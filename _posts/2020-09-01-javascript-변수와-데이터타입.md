@@ -3,12 +3,12 @@ layout: post
 title: "Javascript 변수와 데이터 타입"
 description: "변수와 데이터 타입에 대해 알아보자"
 date: 2020-09-01
-tags: javascript
+tags: javascript, 변수, 데이터 타입
 comments: false
 ---
 
 ## 변수
-- 변수: 문자나 숫자 같은 데이터 값을 담는 데이터 저장 공간 (메모리 공간)
+- 문자나 숫자 같은 데이터 값을 담는 데이터 저장 공간 (메모리 공간)
 
 <br>
 - - -
