@@ -7,7 +7,7 @@ tags: javascript, 변수, 데이터타입
 comments: false
 ---
 
-## 변수
+## **변수**
 - 문자나 숫자 같은 데이터 값을 담는 데이터 저장 공간 (메모리 공간)
 
 <br>
@@ -45,7 +45,7 @@ comments: false
 - 대입(=) 연산자를 사용하면 값 대입 가능
 - 프로그램에서는 **=**이 =를 기준으로 **오른쪽 값을 왼쪽 변수에 대입한다**는 뜻 지님
 
-`ex) var a = 2; var a = 2, b = 1, c = 3;`
+	`ex) var a = 2; var a = 2, b = 1, c = 3;`
 
 <br>
 - - -
@@ -61,7 +61,9 @@ comments: false
     var a;
     ```
 
+	<br>
 	- 선언과 동시에 대입하는 코드는 끌어올려지지 않음
+	<br>
 
     ```
     console.log(a); // >> undefined
@@ -69,4 +71,5 @@ comments: false
     console.log(a); // >> 5
     ```
 
+	<br>
 - **되도록이면 변수 선언부를 반드시 프로그램 시작 부분에 위치시키도록 하자**
