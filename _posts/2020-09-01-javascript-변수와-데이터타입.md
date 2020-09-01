@@ -3,7 +3,7 @@ layout: post
 title: "Javascript 변수와 데이터 타입"
 description: "변수와 데이터 타입에 대해 알아보자"
 date: 2020-09-01
-tags: javascript, 변수, 데이터_타입
+tags: javascript, 변수, 데이터타입
 comments: false
 ---
 
