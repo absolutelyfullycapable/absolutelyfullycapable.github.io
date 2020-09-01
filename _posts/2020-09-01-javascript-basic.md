@@ -1,16 +1,19 @@
 ---
 layout: post
-title: "Javascript Basic"
-description: "Javascript basic description"
+title: "Javascript 기초"
+description: "Javascript에 대해 간략하게 알아보자"
 date: 2020-09-01
 tags: javascript
 comments: false
 ---
 
+
 **자바스크립트**
 - 웹 문서를 동적으로 제어하기 위해 고안된 프로그래밍 언어
 
+
 - - -
+
 
 # 특징
 - 프로그램을 한 줄마다 기계어로 번역해서 실행하는 **인터프리터 언어**
@@ -22,7 +25,9 @@ comments: false
 - 클로저를 정의
 - **CSS보다 우선 순위 높음**
 
+
 - - -
+
 
 # 역할
 - 요소의 추가 및 삭제
@@ -33,7 +38,9 @@ comments: false
 - 웹 브라우저 제어 및 쿠키 등의 설정과 조회
 - AJAX 기술을 이용한 웹 서버와의 통신
 
+
 - - -
+
 
 # 프로그램 작성 방법 및 주의 사항
 1. 유니코드 문자로 작성
@@ -50,7 +57,9 @@ comments: false
 
 	- `` /* */ : 여러 문장일 때 ``
 
+
 - - -
+
 
 # 자바스크립트 포함 방법
 1. HTML 문서 내부에 코드 직접 작성
