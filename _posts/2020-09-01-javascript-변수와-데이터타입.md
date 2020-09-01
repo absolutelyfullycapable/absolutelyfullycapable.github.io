@@ -25,8 +25,7 @@ comments: false
 	- 변수 이름으로 변수 값을 읽거나 쓸 수 있음
 
 - 변수 여러 개를 한 문장으로 선언 시 쉼표 사용
-
-	- `ex) var a, b, c;`
+	`ex) var a, b, c;`
 
 - 변수를 선언하기만 하면 변수 안에는 정의되지 않았음을 뜻하는 undefined 값 들어감
 	- console.log(); => 소괄호 안에 든 값을 콘솔 화면에 표시하라는 뜻
@@ -44,7 +43,6 @@ comments: false
 
 - 대입(=) 연산자를 사용하면 값 대입 가능
 - 프로그램에서는 **=**이 =를 기준으로 **오른쪽 값을 왼쪽 변수에 대입한다**는 뜻 지님
-
 	`ex) var a = 2; var a = 2, b = 1, c = 3;`
 
 <br>
@@ -95,16 +93,7 @@ comments: false
 ## **예약어**
 
 - 자바스크립트 문법을 규정짓기 위해 자바스크립트 언어 사양에서 사용하는 특수한 키워드
-
-    | break | case | catch | class | const | continue |
-    |--------|--------|--------|--------|--------|--------|
-    | **debugger** | **default** | **delete** | **do** | **else** | **export** |
-    | **extends** | **false** | **finally** | **for** | **function** | **if** |
-    | **import** | **in** | **instanceof** | **new** | **null** | **return** |
-    | **super** | **switch** | **this** | **throw** | **true** | **try** |
-    | **typeof** | **var** | **void** | **while** | **with** | **yield** |
-
-	...
+- break, case, catch, class, const, continue, debugger, default, delete, do, elsem, export, extends, false, finally, for, function, if, import, in, instanceof, new, null, return, super, switch, this, throw, true, try, typeof, var, void, while, with, yield...
 
 <br>
 - - -
@@ -114,22 +103,22 @@ comments: false
 - 캐멀 표기법
 	- 두 번째 이후 단어의 첫 글자를 대문자로 표기
 
-	- `ex) userName, userEmail`
+	`ex) userName, userEmail`
 
 - 파스칼 표기법
 	- 각 단어의 첫 글자를 대문자로 표기, 나머지는 소문자로 표기
 
-	- `ex) UserName, UserEmail`
+	`ex) UserName, UserEmail`
 
 - 헝가리안 표기법
 	- 첫 번째 단어의 첫 글자는 소문자, 이후 추가되는 단어들의 첫 글자는 대문자로 표기
 
-	- `ex) userNameName, userEmailEmail`
+	`ex) userNameName, userEmailEmail`
 
 - 밑줄 표기법
 	- 모든 단어는 소문자로 표기, 단어와 단어를 밑줄로 구분
 
-	- `ex) user_name, user_email`
+	`ex) user_name, user_email`
 
 <br>
 - - -
