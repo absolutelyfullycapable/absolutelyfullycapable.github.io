@@ -10,7 +10,7 @@ date: 2020-09-01
 
 tags: javascript
 
-comments: false
+comments: true
 
 ---
 
