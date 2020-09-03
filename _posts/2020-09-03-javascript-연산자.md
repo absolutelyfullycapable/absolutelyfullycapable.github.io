@@ -243,7 +243,7 @@ const b = '다음 수의 합은? ' + 11 + 22; // 문자열 + 숫자 + 숫자 >> 
 
     - 활용 예제
 
-<img src="eximg.png" width="25%" height="25%"></img><br/>
+<img src="eximg.png"></img><br/>
 
 위와 같은 목록 형식도 대입 연산자를 활용하여 만들기 가능
 
