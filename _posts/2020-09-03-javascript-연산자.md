@@ -243,24 +243,23 @@ const b = '다음 수의 합은? ' + 11 + 22; // 문자열 + 숫자 + 숫자 >> 
 
     - 활용 예제
 
-![Alt text](eximg.png)
+<img src="eximg.png" width="25%" height="25%"></img><br/>
+
 위와 같은 목록 형식도 대입 연산자를 활용하여 만들기 가능
 
-	```
-		<script>
-    		window.onload = function(){ // 문서 준비 이벤트
-            let list = ""; // 변수를 빈 문자열로 초기화
+        <script>
+        window.onload = function(){ // 문서 준비 이벤트
+        let list = ""; // 변수를 빈 문자열로 초기화
 
-            list += "<ul>"; // "" + <ul> -> <ul>
-            list += "    <li>HTML5</li>"; // <ul> + <li>html5></li> -> <ul><li>html5</li>
-            list += "    <li>CSS3</li>"; // <ul><li>html5</li> + <li>CSS3</li> -> <ul><li>html5</li><li>CSS3</li>
-            list += "    <li>Javascript</li>"; // <ul><li>html5</li><li>CSS3</li> + <li>javascript</li> -> <ul><li>html5</li><li>CSS3</li><li>javascript</li>
-            list += "</ul>"; // <ul><li>html5</li><li>CSS3</li><li>javascript</li> + </ul> -> <ul><li>html5</li><li>CSS3</li><li>javascript</li></ul>
+        list += "<ul>"; // "" + <ul> -> <ul>
+        list += "    <li>HTML5</li>"; // <ul> + <li>html5></li> -> <ul><li>html5</li>
+        list += "    <li>CSS3</li>"; // <ul><li>html5</li> + <li>CSS3</li> -> <ul><li>html5</li><li>CSS3</li>
+        list += "    <li>Javascript</li>"; // <ul><li>html5</li><li>CSS3</li> + <li>javascript</li> -> <ul><li>html5</li><li>CSS3</li><li>javascript</li>
+        list += "</ul>"; // <ul><li>html5</li><li>CSS3</li><li>javascript</li> + </ul> -> <ul><li>html5</li><li>CSS3</li><li>javascript</li></ul>
 
-            document.body.innerHTML = list; // 문서 노드 안의 바디노드 안에 html 구조를 작성
-            }
+        document.body.innerHTML = list; // 문서 노드 안의 바디노드 안에 html 구조를 작성
+                }
         </script>
-	```
 
 <br/>
 - - -
@@ -300,35 +299,42 @@ const b = '다음 수의 합은? ' + 11 + 22; // 문자열 + 숫자 + 숫자 >> 
     // true(1) > 10 -> false
 
     console.log(1 == true); // true
-    console.log('345' == 345); // true. 숫자형 문자를 자동 변환해서 비교하기 때문에.
+    console.log('345' == 345); // 숫자형 문자를 자동 변환해서 비교하기 때문에 true
 	```
-
-<br/>
 - - -
-<br/>
 
-- **숫자형 문자열끼리 비교 시 문자열 타입을 그대로 가지고 있되 눈에 보이지 않지만 비교 시에 숫자로 자동 변환됨**
-<br/>
-
-- **숫자와 숫자형 문자열 비교 시에도 숫자형 문자열은 문자열 타입을 그대로 가지고 있되 눈에 보이지 않지만 비교 시에 숫자로 자동 변환됨**
+- 비교 연산 특이
 
     ```
     console.log(0 == false); // true
     console.log("" == false); // true
     console.log("" == 0); // true
     console.log("" == null); // false
-	// null은 변수에 데이터로 null이 저장되어 있는 경우나 변수에 저장된 데이터를 비우고자 할 때 사용.
+    // null은 변수에 데이터로 null이 저장되어 있는 경우나 변수에 저장된 데이터를 비우고자 할 때 사용
+
     console.log("" == undefined); // false
-    // undifined는 변수에 아무 값도 등록되어 있지 않은 경우로 변수 초기값.
+    // undifined는 변수에 아무 값도 등록되어 있지 않은 경우로 변수 초기값
 
     console.log(null == undefined); // true
+    ```
 
-    console.log('15' > '12'); // 숫자형 문자열은 자동 변환되어 비교되기 때문에 true.
-    console.log(15 > '12'); // 숫자형 문자열은 자동 변환되어 비교되기 때문에 true.
-    console.log('015' > '10'); // 0이 앞에 오면 문자형으로 비교되어 0이 1보다 작으니까 false.
+<br/>
+- - -
+<br/>
+
+- **숫자형 문자열끼리 비교 시 문자열 타입을 그대로 가지고 있되 눈에 보이지 않지만 비교 시에 숫자로 자동 변환됨**
+
+<br/>
+
+- **숫자와 숫자형 문자열 비교 시에도 숫자형 문자열은 문자열 타입을 그대로 가지고 있되 눈에 보이지 않지만 비교 시에 숫자로 자동 변환됨**
+
+    ```
+    console.log('15' > '12'); // 숫자형 문자열은 자동 변환되어 비교되기 때문에 true
+    console.log(15 > '12'); // 숫자형 문자열은 자동 변환되어 비교되기 때문에 true
+    console.log('015' > '10'); // 0이 앞에 오면 문자형으로 비교되어 0이 1보다 작으니까 false
     console.log('korea' > 'america'); // true. ( 11 (k) > 1 (a) )
     console.log('한글' > '영어'); // true. ( ㅎ (14) > ㅇ (8) )
-    console.log('한글' > 'zoo'); // true. 다른 언어 비교 시에는 언어마다 우선 순위가 있음.
+    console.log('한글' > 'zoo'); // true. 다른 언어 비교 시에는 언어마다 우선 순위가 있음
 
     console.log('1234' == 1234); // true. '문자열' == 숫자 데이터
 	console.log('1234' === 1234 ); // false.
@@ -341,3 +347,67 @@ const b = '다음 수의 합은? ' + 11 + 22; // 문자열 + 숫자 + 숫자 >> 
 	```
 
 - - -
+
+- 변수는 데이터 값을 저장하는 공간으로 메모리에 저장해놓고 필요할 때 꺼내 쓰는 역할을 함
+- 그러다 보니 다양한 조건에서 다르게 리턴되는 경우가 있음
+
+	```
+	var a = [1, 2, 3];
+	var b = [1, 2, 3];
+	console.log(a == b); // >> 각 배열에 같은 데이터가 담겨 있지만 메모리에서 차지하는 위치, 즉 저장 위치가 달라 false
+	```
+
+<br/>
+- - -
+<br/>
+
+### **4. 논리 연산자**
+
+- 주어진 조건을 논리적으로 연산하여 참(true) 또는 거짓(false)을 반환
+- 두 개 이상의 값을 비교
+- 기호
+	- 논리곱 연산자: &&
+		- A 조건 && B 조건 >> A의 조건과 B의 조건이 **모두** 만족시킬 때 true
+
+        ```
+		const a = 10, b = 20;
+        console.log(a >= 10 && b == 20); // true
+        console.log(a > 10 && b == 20); // false
+		```
+
+	<br/>
+
+	- 논리합 연산자: ||
+		- A 조건 || B 조건 >> A의 조건과 B의 조건 중 **하나만** 만족시킬 때 true
+
+        ```
+        const a = 10, b = 20;
+        console.log(a > 10 || b == 20); // true
+        ```
+
+	<br/>
+
+	- 논리 부정 연산자: !
+		- !A 조건: A 조건이 아니면 true
+
+        ```
+        const a = 10, b = 20;
+        console.log(b == 10); // false
+        console.log(!(b == 10)); // 상수 b는 10과 같지 않지 않기 때문에 true
+        console.log(!(a == 10)); // 상수 a는 10과 같지 않다는 게 맞지 않기 때문에 false
+        ```
+
+<br/>
+- - -
+<br/>
+
+### **5. 조건 연산자**
+
+- 조건식을 판별하여 참(true)이냐 거짓(false)이냐에 따라 다음 문장을 선택적으로 실행하는 연산자
+- 삼항 연산자
+	- 첫 번째 피연산자를 조건식으로 평가한 후 그 결과가 참(true)이면 두 번째 피연산자 값으로 삼고, 거짓(false)이면 세 번째 피연산자를 값으로 삼음
+- 예시: 변수 a와 b의 값을 비교하여 a > b가 참이면 a, 거짓이면 b를 변수 c에 대입하는 수식
+
+	```
+	c = (a > b) ? a : b;
+	```
