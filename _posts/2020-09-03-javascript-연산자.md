@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Javascript 연산자"
-description: "Javascript에서 쓰는 연산자의 종류와 쓰는 방법에 대해 알아보자"
+description: "Javascript 연산자의 종류와 쓰는 방법에 대해 알아보자"
 date: 2020-09-03
 tags: javascript 연산자
 comments: true
