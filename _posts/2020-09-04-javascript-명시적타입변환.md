@@ -14,9 +14,13 @@ comments: true
 
 - 숫자 + 문자열
 	- 숫자와 문자열을 + 연산자로 연결하면 숫자의 타입이 문자열로 바뀜
-	- ex1) 10 + "cookies"; // "10cookies"
-	- ex2) 100 + ""; // "100" : 숫자에 빈 문자열을 더해 숫자를 문자열로 바꿀 수 있음
-	<br/>
+
+    ```
+	ex1) 10 + "cookies"; // "10cookies"
+	ex2) 100 + ""; // "100" : 숫자에 빈 문자열을 더해 숫자를 문자열로 바꿀 수 있음
+	```
+
+    <br/>
 
 - Number 객체의 메서드 활용
 	- toString: 숫자를 문자열로 변환
@@ -53,6 +57,9 @@ comments: true
     console.log(a + (b + c)); // 합계888
 	console.log(a + (String(b) + String(c))); // 합계234654
     ```
+	<br/>
+
+- - - -
 
 <br/>
 #### **2. 문자열을 숫자로 변환**
@@ -104,6 +111,9 @@ comments: true
    	const total = Number(a) + Number(b) + Number(c);
     console.log(total); // NaN
     ```
+	<br/>
+
+- - - -
 
 <br/>
 #### **3. 논리값으로 변환**
