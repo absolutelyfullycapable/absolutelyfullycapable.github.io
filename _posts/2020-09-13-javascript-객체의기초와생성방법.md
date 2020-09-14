@@ -160,7 +160,7 @@ comments: true
 		- now.toLocaleDateString(); : 지역화된 날짜 정보
 		- now.toLocaleTimeString(); : 지역화된 시간 정보
 		- .getUTCHours(); : UTC 시각의 시간을 뜻하는 숫자값
-		- now.toUTCSting(); : UTC 날짜와 시간 정보
+		- now.toUTCString(); : UTC 날짜와 시간 정보
 
 <br/>
 
