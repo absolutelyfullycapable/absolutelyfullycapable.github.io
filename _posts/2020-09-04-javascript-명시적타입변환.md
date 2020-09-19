@@ -15,7 +15,7 @@ comments: true
 - 숫자 + 문자열
 	- 숫자와 문자열을 + 연산자로 연결하면 숫자의 타입이 문자열로 바뀜
 
-    ```
+    ```js
 	ex1) 10 + "cookies"; // "10cookies"
 	ex2) 100 + ""; // "100" : 숫자에 빈 문자열을 더해 숫자를 문자열로 바꿀 수 있음
 	```
@@ -30,7 +30,7 @@ comments: true
 	- toPrecision: 숫자를 유효 숫자가 지정된 문자열로 변환, 유효 숫자가 정수부의 자릿수보다 작을 때는 지수로 표시
 	<br/>
 
-    ```
+    ```js
 	var a = 26;
     a.toString(); // 26 >> 인수를 지정하지 않으면 10진수 문자열로 변환
     a.toString(2); // 11010 >> 2진수 문자열로 변환
@@ -52,7 +52,7 @@ comments: true
 	- **String 함수에는 모든 데이터 타입을 문자열로 바꾸는 기능이 있음**
 	<br/>
 
-	```
+	```js
 	const a = "합계", b = 234, c = 654;
     console.log(a + (b + c)); // 합계888
 	console.log(a + (String(b) + String(c))); // 합계234654
@@ -67,7 +67,7 @@ comments: true
 
 - 수식 안에서 묵시적으로 변환
 
-	```
+	```js
 	var a = 2;
     a - 0; // 첫 번째 방법
     +a; // 두 번째 방법
@@ -80,7 +80,7 @@ comments: true
 	- 두 함수 모두 **첫 번째 문자를 숫자로 바꾼 값으로 반환, 이후 등장하는 문자열은 무시**
 	<br/>
 
-	```
+	```js
 	parselnt("3.14"); // 3
     parselnt("3.14 meters"); // 3 : 숫자 다음에 오는 문자열은 무시
     parseFloat("3.14"); // 3.14
@@ -100,7 +100,7 @@ comments: true
 	- **Number 함수에는 모든 데이터 타입을 숫자로 바꾸는 기능이 있음**
 	<br/>
 
-	```
+	```js
 	Number(true); // 1
     Number(false); // 0
     Number(NaN); // NaN

@@ -80,7 +80,7 @@ comments: true
 	- 자바스크립트의 객체는 실행 중에 프로퍼티를 자유롭게 추가하거나 삭제할 수 있음
 	- 없는 프로퍼티 이름에 값을 대입하면 새로운 프로퍼티 추가됨
 
-    ```
+    ```js
 	card.value = 14;
     console.log(card); // >> Object {suit:"하트", rank:"A", value:14}
     ```
@@ -88,7 +88,7 @@ comments: true
 	<br/>
     - delete 연산자를 사용하면 프로퍼티 삭제 가능
 
-    ```
+    ```js
 	delete card.rank;
     console.log(card); // >> Object {suit:"하트", value:14}
     ```
@@ -100,7 +100,7 @@ comments: true
 - **in 연산자**로 프로퍼티 확인
 	- 프로퍼티 이름을 뜻하는 문자열 **in** 객체명
 
-    ```
+    ```js
 	var card = {suit:"하트", rank:"A"};
     console.log("suit" in card); // >> 프로퍼티가 객체에 포함되어 있을 때는 true 반환
     console.log("color" in card); // >> 프로퍼티가 객체에 포함되어 있지 않을 때는 false 반환
@@ -160,7 +160,7 @@ comments: true
 		- now.toLocaleDateString(); : 지역화된 날짜 정보
 		- now.toLocaleTimeString(); : 지역화된 시간 정보
 		- .getUTCHours(); : UTC 시각의 시간을 뜻하는 숫자값
-		- now.toUTCString(); : UTC 날짜와 시간 정보
+		- now.toUTCSting(); : UTC 날짜와 시간 정보
 
 <br/>
 
