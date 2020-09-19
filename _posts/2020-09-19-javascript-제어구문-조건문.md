@@ -2,7 +2,7 @@
 
 layout: post
 
-title: "Javascript 제어문 1 조건문"
+title: "Javascript 제어문 (1) 조건문"
 
 description: "제어문 중 조건문에 대해 알아보자"
 
