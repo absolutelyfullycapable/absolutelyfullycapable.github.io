@@ -307,7 +307,7 @@ switch(상수값) {
 
 ##### **· 간단한 예시**
 
-ex 1) n이 1일 때는 One, 2일 때는 Two, 3일 때는 Three, 그 외에는 "Other" 출력
+ex 1) n이 1일 때는 One, 2일 때는 Two, 3일 때는 Three, 그 외에는 Other 출력
 
 ```js
 switch(n) {
