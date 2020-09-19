@@ -31,7 +31,7 @@ comments: true
 - 변수를 선언하기만 하면 변수 안에는 정의되지 않았음을 뜻하는 undefined 값 들어감
 	- console.log(); => 소괄호 안에 든 값을 콘솔 화면에 표시하라는 뜻
 
-	```
+	```js
     var a;
     console.log(x); // >> undefined
     ```
@@ -56,7 +56,7 @@ comments: true
 - 변수 선언의 끌어올림 (호이스팅, 변수 선언 전 참조)
 	- 프로그램 중간에서 변수를 선언하더라도 변수가 프로그램 첫머리에 선언된 것처럼 다른 문장 앞에 생성
 
-    ```
+    ```js
     console.log(a); // >> undefined
     var a;
     ```
@@ -65,7 +65,7 @@ comments: true
 	- 선언과 동시에 대입하는 코드는 끌어올려지지 않음
 	<br>
 
-    ```
+    ```js
     console.log(a); // >> undefined
     var a = 5;
     console.log(a); // >> 5
