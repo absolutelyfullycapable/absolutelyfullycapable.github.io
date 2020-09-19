@@ -20,28 +20,33 @@ comments: true
 
 **순차적 실행**
 - 문장은 일반적으로 위에서부터 아래 방향으로 작성된 순서로 실행
+
 <br/>
 
 ### **제어문**
 - 프로그램 실행 과정을 제어하기 위해, 즉 순차적 실행 흐름을 변화시키기 위해 쓰이는 문장
 - 반복 처리 및 선택 처리를 할 때 사용
 - 제어문에 사용하는 모든 문자는 **소문자**
+
 <br/>
 
 #### **제어문의 종류**
 - 조건문
 	- 조건에 따라 다음 문장을 선택적으로 실행함
-	- if문, if~else문, 다중 if~else문, switch~case문, try/catch/finally문
-	<br/>
+
+	- `if문, if~else문, 다중 if~else문, switch~case문, try/catch/finally문`
 
 - 반복문
 	- 동일한 명령을 여러 번 처리하거나 특정 연산을 반복적으로 처리
-	- for문, for~in문, for~of문, while문, do~while문
-	<br/>
+
+	- `for문, for~in문, for~of문, while문, do~while문`
+
+<br/>
 
 - 보조 제어문 (점프문)
 	- 조건문을 만나면 건너뛰거나 반복 수행 종료 (반복문 내에서 사용)
-	- continue문, break문, return문, throw문
+
+	- `continue문, break문, return문, throw문`
 
 <br/>
 <br/>
@@ -57,6 +62,7 @@ comments: true
 - 조건식에 true 값을 직접 대입하면 무조건 처리하도록 제어할 수 있음
 - 조건식에 false 값을 쓰면 블록 내 문장은 영원히 처리 불가능
 - if문 안에 또 다른 if문 포함하여 작성 가능 (중첩된 if문)
+
 <br/>
 
 - 작성 방법
@@ -127,6 +133,7 @@ comments: true
 	- 조건의 만족 여부에 따라 처리할 작업 선택
 - "만약 ~이라면... (if) 그렇지 않으면... (else)"이라는 식의 처리 흐름 표현
 - if~else문도 다른 if~else문을 포함하여 작성 가능 (중첩된 if~else문)
+
 <br/>
 
 - 작성 방법
