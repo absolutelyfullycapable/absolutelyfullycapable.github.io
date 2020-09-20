@@ -287,7 +287,7 @@ if(조건식 A) { // 조건식 A가 참인 경우
 
 ```js
 switch(상수값(비교값)) {
-case 표현식 1 (비교할 값 1):
+    case 표현식 1 (비교할 값 1):
     	실행 문장 A;
         break;
     case 표현식 2 (비교할 값 2):
@@ -340,7 +340,7 @@ case 표현식 1 (비교할 값 1):
 
 ```js
 switch(n) {
-case 1:
+    case 1:
     	console.log("One");
         break;
     case 2;
