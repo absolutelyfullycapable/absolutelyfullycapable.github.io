@@ -17,7 +17,7 @@ comments: true
 ### **1. if~else문 예제**
 <br/>
 
-1) 걸음수를 입력하고 걸음수에 맞는 값 출력하기 (입력한 값이 6000 이상이면 '좋은 습관을 가지고 있습니다.' 출력 / 6000 미만이면 '운동이 필요합니다.' 출력)
+1) 걸음수를 입력하고 걸음수에 맞는 값 출력하기 (입력한 값이 6000 이상이면 '좋은 습관을 가지고 있습니다.' / 6000 미만이면 '운동이 필요합니다.' 출력)
 
 ```js
 const walk = prompt('하루에 걷는 걸음은 몇 보입니까?');
@@ -31,7 +31,7 @@ if(walk >= 6000) {
 
 <br/>
 
-2) 입력 받은 값이 10보다 작으면 '입력한 값이 10보다 작습니다.' 출력 / 입력 받은 값이 10보다 크면 '입력 받은 값이 10보다 큽니다.' 출력
+2) 입력 받은 값이 10보다 작으면 '입력한 값이 10보다 작습니다.' / 입력 받은 값이 10보다 크면 '입력 받은 값이 10보다 큽니다.' 출력
 
 ```js
 const num = prompt('숫자를 입력해 주세요.');
@@ -45,7 +45,7 @@ if(num < 10) {
 
 <br/>
 
-3) 숫자를 입력 받아 짝수이면 '짝수입니다.' 출력 / 홀수이면 '홀수입니다.' 출력
+3) 숫자를 입력 받아 짝수면 '짝수입니다.' / 홀수면 '홀수입니다.' 출력
 
 ```js
 let num = prompt('숫자를 입력해 주세요.');
@@ -61,7 +61,7 @@ if(num % 2 == 0) {
 
 <br/>
 
-4) 확인 버튼을 누르면 '탈퇴 처리가 되었습니다.' 출력 / 취소 버튼을 누르면 '탈퇴 취소되었습니다.' 출력
+4) 확인 버튼을 누르면 '탈퇴 처리가 되었습니다.' / 취소 버튼을 누르면 '탈퇴 취소되었습니다.' 출력
 
 ```js
 let a = confirm('탈퇴하시겠습니까?');
@@ -74,6 +74,30 @@ if(a == 1) {
 
 // 확인 버튼 클릭 시 == true == 1
 // 취소 버튼 클릭 시 == false == 0
+```
+
+<br/>
+
+5) ID가 web, 비밀번호가 12345일 때 로그인
+
+```js
+const id = "web", pw = "12345";
+const user_id = prompt('아이디를 입력해 주세요.');
+
+if(id == user_id) { // 아이디 일치
+	const user_pw = prompt('비밀번호를 입력해 주세요.');
+    if(pw == user_pw) { // 아이디 일치, 비밀번호 일치
+    	alert('로그인되었습니다.');
+    } else { // 아이디 일치, 비밀번호 불일치
+    	alert('비밀번호가 일치하지 않습니다.');
+        window.location.reload();
+    }
+} else { // 아이디 불일치
+	alert('아이디가 일치하지 않습니다.');
+    window.location.reload();
+}
+
+// window.location.reload(); 브라우저 새로 고침
 ```
 
 <br/>
@@ -127,7 +151,7 @@ if(num1 > num2) {
 
 ```js
 let score = prompt('점수를 입력해 주세요.'); // 점수
-let grade = ""; // 등급
+let grade // 등급 선언
 
 if(score >= 90 && score <= 100) {
 	grade = "A";
@@ -168,8 +192,6 @@ if(random == 1) {
 }
 ```
 
-<br/>
-
 ![ex_screenshot](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRe9Uo%2FbtqI6N4P4ye%2F7shglXYuXkXVlM1dAb9bPK%2Fimg.png)
 
 - 해당 예제의 prompt 창은 이렇게 뜸
@@ -181,6 +203,40 @@ if(random == 1) {
 
 ```js
 let month = prompt('좋아하는 달을 입력해 주세요.', '숫자로만 입력해 주세요.');
+month >= 1, month <= 12;
 
-if(month)
+if(month >= 3 && month <= 5) {
+	alert('봄입니다.');
+} else if(month >= 6 && month <= 8) {
+	alert('여름입니다.');
+} else if(month >= 9 && month <= 11) {
+	alert('가을입니다.');
+} else if(month <= 12 || month <= 2) { // 12보다 작고 2보다 작은 것 둘 다 만족시키면 값은 1밖에 없으므로 둘 중 하나만 만족시키는 걸로 해야 함
+	alert('겨울입니다.');
+} else {
+	alert('1~12 사이ㅢ 숫자만 입력해 주세요.');
+}
+
+// && 논리곱 연산자: A 조건, B 조건 모두 만족시켜야만 실행
+// || 논리합 연산자: A 조건이나 B 조건 중 하나만 만족시켜도 실행
+```
+
+<br/>
+
+6) 입력한 점수에 따라 상(100~81) / 중(80~61) / 하(60~41) / 탈락(40~0)으로 나누고 해당 알림창 띄우기
+
+```js
+let score = prompt('점수를 입력해 주세요.');
+
+if(score <= 100 && score > 80) {
+	alert(score + '점은 상입니다.');
+} else if(score <= 80 && score > 60) {
+	alert(score + '점은 중입니다.');
+} else if(score <= 60 && score > 40) {
+	alert(score + '점은 하입니다.');
+} else if(score <= 40 && score >= 0} {
+	alert(score + '점은 탈락입니다.');
+} else {
+	alert('0에서 100 사이 숫자로만 입력해 주세요');
+}
 ```
