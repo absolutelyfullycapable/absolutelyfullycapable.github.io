@@ -206,5 +206,5 @@ switch(week) {
         break;
 }
 
-document.write('<h1>오늘은' + work + ' 일정이 있는 날입니다.<h1>');
+document.write('<h1>오늘은 ' + work + ' 일정이 있는 날입니다.<h1>');
 ```
