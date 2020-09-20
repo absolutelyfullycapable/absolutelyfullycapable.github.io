@@ -93,7 +93,7 @@ if(id == user_id) { // 아이디 일치
         window.location.reload();
     }
 } else { // 아이디 불일치
-	alert('아이디가 일치하지 않습니다.');
+    alert('아이디가 일치하지 않습니다.');
     window.location.reload();
 }
 
@@ -187,7 +187,7 @@ if(random == 1) {
 } else if(random == 4) {
 	document.write('<img src="img4.jpg" alt="image 4">');
 } else {
-	alert('해당 번호로만 입력해 주세요.');
+    alert('해당 번호로만 입력해 주세요.');
     alert('새로 고침 후 다시 번호를 입력해 주세요');
 }
 ```
