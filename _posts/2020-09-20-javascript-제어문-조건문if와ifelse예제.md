@@ -146,3 +146,41 @@ if(score >= 90 && score <= 100) {
 document.body.innerhtml = '<h1>' + score + '점은 ' + grade + '등급입니다.</h1>';
 // document.body.innerhtml; html의 body 태그 안쪽에 작성한다는 뜻
 ```
+
+<br/>
+
+4) 1과 4 사이의 숫자를 입력하면 해당되는 번호의 이미지를 출력 / 1과 4 사이의 숫자가 아닌 예외 숫자 입력 시에는 '해당 번호로만 선택해 주세요.' 출력한 다음 '새로 고침 후 다시 번호를 선택해 주세요.' 출력
+
+```js
+let random = prompt('1~4번까지 번호를 선택하세요.', '이곳에 작성하세요.');
+
+if(random == 1) {
+	document.write('<img src="img1.jpg" alt="image 1">');
+} else if(random == 2) {
+	document.write('<img src="img2.jpg" alt="image 2">');
+} else if(ramdom == 3){
+	document.write('<img src="img3.jpg" alt="image 3">');
+} else if(random == 4) {
+	document.write('<img src="img4.jpg" alt="image 4">');
+} else {
+	alert('해당 번호로만 입력해 주세요.');
+    alert('새로 고침 후 다시 번호를 입력해 주세요');
+}
+```
+
+<br/>
+
+![ex_screenshot](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRe9Uo%2FbtqI6N4P4ye%2F7shglXYuXkXVlM1dAb9bPK%2Fimg.png)
+
+- 해당 예제의 prompt 창은 이렇게 뜸
+	- prompt('a', 'b');일 때 a는 입력창 위에, b는 입력창에 표시됨
+
+<br/>
+
+5) 3~5월: '봄입니다.'/ 6~8월: '여름입니다.' / 9~11월: '가을입니다.' / 12~2월: '겨울입니다.' 출력
+
+```js
+let month = prompt('좋아하는 달을 입력해 주세요.', '숫자로만 입력해 주세요.');
+
+if(month)
+```
