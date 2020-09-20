@@ -33,7 +33,7 @@ switch(site) {
         url = "https://www.google.com";
         break;
     case '다음':
-    	// window.open("about:blank").location().href = "https://www.daum.net";
+    	// window.open("about:blank").location.href = "https://www.daum.net";
         url = "https://www.daum.net";
         break;
     default :
