@@ -21,6 +21,7 @@ comments: true
 ### **반복문**
 
 - 동일한 명령을 여러 번 처리하거나 특정 연산을 반복적으로 처리
+	- 일정한 처리를 한 다음 원래 위치로 돌아가 똑같은 처리를 반복하는 처리
 - 반복문의 공통 작업
 	1. 반복 조건의 초기화 작업
 	2. 반복문의 조건식
@@ -34,7 +35,7 @@ comments: true
 - 반복 횟수에 중점을 둠
 - 조건이 만족되는 동안 반복 실행
 - 반복문의 공통 작업을 명시적으로 한 곳(소괄호 안)에 모아서 표기
-	- 어떤 반복 처리를 하는지 이해하기 쉬움 
+	- 어떤 반복 처리를 하는지 이해하기 쉬움
 	- 반복 조건의 포기화 작업과 갱신 작업을 빠뜨리는 등의 실수 사전 방지 가능
 - for 반복문 안에 break 문, continue 문 사용 가능
 
@@ -70,7 +71,6 @@ for(초기화식; 조건식; 반복식;) {
 1. 반복문을 시작하기 전에 초기화식 단 한 번 실행
 2. 조건식 먼저 평가 -> 결과가 false면 for 반복문을 빠져 나와 다음 처리로 이동 / true면 문장을 실행한 후에 반복문 실행
 3. 다시 한 번 for 반복문의 시작 부분으로 돌아가서 조건식을 평가
-
 
 <br/>
 <br/>
@@ -132,7 +132,7 @@ for( ; num < ct; ) {
 var x, y;
 for(x = 2; x <= 3; x++) {
 	document.write("--- " + x + "단 ---<br>");
-    
+
     for(y = 1; y <= 9; y++) {
     	document.write(x + "*" + y + "=" + (x * y) + "<br>");
     }
@@ -149,3 +149,206 @@ for(x = 2; x <= 3; x++) {
 <br/>
 
 #### **1-2. for~in 반복문**
+
+- 객체 안의 프로퍼티를 순회하는 반복문
+- 반복문 안에서 문장을 여러 개 실행하려면 여러 문장을 블록으로 묶어서 블록 문장으로 만듦
+- for~in 반복문 안에서도 break문과 continue문 사용 가능
+
+<br/>
+
+##### **· for~in 반복문의 처리 흐름**
+
+1. for~in 반복문이 실행되면 먼저 객체 표현식을 평가
+2. 객체 표현식이 null 또는 undefined로 평가되면 for~in 반복문을 빠져나와 다음 작업으로 이동 / 객체로 평가되면 객체 프로퍼티 이름이 차례대로 변수에 할당되고 각각의 프로퍼티에 대해서 문장이 한 번씩 실행됨
+
+<br/>
+<br/>
+
+##### **· 간단한 예시**
+
+1)
+
+```js
+var obj = {a:1, b:2, c:3};
+
+for(var p in obj) {
+	console.log("p = " + p);
+}
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdmuiB6%2FbtqL38EgaBc%2Fz3P45d8GQaKskp3X3s8jDK%2Fimg.png)
+
+- for~in 반복문은 프로퍼티 이름만 꺼내 변수에 할당
+
+<br/>
+
+2) 반복문 안에 프로퍼티 값 가지고 오기 (괄호 연산자 사용)
+
+```js
+var obj = {a:1, b:2, c:3};
+
+for(var p in obj) {
+	console.log("obj." + p + "=" + obj[p]);
+}
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb2metx%2FbtqLXSiTMqt%2FKthaKj6QnadsqGU3BJKnj0%2Fimg.png)
+
+<br/>
+<br/>
+- - -
+<br/>
+
+#### **2. while 반복문**
+
+- 조건만 맞아떨어지면 일정한 처리를 계속 반복해서 실행
+- 반복문 안에서 여러 문장을 실행하려면 여러 문장을 블록으로 묶어서 블록 문장으로 만듦
+- while 반복문 안에 break문과 continue문 사용 가능
+
+<br/>
+
+##### **· 작성 방법**
+
+```js
+// 1. 기본 작성
+while(조건식) {
+	조건이 만족될 때까지의 실행 문장;
+    증감식;
+}
+```
+
+- 조건식: 참과 거짓의 조건으로 참인 동안 실행
+
+<br/>
+
+##### **· while 반복문의 처리 흐름**
+
+1. 조건식 평가
+2. 조건이 참인 동안 블록 내 문장을 처리, 거짓이면 블록을 벗어나 다음 문장을 처리
+	- while 반복문의 조건식을 처음 실행할 때 거짓이면 한 번도 블록 내 문장을 처리하지 못하고 블록을 벗어남
+	- 항상 참이면 무한 반복 (문장 실행 후 다시 한 번 while 반복문의 시작 부분으로 돌아가서 조건식을 평가) -> 실행 문장 내에 if 조건문과 break문을 사용하여 특정 조건을 만족하면 반복을 중단하게 해야 함
+
+<br/>
+<br/>
+
+##### **· 간단한 예시**
+
+1) n의 팩토리얼 구하는 함수
+
+```js
+function fact(n) {
+	var k = 1, i = 1;
+    while(i < n) {
+    	k *= (++i);
+    }
+    return k;
+}
+
+fact(5); // -> 120
+```
+
+<br/>
+
+2) 1부터 100까지의 합 구하기
+
+```js
+var x = 1, sum = 0;
+
+while(x <= 100) {
+	sum += x;
+    x++;
+}
+
+document.write("1부터 100까지의 합은 " + sum + "입니다.");
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQrwnU%2FbtqL5A8o5Bn%2FCXNfhAFtkIlNm2EOMx2Q6K%2Fimg.png)
+
+2-1) 1부터 100까지의 합 구하기 - 다른 방법
+
+```js
+var x = 1, sum = 0;
+
+while(1) {
+	sum += x;
+    x++;
+
+    if(x == 101) {
+    	break;
+    }
+}
+
+document.write("1부터 100까지의 합은 " + sum + "입니다.");
+```
+
+2)와 같은 결과 출력
+
+<br/>
+
+3)1에서 30까지의 숫자 중 2의 배수이고 6의 배수일 경우만 출력
+
+```js
+var x = 1;
+
+while(x <= 30) {
+	if(x % 2 == 0 && x % 6 ==0) { // 조건이 만족될 때까지의 실행 문장
+    	document.writeIn(x);
+    }
+    x++; // 증감식
+}
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbB6G0D%2FbtqL2wMDzmV%2FK6ohH0vmBkB3EkYxpKCl8k%2Fimg.png)
+
+<br/>
+<br/>
+- - -
+<br/>
+
+#### **2-1. do~while 반복문**
+
+- 블록 내 문장을 먼저 처리한 후 조건식 체크
+	- **블록 내 문장을 한 번 이상 반드시 수행함**
+	- 반복 실행 여부를 마지막 부분에서 판단
+- 작성 시 끝에 세미콜론(;) **반드시 작성**
+- 반복문 안에서 문장을 여러 개 실행하려면 여러 문장을 블록으로 묶어서 블록 문장으로 만듦
+- do~while 반복문 안에서 break문과 continue문 사용 가능
+
+<br/>
+
+##### **· 작성 방법**
+
+```js
+// 1. 기본 작성
+do {
+	실행 문장
+}
+while(조건식);
+```
+
+<br/>
+
+##### **· while 반복문의 처리 흐름**
+
+1. 실행 문장 먼저 실행
+2. 조건식 평가
+3. 결과가 false면 do~while 반복문을 빠져 나와 다음 처리로 이동 / true면 반복문의 시작 부분으로 되돌아감
+
+<br/>
+<br/>
+
+##### **· 간단한 예시**
+
+1) 1부터 100까지 합 구하기 - do~while 반복문 방법
+
+```js
+var x = 1, sum = 0;
+
+do {
+	sum += x;
+    x++;
+}
+while(x <= 100);
+
+document.write("1부터 100까지의 합은 " + sum + "입니다.");
+```
