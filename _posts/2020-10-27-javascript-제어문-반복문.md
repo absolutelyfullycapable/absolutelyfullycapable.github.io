@@ -141,9 +141,7 @@ for(x = 2; x <= 3; x++) {
 
 <br/>
 
-- 결과
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FUPE19%2FbtqLXS4dxhL%2FFhlMIOq5N9UBfOBkoZsA10%2Fimg.png)
-```
 
 <br/>
 <br/>
