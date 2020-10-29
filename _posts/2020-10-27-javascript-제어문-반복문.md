@@ -262,6 +262,8 @@ while(i <= 10) {
 }
 ```
 
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOsJRp%2FbtqL5A3d1sj%2FYmUVDSQVbLId5ukIXBGHc1%2Fimg.png)
+
 <br/>
 
 2) n의 팩토리얼 구하는 함수
