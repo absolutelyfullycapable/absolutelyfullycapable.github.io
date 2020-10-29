@@ -227,6 +227,7 @@ for(var p in obj) {
 
 ```js
 // 1. 기본 작성
+let 변수 = 초기값;
 while(조건식) {
     조건이 만족될 때까지의 실행 문장;
     증감식;
@@ -249,7 +250,21 @@ while(조건식) {
 
 ##### **· 간단한 예시**
 
-1) n의 팩토리얼 구하는 함수
+1) 1부터 10까지 나열
+
+```js
+let i = 1;
+
+while(i <= 10) {
+    document.writeln(i);
+    // document.writeln(); -> 문서에 띄어쓰기로 작성
+    i++;
+}
+```
+
+<br/>
+
+2) n의 팩토리얼 구하는 함수
 
 ```js
 function fact(n) {
@@ -265,7 +280,7 @@ fact(5); // -> 120
 
 <br/>
 
-2) 1부터 100까지의 합 구하기
+3) 1부터 100까지의 합 구하기
 
 ```js
 var x = 1, sum = 0;
@@ -280,7 +295,7 @@ document.write("1부터 100까지의 합은 " + sum + "입니다.");
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQrwnU%2FbtqL5A8o5Bn%2FCXNfhAFtkIlNm2EOMx2Q6K%2Fimg.png)
 
-2-1) 1부터 100까지의 합 구하기 - 다른 방법
+3-1) 1부터 100까지의 합 구하기 - 다른 방법
 
 ```js
 var x = 1, sum = 0;
@@ -301,7 +316,7 @@ document.write("1부터 100까지의 합은 " + sum + "입니다.");
 
 <br/>
 
-3)1에서 30까지의 숫자 중 2의 배수이고 6의 배수일 경우만 출력
+4)1에서 30까지의 숫자 중 2의 배수이고 6의 배수일 경우만 출력
 
 ```js
 var x = 1;
@@ -309,7 +324,6 @@ var x = 1;
 while(x <= 30) {
     if(x % 2 == 0 && x % 6 ==0) { // 조건이 만족될 때까지의 실행 문장
         document.writeIn(x);
-        // document.writeln(); -> 문서에 띄어쓰기로 작성
     }
     x++; // 증감식
 }
