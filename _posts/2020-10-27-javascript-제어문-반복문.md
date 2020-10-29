@@ -293,6 +293,7 @@ var x = 1;
 while(x <= 30) {
     if(x % 2 == 0 && x % 6 ==0) { // 조건이 만족될 때까지의 실행 문장
         document.writeIn(x);
+        // document.writeln(); -> 문서에 띄어쓰기로 작성
     }
     x++; // 증감식
 }
