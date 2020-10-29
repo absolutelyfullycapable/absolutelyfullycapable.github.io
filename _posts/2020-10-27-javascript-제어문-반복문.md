@@ -46,7 +46,7 @@ comments: true
 ```js
 // 1. 기본 작성
 for(초기화식; 조건식; 반복식;) {
-	실행 문장
+    실행 문장
 }
 ```
 
@@ -92,7 +92,7 @@ for(var i = 10; i > 0; i--) { ... } // -> i = 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 ```js
 var num = 1;
 for( ; num < 5; num++) {
-	// 실행 문장 작성
+    // 실행 문장 작성
 }
 ```
 
@@ -106,7 +106,7 @@ var st = "ABCDEF";
 var ct = st.length;
 
 for( ; num < ct; ) {
-	// 실행 문장 작성
+    // 실행 문장 작성
     num++;
 }
 ```
@@ -131,10 +131,10 @@ for( ; num < ct; ) {
 ```js
 var x, y;
 for(x = 2; x <= 3; x++) {
-	document.write("--- " + x + "단 ---<br>");
+    document.write("--- " + x + "단 ---<br>");
 
     for(y = 1; y <= 9; y++) {
-    	document.write(x + "*" + y + "=" + (x * y) + "<br>");
+        document.write(x + "*" + y + "=" + (x * y) + "<br>");
     }
 }
 ```
@@ -172,7 +172,7 @@ for(x = 2; x <= 3; x++) {
 var obj = {a:1, b:2, c:3};
 
 for(var p in obj) {
-	console.log("p = " + p);
+    console.log("p = " + p);
 }
 ```
 
@@ -188,7 +188,7 @@ for(var p in obj) {
 var obj = {a:1, b:2, c:3};
 
 for(var p in obj) {
-	console.log("obj." + p + "=" + obj[p]);
+    console.log("obj." + p + "=" + obj[p]);
 }
 ```
 
@@ -212,7 +212,7 @@ for(var p in obj) {
 ```js
 // 1. 기본 작성
 while(조건식) {
-	조건이 만족될 때까지의 실행 문장;
+    조건이 만족될 때까지의 실행 문장;
     증감식;
 }
 ```
@@ -237,9 +237,9 @@ while(조건식) {
 
 ```js
 function fact(n) {
-	var k = 1, i = 1;
+    var k = 1, i = 1;
     while(i < n) {
-    	k *= (++i);
+        k *= (++i);
     }
     return k;
 }
@@ -255,7 +255,7 @@ fact(5); // -> 120
 var x = 1, sum = 0;
 
 while(x <= 100) {
-	sum += x;
+    sum += x;
     x++;
 }
 
@@ -270,11 +270,11 @@ document.write("1부터 100까지의 합은 " + sum + "입니다.");
 var x = 1, sum = 0;
 
 while(1) {
-	sum += x;
+    sum += x;
     x++;
 
     if(x == 101) {
-    	break;
+        break;
     }
 }
 
@@ -291,8 +291,8 @@ document.write("1부터 100까지의 합은 " + sum + "입니다.");
 var x = 1;
 
 while(x <= 30) {
-	if(x % 2 == 0 && x % 6 ==0) { // 조건이 만족될 때까지의 실행 문장
-    	document.writeIn(x);
+    if(x % 2 == 0 && x % 6 ==0) { // 조건이 만족될 때까지의 실행 문장
+        document.writeIn(x);
     }
     x++; // 증감식
 }
@@ -321,7 +321,7 @@ while(x <= 30) {
 ```js
 // 1. 기본 작성
 do {
-	실행 문장
+    실행 문장
 }
 while(조건식);
 ```
@@ -345,7 +345,7 @@ while(조건식);
 var x = 1, sum = 0;
 
 do {
-	sum += x;
+    sum += x;
     x++;
 }
 while(x <= 100);
