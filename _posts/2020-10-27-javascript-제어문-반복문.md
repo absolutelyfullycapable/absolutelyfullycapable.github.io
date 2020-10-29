@@ -112,6 +112,22 @@ for( ; num < ct; ) {
 ```
 
 <br/>
+
+4) 구구단 2단 출력
+
+```js
+let sum = 0;
+
+for(i = 1; i < 10; i++) {
+    sum = i * 2;
+    document.write(2 + " * " + i + " = " + sum + "<br/>");
+}
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbg5ST2%2FbtqL5z3lRIA%2F5a7yd787ejKiZ72k6YBiXK%2Fimg.png)
+
+
+<br/>
 <br/>
 - - -
 <br/>
