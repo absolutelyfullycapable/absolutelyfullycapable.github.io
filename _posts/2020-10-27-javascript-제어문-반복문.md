@@ -325,7 +325,7 @@ var x = 1;
 
 while(x <= 30) {
     if(x % 2 == 0 && x % 6 ==0) { // 조건이 만족될 때까지의 실행 문장
-        document.writeIn(x);
+        document.writeln(x);
     }
     x++; // 증감식
 }
