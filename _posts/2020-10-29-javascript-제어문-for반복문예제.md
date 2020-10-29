@@ -92,7 +92,7 @@ if(num >= 2 && num <= 9) {
 
     for(i = 1; i <= 9; i++) {
         sum = i * num;
-        document.write(num + " * " + i + " = " + sum + "<br/>");
+        document.write(num + " * " + i + " = " + sum + "<br>");
     }
 } else {
     alert("2부터 9까지의 숫자만 입력해 주세요.");
@@ -109,7 +109,7 @@ for(let i = 1; i <= 9; i++) {// 줄 수
     for(let star = 1; star <= i; star++) {// 별 수
         document.write("*");
     }
-    document.write("<br/>");
+    document.write("<br>");
 }
 ```
 
