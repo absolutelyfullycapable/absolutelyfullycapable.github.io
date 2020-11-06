@@ -2,13 +2,13 @@
 
 layout: post
 
-title: "Javascript 기초"
+title: "JavaScript 기초"
 
-description: "Javascript에 대해 간략하게 알아보자"
+description: "JavaScript에 대해 간략하게 알아보자"
 
 date: 2020-09-01
 
-tags: javascript
+tags: JavaScript
 
 comments: true
 

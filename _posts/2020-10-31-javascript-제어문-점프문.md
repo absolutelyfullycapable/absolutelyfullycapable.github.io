@@ -2,13 +2,13 @@
 
 layout: post
 
-title: "Javascript 제어문 (3) 점프문"
+title: "JavaScript 제어문 (3) 점프문"
 
 description: "제어문 중 점프문에 대해 알아보자"
 
 date: 2020-10-31
 
-tags: javascript 제어문 점프문
+tags: JavaScript 제어문 점프문
 
 comments: true
 

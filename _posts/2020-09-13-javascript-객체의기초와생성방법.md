@@ -2,13 +2,13 @@
 
 layout: post
 
-title: "Javascript 객체의 기초와 객체 생성 방법"
+title: "JavaScript 객체의 기초와 객체 생성 방법"
 
 description: "객체에 대한 기본적인 것들과 객체 생성 방법에 대해 알아보자"
 
 date: 2020-09-13
 
-tags: javascript 객체
+tags: JavaScript 객체
 
 comments: true
 

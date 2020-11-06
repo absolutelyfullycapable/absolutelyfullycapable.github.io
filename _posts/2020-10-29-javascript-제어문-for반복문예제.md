@@ -2,13 +2,13 @@
 
 layout: post
 
-title: "Javascript 제어문 (2) 반복문 - for 반복문 예제"
+title: "JavaScript 제어문 (2) 반복문 - for 반복문 예제"
 
 description: "제어문의 반복문 중 for 반복문의 다양한 예제를 작성해 보자"
 
 date: 2020-10-29
 
-tags: javascript 제어문 반복문 중첩 for반복문
+tags: JavaScript 제어문 반복문 중첩 for반복문
 
 comments: true
 

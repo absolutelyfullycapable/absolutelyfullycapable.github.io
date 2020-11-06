@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Javascript 명시적 타입 변환"
+title: "JavaScript 명시적 타입 변환"
 description: "숫자를 문자열로, 문자열을 숫자로, 논리값으로 변환하는 방법을 알아보자"
 date: 2020-09-04
-tags: javascript
+tags: JavaScript 타입변환
 comments: true
 ---
 

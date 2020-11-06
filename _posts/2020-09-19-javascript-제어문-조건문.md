@@ -2,13 +2,13 @@
 
 layout: post
 
-title: "Javascript 제어문 (1) 조건문"
+title: "JavaScript 제어문 (1) 조건문"
 
 description: "제어문 중 조건문에 대해 알아보자"
 
 date: 2020-09-19
 
-tags: javascript 제어문 조건문
+tags: JavaScript 제어문 조건문
 
 comments: true
 

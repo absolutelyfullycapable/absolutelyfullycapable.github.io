@@ -2,13 +2,13 @@
 
 layout: post
 
-title: "Javascript 제어문 (1) 조건문 - switch~case문 예제"
+title: "JavaScript 제어문 (1) 조건문 - switch~case문 예제"
 
 description: "제어문의 조건문 중 switch~case문의 다양한 예제를 작성해 보자"
 
 date: 2020-09-20
 
-tags: javascript 제어문 조건문 중첩 switch~case문
+tags: JavaScript 제어문 조건문 중첩 switch~case문
 
 comments: true
 
