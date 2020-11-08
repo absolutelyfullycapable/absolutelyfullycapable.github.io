@@ -3,7 +3,7 @@ Welcome!
 
 ### about
 - 이곳은 **개인 블로그 저장소**입니다.
-- **Javascript**를 비롯한 HTML5, CSS3 등 코딩 공부 기록이 올라오는 곳입니다.
+- **JavaScript**를 비롯한 HTML5, CSS3, jQuery 등 코딩 공부 기록이 올라오는 곳입니다.
 - 꾸준히 성실하게 공부하는 것이 목표입니다.
 
 ### contact
