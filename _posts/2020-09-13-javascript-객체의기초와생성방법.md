@@ -25,14 +25,8 @@ comments: true
 -  자바스크립트 객체는 크게 네이티브 객체, 호스트 객체, 사용자 정의 객체로 나뉘어짐
 	- **네이티브 객체(Native  Object), 코어 객체(Core Object)**: ECMAScript 사양에 정의된 객체
 	    - 내장 생성자 객체(Object, String, Number, Boolean, Array, Function...), JSON, Math, Reflect 등
-
-    <br/>
-
 	- **호스트 객체(Host Object)**: ECMAScript에는 정의되어 있지 않지만 자바스크립트 실행 환경에 정의된 객체 -> 운영 체제, 웹 브라우저마다 달라짐
 	    - BOM 객체(Browser Object Model(브라우저 객체): Window, Navigator, History, Location, Screen, Document...), DOM 객체(Document Object Model(문서 객체 모델)), XMLHttpRequest 객체, HTML5의 각종 API...
-
-    <br/>
-
 	- **사용자 정의 객체(User-defined Object)**: 사용자가 정의한 자바스크립트 코드를 실행한 결과로 생성된 객체
 
 <br/>
@@ -63,25 +57,17 @@ comments: true
 	- 마침표(.) 연산자: 프로퍼티 이름, 즉 식별자만 사용 가능
 	    - obj.name = "이름"; -> 객체명.속성(프로퍼티) = 값
 
-    ```js
-    card.suit // >> 하트
-    ```
-
-    <br/>
+    `card.suit // >> 하트`
 
 	- 대괄호([]) 연산자: 프로퍼티 이름 또는 문자열 반환하는 표현식 사용 가능
 
-	```js
-    card["rank"] // >> A
-    ```
+	`card["rank"] // >> A`
 
 <br/>
 
 - 객체에 없는 프로퍼티를 읽으려고 시도하면 undefined 반환됨
 
-	```js
-    card.color // >> undefined
-    ```
+	`card.color // >> undefined`
 
 <br/>
 
@@ -198,9 +184,7 @@ console.log(address.연락처);
 - Date 생성자
 	- 날짜와 시간을 표현하는 객체 생성
 
-		```js
-        var now = new Date();
-        ```
+		`var now = new Date();`
 
 		- .getFullYear() : 연도를 뜻하는 숫자값
 		- .getMonth(); : 월을 뜻하는 숫자값, 0부터 시작
