@@ -23,9 +23,11 @@ comments: true
 -  데이터 여러 개를 하나로 모은 복합 데이터
 -  변수와 함수(속성, 이벤트, 매서드)가 모여 만든 변형 가능한 속성들의 집합
 -  자바스크립트 객체는 크게 네이티브 객체, 호스트 객체, 사용자 정의 객체로 나뉘어짐
-	- **네이티브 객체**: ECMAScript 사양에 정의된 객체
-	- **호스트 객체**: ECMAScript에는 정의되어 있지 않지만 자바스크립트 실행 환경에 정의된 객체
-	- **사용자 정의 객체**: 사용자가 정의한 자바스크립트 코드를 실행한 결과로 생성된 객체
+	- **네이티브 객체(Native  Object), 코어 객체(Core Object)**: ECMAScript 사양에 정의된 객체
+	    - 내장 생성자 객체(Object, String, Number, Boolean, Array, Function...), JSON, Math, Reflect 등
+	- **호스트 객체(Host Object)**: ECMAScript에는 정의되어 있지 않지만 자바스크립트 실행 환경에 정의된 객체 -> 운영 체제, 웹 브라우저마다 달라짐
+	    - BOM 객체(Browser Object Model(브라우저 객체): Window, Navigator, History, Location, Screen, Document...), DOM 객체(Document Object Model(문서 객체 모델)), XMLHttpRequest 객체, HTML5의 각종 API...
+	- **사용자 정의 객체(User-defined Object)**: 사용자가 정의한 자바스크립트 코드를 실행한 결과로 생성된 객체
 
 <br/>
 프로퍼티
@@ -44,6 +46,7 @@ comments: true
 - ex) var card = {suit: "하트", rank: "A"};
 	- {...} : **객체 리터럴**
 	- 객체 리터럴을 변수 card에 대입한 것
+	- 객체가 생성되면 객체 내부에는 속성(프로퍼티)와 값이 존재
 	- **프로퍼티 이름 (키):프로터티 값** ('콜론(:)'으로 구분)
 	- 프로퍼티 값에는 모든 데이터 타입의 값과 표현식 대입 가능
 	- 중괄호 안에 있는 프로퍼티들은 **쉼표(,)**로 구분
@@ -52,6 +55,7 @@ comments: true
 
 - 변수에 대입된 객체 안의 프로퍼티 값을 읽거나 쓸 때는 **마침표 연산자** 또는 **대괄호 연산자** 사용 (객체 접근)
 	- 마침표(.) 연산자: 프로퍼티 이름, 즉 식별자만 사용 가능
+	    - obj.name = "이름"; -> 객체명.속성(프로퍼티) = 값
 
     `card.suit // >> 하트`
 
@@ -73,8 +77,6 @@ comments: true
 	- 이때 변수의 상태를 **그 객체를 참조하고 있다**라고 함
 
 <br/>
-- - -
-<br/>
 
 - 프로퍼티 추가와 삭제
 	- 자바스크립트의 객체는 실행 중에 프로퍼티를 자유롭게 추가하거나 삭제할 수 있음
@@ -92,6 +94,42 @@ comments: true
 	delete card.rank;
     console.log(card); // >> Object {suit:"하트", value:14}
     ```
+
+<br/>
+
+- 간단한 예시
+
+```js
+let obj = {};
+obj.name = "이름";
+obj.age = "나이";
+
+document.write("객체 obj의 name 속성은 " + obj.name + "<br>");
+document.write("객체 obj의 age property은 " + obj.age + "<br>");
+document.write(obj);
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbtFTFb%2FbtqM5UEZWaT%2F9v2oI2gzB6zWgrEc5y5Dd0%2Fimg.png)
+
+<br/>
+
+```js
+let address = {
+    "이름" : "홍길동",
+    "주소" : "서울특별시"
+};
+
+address.우편번호 = 1550; // 객체 속성 추가
+
+console.log(address.이름);
+console.log(address.주소);
+console.log(address.우편번호);
+
+address["연락처"] = "010-1234-5678"; // 객체 속성 추가
+console.log(address.연락처);
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbfJbOq%2FbtqM4zg101Y%2FM5Is3YeZxgCMMWm7kKP10k%2Fimg.png)
 
 <br/>
 - - -
