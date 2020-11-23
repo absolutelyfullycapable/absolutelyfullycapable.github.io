@@ -24,8 +24,7 @@ comments: true
 	- break문, continue문, etc...
 - 문장에 라벨을 붙이면 break문이나 continue문을 실행한 후에 점프할 수 있는 위치가 됨
 
-
-<br/>
+<br>
 
 #### **1. label문**
 
@@ -35,7 +34,7 @@ comments: true
 - 프로그램 처리 구조에 주의해야 함
 	- 너무 많이 사용하면 프로그램의 논리성이 약해지고, 순환 구조로 프로그래밍하면 무한 반복에 빠질 수 있음
 
-<br/>
+<br>
 
 ##### **· 작성 방법**
 
@@ -46,7 +45,7 @@ comments: true
 
 라벨 이름에는 모든 식별자를 사용할 수 있음
 
-<br/>
+<br>
 
 ##### **· label문의 처리 흐름 예시**
 
@@ -60,10 +59,10 @@ loop: while(true) {
 
 break loop;를 실행하면 앞과 뒤 코드와 상관없이 loop라는 라벨이 붙은 while문에서 빠져나옴
 
-<br/>
-<br/>
+<br>
+<br>
 - - -
-<br/>
+<br>
 
 #### **2. break문**
 
@@ -73,7 +72,7 @@ break loop;를 실행하면 앞과 뒤 코드와 상관없이 loop라는 라벨�
 - break문을 실행하면 가장 안쪽에 있는 반복문이나 switch문에서 빠져나옴
 - **반복문을 완전히 벗어나게 하는 역할**
 
-<br/>
+<br>
 
 ##### **· 작성 방법**
 
@@ -93,8 +92,8 @@ break 라벨 이름;
 - break문과 라벨 이름 사이에는 줄 바꿈 문자를 넣지 않도록 주의
 	- 줄 바꿈 문자를 넣으면 자바스크립트 엔진이 내부적으로 세미콜론을 추가하므로 라벨을 지정하지 않은 break문으로 해석하기 때문
 
-<br/>
-<br/>
+<br>
+<br>
 
 ##### **· 간단한 예시**
 
@@ -114,7 +113,7 @@ while(1) {
 document.write("<br>1부터 100까지의 수 중 3의 배수의 합은 " + sum + "이다.");
 ```
 
-<br/>
+<br>
 
 2) 배열 a와 배열 b에서 같은 값을 가진 요소를 발견하면 전체 반복문에서 빠져나오기
 
@@ -134,7 +133,7 @@ console.log("a[" + i + "] = b[" + j + "]");
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F17fWY%2FbtqMfjMxBxH%2FiIPqgZ3fcAyjkn88jJqdB0%2Fimg.png)
 
-<br/>
+<br>
 
 3) 0에서 100까지 0을 포함한 3의 배수 출력 -> 20 이상인 3의 배수는 출력 제외
 
@@ -149,7 +148,7 @@ for(i = 0; i <= 100; i += 3) {
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvgIir%2FbtqMdWLhvoX%2F20im2mikM7GWjtBCFaXdTk%2Fimg.png)
 
-<br/>
+<br>
 
 4) 10번의 알림값을 가지고 있으나 3번의 알림 후 실행되지 않음
 
@@ -163,10 +162,10 @@ for(i = 1; i <= 10; i++) {
 alert("프로그램이 종료되었습니다.");
 ```
 
-<br/>
-<br/>
+<br>
+<br>
 - - -
-<br/>
+<br>
 
 #### **3. continue문**
 
@@ -180,7 +179,7 @@ alert("프로그램이 종료되었습니다.");
 		- **for문: 반복식을 실핸한 후에 조건식 평가 / true면 반복문 이어서 실행**
 		- **for~in문: 반복문의 처음으로 되돌아감 / 지정한 변수에 할당되어 있는 프로퍼티의 다음 프로퍼티를 대상으로 작업 실행**
 
-<br/>
+<br>
 
 ##### **· 작성 방법**
 
@@ -194,8 +193,8 @@ continue 라벨 이름;
 
 - continue문은 라벨 지정 여부와 관계없이 **반복문 안에서만 사용 가능**
 
-<br/>
-<br/>
+<br>
+<br>
 
 ##### **· 간단한 예시**
 
@@ -218,7 +217,7 @@ for(i = 0; i < 3; i++) {
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbnbIpL%2FbtqMdinOMV8%2FzQII1EQ940TQFsrtrp5MyK%2Fimg.png)
 
-<br/>
+<br>
 
 2) 1부터 100까지 수 중 3의 배수의 합 구하기
 
@@ -236,7 +235,7 @@ for(x = 1; x <= 100; x++) {
 document.write("<br>1부터 100까지의 수 중 3의 배수의 합은 " + sum + "이다.");
 ```
 
-<br/>
+<br>
 
 3) 배열 a 안에서 값이 0 이상인 요소의 값을 모두 더하기
 

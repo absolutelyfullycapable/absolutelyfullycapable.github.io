@@ -16,7 +16,7 @@ comments: true
 
 ### **· for 반복문 예제**
 
-<br/>
+<br>
 
 1) 1부터 10까지의 합 구하기
 
@@ -32,7 +32,7 @@ document.body.innerHTML = "<h1>1부터 10까지의 합은 " + sum + "입니다.<
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fpgugc%2FbtqL3wlCI9G%2FTG8b4TL4dYah73pkycR1ek%2Fimg.png)
 
-<br/>
+<br>
 
 2) 3, 5, 7, 9의 합
 
@@ -48,7 +48,7 @@ document.body.innerHTML = "<h1>3, 5, 7, 9의 합은 " + sum + "입니다.</h1>";
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbawZXM%2FbtqL1oBVmgm%2FnUB3nGxF2Zc5zZz6QBBynK%2Fimg.png)
 
-<br/>
+<br>
 
 3) 1부터 입력한 숫자를 모두 더해 출력
 
@@ -64,7 +64,7 @@ for(let i = 1; i <= num; i++) {
 document.inner.HTML = "<h1>1부터 " + num + "까지의 합은 " + sum + "입니다.</h1>"
 ```
 
-<br/>
+<br>
 
 4) 1부터 100까지 중에 3의 배수이지만 7의 배수는 아닌 숫자만 출력
 
@@ -78,7 +78,7 @@ for(let i = 1; i <= 100; i++) {
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdKAKmO%2FbtqL6HUqF1T%2F1ZEK0VX6b5pmz4IZO6F8u0%2Fimg.png)
 
-<br/>
+<br>
 
 5) 입력 받은 구구단 출력
 
@@ -100,7 +100,7 @@ if(num >= 2 && num <= 9) {
 }
 ```
 
-<br/>
+<br>
 
 6) 별 쌓기 - **중첩 반복문**
 

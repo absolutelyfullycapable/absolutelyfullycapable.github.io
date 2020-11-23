@@ -8,9 +8,12 @@ comments: true
 ---
 
 ## **명시적 타입 변환**
-<br/>
+
+<br>
+
 #### **1. 숫자를 문자열로 변환**
-<br/>
+
+<br>
 
 - 숫자 + 문자열
 	- 숫자와 문자열을 + 연산자로 연결하면 숫자의 타입이 문자열로 바뀜
@@ -20,7 +23,7 @@ comments: true
 	ex2) 100 + ""; // "100" : 숫자에 빈 문자열을 더해 숫자를 문자열로 바꿀 수 있음
 	```
 
-    <br/>
+    <br>
 
 - Number 객체의 메서드 활용
 	- toString: 숫자를 문자열로 변환
@@ -28,7 +31,7 @@ comments: true
 	- toFixed: 숫자의 소수점 아래 자릿수를 지정한 문자열로 변환
 	- toExponential: 숫자의 소수점 아래 자릿수를 지정한 문자열로 변환하되 지수와 함께 표시
 	- toPrecision: 숫자를 유효 숫자가 지정된 문자열로 변환, 유효 숫자가 정수부의 자릿수보다 작을 때는 지수로 표시
-	<br/>
+	<br>
 
     ```js
 	var a = 26;
@@ -44,26 +47,28 @@ comments: true
 	b.toPrecision(3); // 1.23e+3
     ```
 
-    <br/>
+    <br>
 
 - **String 함수 활용**
 	- String 생성자 앞에 new를 붙이지 않으면 일반적인 함수로 활용 가능
 	- 이때 String 함수 반환값은 String 객체가 아닌 문자열
 	- **String 함수에는 모든 데이터 타입을 문자열로 바꾸는 기능이 있음**
-	<br/>
+	<br>
 
 	```js
 	const a = "합계", b = 234, c = 654;
     console.log(a + (b + c)); // 합계888
 	console.log(a + (String(b) + String(c))); // 합계234654
     ```
-	<br/>
+	<br>
 
 - - - -
 
-<br/>
+<br>
+
 #### **2. 문자열을 숫자로 변환**
-<br/>
+
+<br>
 
 - 수식 안에서 묵시적으로 변환
 
@@ -72,13 +77,13 @@ comments: true
     a - 0; // 첫 번째 방법
     +a; // 두 번째 방법
     ```
-	<br/>
+	<br>
 
 - parselnt와 parseFloat 함수 사용
 	- parselnt: 문자열을 정수로 바꿈
 	- parseFloat: 문자열을 부동소수점으로 바꿈
 	- 두 함수 모두 **첫 번째 문자를 숫자로 바꾼 값으로 반환, 이후 등장하는 문자열은 무시**
-	<br/>
+	<br>
 
 	```js
 	parselnt("3.14"); // 3
@@ -92,13 +97,13 @@ comments: true
     parselnt("ff", 16); // 255 : 문자열을 16진수로 해석해서 변환
     ```
 
-    <br/>
+    <br>
 
 - **Number 함수를 활용하는 방법**
 	- Number 생성자 앞에 new를 붙이지 않으면 일반적인 함수로 활용 가능
 	- 이때 Number 함수 반환값은 Number 객체가 아닌 숫자
 	- **Number 함수에는 모든 데이터 타입을 숫자로 바꾸는 기능이 있음**
-	<br/>
+	<br>
 
 	```js
 	Number(true); // 1
@@ -111,13 +116,15 @@ comments: true
    	const total = Number(a) + Number(b) + Number(c);
     console.log(total); // NaN
     ```
-	<br/>
+	<br>
 
 - - - -
 
-<br/>
+<br>
+
 #### **3. 논리값으로 변환**
-<br/>
+
+<br>
 
 - !!a
 	- ! 연산자는 논리 타입이 아닌 값의 타입을 논치 타입으로 바꿈

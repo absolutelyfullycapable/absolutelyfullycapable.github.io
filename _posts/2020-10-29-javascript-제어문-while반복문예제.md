@@ -16,7 +16,7 @@ comments: true
 
 ### **· while 반복문 예제**
 
-<br/>
+<br>
 
 1) 구구단 8단 출력
 
@@ -33,7 +33,7 @@ while(i <= 9) {
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9VIPn%2FbtqL8nhtrD4%2FDoj6wIvw4lKd2AcSKlMfK1%2Fimg.png)
 
-<br/>
+<br>
 
 2) 구구단 2단부터 4단까지 출력
 
@@ -56,7 +56,7 @@ while (num < 4) {
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Flku4t%2FbtqL6JlhgGg%2FgvxPWl6WzniQnFK3Re3sD0%2Fimg.png)
 
-<br/>
+<br>
 
 3) 1에서 30까지의 숫자 중 2의 배수이고 6의 배수일 경우만 출력
 
@@ -73,7 +73,7 @@ while(i <= 30) {
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrVCij%2FbtqL8VSzhY1%2FRlami1QsiX2ZrVZvQnql1K%2Fimg.png)
 
-<br/>
+<br>
 
 4) 1부터 1000까지의 합
 
@@ -91,7 +91,7 @@ document.body.innerHTML = "<h2>1부터 1000까지의 합은 " + sum + "입니다
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fda4P7r%2FbtqL8U0tnIF%2Frk43lgKVc5EzgIUTEK3yTK%2Fimg.png)
 
-<br/>
+<br>
 
 5) 1부터 몇까지 더해야 3000을 넘길 수 있는지 확인
 
