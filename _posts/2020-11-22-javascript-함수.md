@@ -4,7 +4,7 @@ layout: post
 
 title: "JavaScript 함수"
 
-description: "JavaScript 함수에 대해 알아보자"
+description: "JavaScript 함수의 특징, 작성 방법, 호출, 반환값 출력에 대해 알아보자"
 
 date: 2020-11-22
 
@@ -133,6 +133,8 @@ printMsg(after);    // 함수 선언 후 호출
     myMsg(after); // 함수 호출 에러
     ```
 
+<br>
+
 - 이 방법 사용 시 **함수 선언 전에 함수 호출을 할 수 없다는 점에 주의해야 함**
     - 함수 선언 전에 호출하면 구문 에러(syntax error)가 발생함
 
@@ -186,6 +188,13 @@ printMsg("호출되었습니다."); // 함수 호출
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmJwFg%2FbtqNZNmtAd9%2FcnCe8X2gTp0HFN0DOUDwq1%2Fimg.png)
 
+<br>
+
+##### **3. Function 생성자로 정의**
+
+##### **4. 화살표 함수 표현식으로 정의**
+
+
 - - -
 
 <br>
@@ -195,7 +204,7 @@ printMsg("호출되었습니다."); // 함수 호출
 - 함수 수행 결괏값을 반환할 때는 **'return'** 키워드 사용
 - 반환할 결괏값이 없다면 return문 생략 가능
 - 반환값을 저장하기 위한 변수 미리 선언해야 함
-    - 작성 방법 예시에서는 'result'가 그 역할
+    - 간단한 예시 1)에서는 'result'가 그 역할
 - 함수 처리가 완료되면 자동으로 함수를 호출한 시점으로 돌아가 프로그램 계속 수행
 
 <br>
@@ -211,3 +220,69 @@ function 함수명(매개 변수 1, 매개 변수 2, ...) { // 함수 선언
 result = 함수명(인자 1, 인자 2, ...); // 함수 호출
 ```
 
+<br>
+
+- 간단한 예시
+
+1) 변수 이용하여 반환값 출력
+
+```js
+var result; // result는 반환값을 저장하는 변수
+
+function add(name, n) {
+    document.write(name + " 학생이 1부터 " + n + "까지 덧셈 수행<br>");
+    var sum = 0;
+    for(var i = 1; i <= n; i++) {
+        sum+=i;
+    }
+    return sum;
+}
+
+result = add('홍길동', 10);
+document.write("결과: " + result + "<br>");
+
+result = add('이영희', 100);
+document.write("결과: " + result);
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAulat%2FbtqN2VK3461%2FkL8TyBhO7ELcoZ2dcprh01%2Fimg.png)
+
+<br>
+
+2) 변수 없이 반환값 출력하기
+
+```js
+function add(name, n) {
+    document.write(name + " 학생이 1부터 " + n + "까지 덧셈 수행<br>");
+    var sum = 0;
+    for(var i = 1; i <= n; i++) {
+        sum+=i;
+    }
+    return sum;
+}
+
+document.write("결과: " + add('홍길동', 10) + "<br>");
+document.write("결과: " + add('이영희', 100));
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAulat%2FbtqN2VK3461%2FkL8TyBhO7ELcoZ2dcprh01%2Fimg.png)
+
+<br>
+
+3) 서로 다른 변수로 같은 함수 반환값 출력하기
+
+- 자바스크립트 함수에서는 여러 변수명으로 하나의 함수를 사용할 수 있음
+
+```js
+function add(x, y) {
+    return x+y;
+}
+
+var calSum = add;   // 함수를 변수에 할당
+var addUp = add;    // 함수를 변수에 할당
+
+document.write("결과 1: " + calSum(5, 10) + "<br>");
+document.write("결과 2: " + addUp(3, 20));
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdGt3R0%2FbtqNZNz8cqW%2FEyxzXPj0eXy9kiElGnEsck%2Fimg.png)
