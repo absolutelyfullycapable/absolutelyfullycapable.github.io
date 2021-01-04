@@ -22,6 +22,8 @@ comments: true
     - 호출할 때마다 어떤 입력값을 주냐에 따라 출력값이 달라짐
 - 함수를 선언, 사용하는 이유: **한번 정의한 작업을 필요할 때마다 호출하여 사용하기 위함**
 
+<br>
+
 - - -
 
 <br>
@@ -54,19 +56,41 @@ function 함수명(매개 변수 1, 매개 변수 2, ...) { // 함수 선언
 
 1. 함수 선언문으로 정의
 
-     `function square(x) { return x*x; };`
+	- 함수 선언문으로 정의한 함수는 호출문이 그보다 앞에 위치해도 호출할 수 있음 (자바스크립트 엔진이 함수 선언문을 프로그램의 첫머리 또는 함수의 첫머리로 끌어올리기 때문)
+
+    ```js
+    console.log(square(2)); // -> 4
+    function square(x) { return x*x; };
+    ```
 
 2. 함수 리터럴로 정의 (표현식으로 작성)
 
-     `var square = function square(x) { return x*x; };`
+	- 함수 리터럴로 정의한 함수는 그 참조를 변수에 할당한 후 호출 가능
+
+    ```js
+    var square = function square(x) { return x*x; };`
+    console.log(square(2)); // -> 4
+    ```
 
 3. Function 생성자로 정의
 
-     `var square = new Function("x", "return x*x");`
+	- Function 생성자로 정의한 함수는 그 참조를 변수에 할당한 후 호출 가능
+
+    ```js
+    var square = new Function("x", "return x*x");
+    console.log(square(2)); // -> 4
+    ```
 
 4. 화살표 함수 표현식으로 정의
 
-     `var square = x => x*x;`
+	- 화살표 함수 표현식으로 정의한 함수는 그 참조를 변수에 할당한 후 호출 가능
+
+    ```js
+    var square = x => x*x;
+    console.log(square(2)); // -> 4
+    ```
+
+<br>
 
 - - -
 
