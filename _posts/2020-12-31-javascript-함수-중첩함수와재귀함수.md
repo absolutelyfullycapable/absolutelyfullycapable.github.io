@@ -2,7 +2,7 @@
 
 layout: post
 
-title: "JavaScript 함수 - 중첩 함수와 재귀 함수"
+title: "JavaScript 함수 (2) 중첩 함수와 재귀 함수"
 
 description: "JavaScript 함수 중 중첩 함수와 재귀 함수에 대해 알아보자"
 
