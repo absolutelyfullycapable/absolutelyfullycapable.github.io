@@ -2,7 +2,7 @@
 
 layout: post
 
-title: "JavaScript 함수"
+title: "JavaScript 함수 (1)"
 
 description: "JavaScript 함수의 특징, 작성 방법, 호출, 반환값 출력에 대해 알아보자"
 
@@ -47,6 +47,26 @@ function 함수명(매개 변수 1, 매개 변수 2, ...) { // 함수 선언
     - 기본적으로 지역 변수로 정의되어 함수 내에서만 사용 가능
 4. **function**: 함수 선언 시 사용되는 키워드
 5. **return**: 함수에서 수행한 결괏값을 반환할 때 사용하는 키워드
+
+- - -
+
+#### **· 함수 정의 방법**
+
+1. 함수 선언문으로 정의
+
+     `function square(x) { return x*x; };`
+
+2. 함수 리터럴로 정의 (표현식으로 작성)
+
+     `var square = function square(x) { return x*x; };`
+
+3. Function 생성자로 정의
+
+     `var square = new Function("x", "return x*x");`
+
+4. 화살표 함수 표현식으로 정의
+
+     `var square = x => x*x;`
 
 - - -
 
@@ -241,11 +261,6 @@ printMsg("호출되었습니다."); // 함수 호출
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmJwFg%2FbtqNZNmtAd9%2FcnCe8X2gTp0HFN0DOUDwq1%2Fimg.png)
 
 <br>
-
-##### **3. Function 생성자로 정의**
-
-##### **4. 화살표 함수 표현식으로 정의**
-
 
 - - -
 
