@@ -1,5 +1,5 @@
 ---
-title: "Bootstrap 특징"
+title: "Bootstrap (2) 특징"
 date: 2021-01-11
 categories: [Bootstrap]
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: "Bootstrap 기초"
+title: "Bootstrap (1) 기초"
 date: 2021-01-11
 categories: [Bootstrap]
 comments: true

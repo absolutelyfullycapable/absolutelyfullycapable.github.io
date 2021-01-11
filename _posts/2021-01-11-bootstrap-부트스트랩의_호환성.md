@@ -1,5 +1,5 @@
 ---
-title: "Bootstrap 호환성"
+title: "Bootstrap (3) 호환성"
 date: 2021-01-11
 categories: [Bootstrap]
 comments: true
