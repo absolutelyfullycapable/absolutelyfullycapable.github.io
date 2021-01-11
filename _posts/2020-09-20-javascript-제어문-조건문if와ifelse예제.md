@@ -1,17 +1,8 @@
 ---
-
-layout: post
-
 title: "JavaScript 제어문 (1) 조건문 - if~else문, 다중 if~else문 예제"
-
-description: "제어문의 조건문 중 if~else문, 다중 if~else문의 다양한 예제를 작성해 보자"
-
 date: 2020-09-20
-
-tags: JavaScript 제어문 조건문 중첩 if~else문 다중if~else문
-
+categories: [JavaScript]
 comments: true
-
 ---
 
 ### **1. if~else문 예제**

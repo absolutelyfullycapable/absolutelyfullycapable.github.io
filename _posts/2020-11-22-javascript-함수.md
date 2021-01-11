@@ -1,17 +1,8 @@
 ---
-
-layout: post
-
 title: "JavaScript 함수 (1)"
-
-description: "JavaScript 함수의 특징, 작성 방법, 호출, 반환값 출력에 대해 알아보자"
-
 date: 2020-11-22
-
-tags: JavaScript 함수
-
+categories: [JavaScript]
 comments: true
-
 ---
 
 ## **함수**

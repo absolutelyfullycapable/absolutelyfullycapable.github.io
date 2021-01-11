@@ -1,22 +1,9 @@
 ---
-
-layout: post
-
 title: "JavaScript 제어문 (2) 반복문"
-
-description: "제어문 중 반복문에 대해 알아보자"
-
 date: 2020-10-27
-
-tags: JavaScript 제어문 반복문
-
+categories: [JavaScript]
 comments: true
-
 ---
-
-
-
-
 
 ### **반복문**
 
