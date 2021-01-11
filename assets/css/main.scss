@@ -254,6 +254,7 @@ img {
 
 .archive_date {
     text-transform: uppercase;
+    color: #6995b5;
 
     @include breakpoint(medium) {
         float: right;
