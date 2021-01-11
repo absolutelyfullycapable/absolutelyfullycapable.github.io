@@ -11,4 +11,4 @@ Welcome!
 -lovinsurfaces@gmail.com
 
 <br>
-theme copyright (c) 2018 Mike JS. Choi
+theme copyright (c) starry99
