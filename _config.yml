@@ -1,25 +1,47 @@
-# Site settings
-title: "JiHye LEE"
-description: > 
-  Archive Of Records
 
-author: JiHye LEE
-email: fearnonemyself@gmail.com
-github_username: absolutelyfullycapable
+title: Archive Of Record
+email: lovinsurfaces@gmail.com
+description: > # this means to ignore newlines until "baseurl"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://absolutelyfullycapable.github.io" # the base hostname & protocol for your site
+baseurl: # the subpath of the site
+url: http://absolutelyfullycapable.github.io/test # the base hostname & protocol for your site
 
-google_analytics_id: UA-1111111111-1
-disqus_id:
+permalink: /:year-:month/:title
+timezone:
 
-# Build settings
-include: [_pages]
-markdown: kramdown
-permalink: /:year/:month/:title.html
+favicon: favicon.ico
 
-sass:
-    style: compressed
+google_analytics: #UA—XXXXXXXX-X
+disqus_shortname: #disqus shortname
 
-exclude: [vendor]
+user:
+  name: Archive Of Record
+  pic: /assets/img/profile.jpg
+  picAlt: "profile"
+  job: keep studying
+  aboutme: true # comment this out if you don't need the 'about' page.
 
+exclude:
+  - README.md
+  - LICENSE
+  - github
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comment: true   
+ 
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: kramdown 
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false

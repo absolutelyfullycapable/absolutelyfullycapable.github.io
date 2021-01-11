@@ -1,42 +1,36 @@
 ---
 layout: page
 ---
-<article class="c-article">
-  <header class="c-article__header">
-    <h1 class="c-article__title">{{ page.title }}</h1>
-    <p class="c-article__time"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
-  </header>
-  <!-- Post Tags -->
-  <ul class="c-tags">
-    {% for tag in page.tags %}
-    <li class="c-tag">{{ tag }}</li>
-    {% endfor %}
-  </ul>
-  <div class="c-article__main">
+
+<div class="post">
+  <div>
+    {% if page.title %}
+    <p class="post_title">{{ page.title }}</p>
+    {% endif %}
+  </div>
+  <div class="post_data">
+    {% if page.date %}
+    <span class="post_date">{{ page.date | date: "%b %-d, %Y" }}</span>
+    {% endif %}
+    {% if page.categories %}
+    <span class="post_categories">
+      &raquo; {% for cat_name in page.categories %}
+      <a href="{{ site.baseurl }}/categories/{{ cat_name }}">{{ cat_name }}</a>{% if forloop.last == false %},
+      {% endif %}{% endfor %}
+    </span>
+    {% endif %}
+  </div>
+  <div class="post_content">
     {{ content }}
   </div>
-  <!-- Previous / Next Buttons -->
-  <div class="pagenav">
-    {% if page.previous.url %}
-    <div class="wrapper" id="left">
-      <small><b>Previous</b> {{page.previous.date | date: "%b %-d, %Y"}}</small>
-      <br>
-      <a class="no-hov" href="{{ page.previous.url | prepend: site.baseurl }}">&laquo; {{page.previous.title}}</a>
-    </div>
-    {% endif %}
-    {% if page.next.url %}
-    <div class="wrapper" id="right">
-      <small>{{page.next.date | date: "%b %-d, %Y"}} <b>Next</b></small>
-      <br>
-      <a class="no-hov" href="{{ page.next.url | prepend: site.baseurl }}">{{page.next.title}} &raquo;</a>
-    </div>
-    {% endif %}
-  </div>
-  <!-- Disqus comments view -->
-  {% if page.comments != false and site.disqus_id %}
-  <div class="post-disqus">
-    <section id="disqus_thread"></section>
-    {% include disqus.html %}
+
+
+  {% if page.comment %}
+  <div class="post_comment">
+
+    {% include disqus.html username = site.disqus.shortname %}
+
   </div>
   {% endif %}
-</article>
+
+</div>
