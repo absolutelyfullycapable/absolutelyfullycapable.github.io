@@ -328,7 +328,33 @@ result = 함수명(인자 1, 인자 2, ...); // 함수 호출
 
 - 간단한 예시
 
-1) 변수 이용하여 반환값 출력
+1) a * b 값을 반환
+
+```js
+function num(a, b) { // 매개 변수 a, b를 이용하여 a * b 값 반환
+    let sum = a * b;
+    console.log(sum);
+
+    return sum;
+
+    // 함수 안에서 선언된 변수나 값의 경우 외부에서의 접근이 불가능하기 때문에 매개 변수(인자)와 리턴 키워드 사용
+}
+
+// a: 10, b: 30
+alert(num(10, 30)); // 인자 10, 30을 함수 num에게 넘겨 줌
+
+// a: 20, b: 400
+alert(num(20, 400));
+
+// a: 15, b: 33
+alert(num(15, 33));
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FuaYCA%2FbtqTcP7yffi%2FUqoAepOgliQXk2qRy38skK%2Fimg.png)
+
+<br>
+
+2) 변수 이용하여 반환값 출력
 
 ```js
 var result; // result는 반환값을 저장하는 변수
@@ -353,7 +379,7 @@ document.write("결과: " + result);
 
 <br>
 
-2) 변수 없이 반환값 출력하기
+3) 변수 없이 반환값 출력하기
 
 ```js
 function add(name, n) {
@@ -373,7 +399,7 @@ document.write("결과: " + add('이영희', 100));
 
 <br>
 
-3) 서로 다른 변수로 같은 함수 반환값 출력하기
+4) 서로 다른 변수로 같은 함수 반환값 출력하기
 
 - 자바스크립트 함수에서는 여러 변수명으로 하나의 함수를 사용할 수 있음
 
