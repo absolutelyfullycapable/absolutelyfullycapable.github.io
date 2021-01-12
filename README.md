@@ -8,7 +8,7 @@ Welcome!
 
 ### contact
 
--lovinsurfaces@gmail.com
+- lovinsurfaces@gmail.com
 
 <br>
 theme copyright (c) starry99
