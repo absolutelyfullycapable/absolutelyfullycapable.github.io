@@ -1,5 +1,5 @@
 
-title: Archive Of Record
+title: Archive Of Records
 email: lovinsurfaces@gmail.com
 description: > # this means to ignore newlines until "baseurl"
   Write an awesome description for your new site here. You can edit this
@@ -18,7 +18,7 @@ google_analytics: #UA—XXXXXXXX-X
 disqus_shortname: #disqus shortname
 
 user:
-  name: Archive Of Record
+  name: Archive Of Records
   pic: /assets/img/profile.jpg
   picAlt: "profile"
   job: keep studying
