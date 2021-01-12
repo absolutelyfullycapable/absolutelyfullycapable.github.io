@@ -87,7 +87,7 @@ comments: true
 	- 1-1. 순수 자바스크립트 실행 시 **body 요소에 배치**
 	- 1-2. 자바스크립트로 HTML과 CSS 제어 시 **head의 자식 요소로 배치**
 
-    ```js
+    ```html
 
         <head>
             <meta charset="utf-8">
