@@ -62,7 +62,7 @@ switch(num) {
     	document.body.innerHTML = '<img src="img4.jpg" alt="image 4">';
         break;
     default:
-    	alert(''1~4번까지만 선택해 주세요.');
+    	alert('1~4번까지만 선택해 주세요.');
         window.location.reload();
 }
 ```
