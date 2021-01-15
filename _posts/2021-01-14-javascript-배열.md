@@ -135,7 +135,15 @@ a[3] = "D";
 console.log(a); // ["A", "B", "C", "D"];
 ```
 
-(2) push 메서드 사용 -> 요소의 끝에 추가
+(2) unshift 메서드 사용 -> 요소 앞부터 차례대로 추가
+
+```js
+var a = [3, 4, 5];
+a.unshift(1, 2);
+console.log(a); // [1, 2, 3, 4, 5]
+```
+
+(3) push 메서드 사용 -> 요소의 끝에 추가
 
 ```js
 var a = ["A", "B", "C"];
@@ -147,9 +155,7 @@ console.log(a); // ["A", "B", "C", "D"];
 
 #### **2. 삭제**
 
-(1) delete 연산자 사용 -> 특정 배열 요소 삭제
-
-- delete 연산자를 사용하여 배열 요소를 삭제해도 그 배열의 **length 값은 유지** (삭제한 요소만 사라짐)
+(1) delete 연산자 사용 -> 특정 배열 요소 삭제 / **length 값은 유지** (삭제한 요소만 사라짐)
 
 ```js
 var a = ["A", "B", "C"];
@@ -158,9 +164,7 @@ console.log(a); // ["A", undefined, "C"]
 console.log(a.length); // 3
 ```
 
-(2) shift 메서드 사용 -> 배열의 첫 번째 요소 삭제
-
-- **length 값 변경**
+(2) shift 메서드 사용 -> 배열의 첫 번째 요소 삭제 / **length 값 변경**
 
 ```js
 var a = ["A", "B", "C"];
@@ -168,9 +172,7 @@ a.shift(); // "A" 삭제
 console.log(a.length); // 2
 ```
 
-(3) pop 메서드 사용 -> 배열의 마지막 요소 삭제
-
-- **length 값 변경**
+(3) pop 메서드 사용 -> 배열의 마지막 요소 삭제 / **length 값 변경**
 
 ```js
 var a = ["A", "B", "C"];
