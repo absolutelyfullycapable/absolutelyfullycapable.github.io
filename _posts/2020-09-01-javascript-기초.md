@@ -5,7 +5,7 @@ categories: [JavaScript]
 comments: true
 ---
 
-**자바스크립트**
+## **자바스크립트**
 
 - 웹 문서를 동적으로 제어하기 위해 고안된 프로그래밍 언어
 
