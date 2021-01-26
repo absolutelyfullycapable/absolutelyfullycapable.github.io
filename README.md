@@ -11,4 +11,4 @@ Welcome!
 - lovinsurfaces@gmail.com
 
 <br>
-theme copyright (c) starry99
+theme copyright (c) [starry99](https://github.com/starry99/catbook)
