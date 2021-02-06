@@ -1,7 +1,7 @@
 ---
 title: "CSS3 flexible box(flexbox) - display:flex;"
 date: 2021-02-06
-categories: [JavaScript]
+categories: [CSS3]
 comments: true
 ---
 
