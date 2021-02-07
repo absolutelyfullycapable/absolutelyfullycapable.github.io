@@ -1,5 +1,5 @@
 ---
-title: "CSS3 flexible box(flexbox) - display:flex;"
+title: "CSS3 flexible box(flexbox)"
 date: 2021-02-06
 categories: [CSS3]
 comments: true
@@ -180,7 +180,7 @@ comments: true
 - 자식 박스(flex item)의 방향과 여러 줄 배치를 동시에 지정하는 속성
 - `flex-flow:(flex-direction 값) (flex-wrap 값);`으로 작성
 - ex) `flex-wrap` 예시 코드에 `flex-flow:row-reverse wrap` 작성 시
-    ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fv1dRT%2FbtqVh7QXXRm%2FkIg5n7IUx3ef2dgfqVZQo1%2Fimg.png)
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fv1dRT%2FbtqVh7QXXRm%2FkIg5n7IUx3ef2dgfqVZQo1%2Fimg.png)
 
 <br>
 
@@ -198,4 +198,61 @@ comments: true
     - `center`: 주축을 기준으로 중앙 배치
     - `space-around`: 주축 기준으로 여백 포함 양 끝 배치
     - `space-between`: 주축을 기준으로 양 끝에 자식 박스(flex item)를 붙이고 나머지 자식 박스(flex item)를 동일한 간격으로 배치
-    - `space-evenly`
+    - `space-evenly`: 주축을 기준으로 자식 박스(flex item)의 사이와 양 끝에 균일한 간격을 만들어 배치
+        - IE 지원하지 않음
+
+```html
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+        <title>flexible box</title>
+        <style>
+            body { margin:0; font-size:28px; font-weight:bold; text-align:center; }
+
+             .container { border:#000 solid 4px; width:500px; display:flex; }
+
+             .container div { width:100px; height:100px; }
+             .box1 { background-color:steelblue; }
+             .box2 { background-color:tan; }
+             .box3 { background-color:#eee; }
+        </style>
+    </head>
+
+    <body>
+        <div class="container"> <!-- flex container의 역할 -->
+            <div class="box1">box1</div> <!-- flex item의 역할 -->
+            <div class="box2">box2</div> <!-- flex item의 역할 -->
+            <div class="box3">box3</div> <!-- flex item의 역할 -->
+        </div>
+    </body>
+</html>
+```
+
+일 때
+
+1) `flex-start`
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbCclKf%2FbtqV8Fr9kW2%2FpJCPvfhQNGbBi4y9IZdVP1%2Fimg.png)
+
+2) `flex-end`
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdzToIC%2FbtqV2WVxhAc%2FUEdDjKkQ9B4XWp01jKJPBk%2Fimg.png)
+
+3) `center`
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdhvrv3%2FbtqV36cvKuL%2FMZvuIspd9lxUH2isUuSUrk%2Fimg.png)
+
+4) `space-around`
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FuNaQ2%2FbtqVV23Pa7y%2F7SEFmKHkapQHeuvM0Ruzo1%2Fimg.png)
+
+5) `space-between`
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbXEoU9%2FbtqV08ITlrZ%2Foxc9TkviTIPS59PtZhK49K%2Fimg.png)
+
+6) `space-evenly`
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtHpwJ%2FbtqV0FmHmxF%2FgGN4e9a5MGsVMfS4bhSzl1%2Fimg.png)
