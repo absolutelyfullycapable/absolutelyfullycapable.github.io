@@ -1,5 +1,5 @@
 ---
-title: "CSS3 flexible box(flexbox)"
+title: "CSS3 flexible box (flexbox)"
 date: 2021-02-06
 categories: [CSS3]
 comments: true
