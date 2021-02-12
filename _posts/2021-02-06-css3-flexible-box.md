@@ -280,7 +280,7 @@ comments: true
     - `flex-end`: 교차축을 기준으로 끝점(bottom)에서 시작점(top)으로 배치
     - `center`: 교차축을 기준으로 중앙 배치
     - `baseline`: 자식 박스 시작점에서 배치되는 글자 baseline에 맞춤
-        ![baseline](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FosQZQ%2FbtqWU7QFZnE%2Fr2ezAIpvHsuD1MWgeh77v1%2Fimg.png)
+![baseline](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FosQZQ%2FbtqWU7QFZnE%2Fr2ezAIpvHsuD1MWgeh77v1%2Fimg.png)
     - `stretch`: 기본값, 높이값이 지정되지 않았을 때 자식 박스 확장 배치
 
 ```html
