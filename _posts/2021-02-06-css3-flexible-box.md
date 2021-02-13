@@ -40,7 +40,7 @@ comments: true
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
-        <title>flexible box</title>
+        <title>flexible box - display:flex</title>
         <style>
             body { margin:0; font-size:28px; font-weight:bold; text-align:center; }
 
@@ -73,6 +73,26 @@ comments: true
 
 - `display:flex;` 작성 후
     - 자식 박스들(flex item)이 자동으로 정렬되는 것을 확인할 수 있음
+
+<br>
+
+- - -
+
+<br>
+
+### display:inline-flex와 display:flex의 차이점
+
+1) `display:inline-flex`
+
+- 부모 박스는 인라인 성격을 가진 상태로 flex 적용됨
+
+![example](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcg0wJW%2FbtqXb1OuuQU%2FgFdrsb9VpKmLONN3xH5qV0%2Fimg.png)
+
+2) `display:flex`
+
+- 부모 박스는 블록 성격을 가진 상태로 flex 적용됨
+
+![example](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbT4DLI%2FbtqWVRGYRS7%2FPkUv6qDexaN2kEUgJhYFak%2Fimg.png )
 
 <br>
 
@@ -132,7 +152,7 @@ comments: true
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
-        <title>flexible box</title>
+        <title>flexible box: flex-wrap</title>
         <style>
             body { margin:0; font-size:28px; font-weight:bold; text-align:center; }
 
@@ -211,7 +231,7 @@ comments: true
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
-        <title>flexible box</title>
+        <title>flexible box: justify-content</title>
         <style>
             body { margin:0; font-size:28px; font-weight:bold; text-align:center; }
 
@@ -292,7 +312,7 @@ comments: true
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
-        <title>flexible box</title>
+        <title>flexible box: align-items</title>
         <style>
             body { margin:0; font-size:28px; font-weight:bold; text-align:center; }
 
@@ -358,7 +378,7 @@ comments: true
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
-        <title>flexible box</title>
+        <title>flexible box: align-self</title>
         <style>
             body { margin:0; font-size:28px; font-weight:bold; text-align:center; }
 
@@ -419,7 +439,7 @@ comments: true
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
-        <title>flexible box</title>
+        <title>flexible box: align-content</title>
         <style>
             body { margin:0; font-size:28px; font-weight:bold; text-align:center; }
 
@@ -471,3 +491,371 @@ comments: true
 7) `stretch`
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcTscFb%2FbtqXb1AK3zF%2FAseKRJojLTVFEO3tDRaFl0%2Fimg.png)
+
+<br>
+
+- - -
+
+<br>
+
+### order
+
+- 자식 박스 배치 순서 결정
+- `display:flex;` 값 있어야 `order` 적용 가능
+- 정렬 순서는 오름차순 `order` 값
+    - 같은 값일 경우 소스 코드의 순서대로 정렬
+- 논리적인 순서나 탭 순서와는 상관 없이 **화면에 보이는 순서에만** 영향 줌
+    - 비시각적 매체에 적용해서는 안 됨
+
+[참고](https://developer.mozilla.org/ko/docs/Web/CSS/order)
+
+```html
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+        <title>flexible box: order</title>
+        <style>
+            body { margin:0; font-size:20px; font-weight:bold; text-align:center; }
+            .container { border:#000 solid 4px; width:600px; height:300px; display:flex; justify-content:space-around; align-items:center; }
+            .container div { width:15%; border:1px solid #000; }
+            .box1 { background-color:steelblue; order:5; }
+            .box2 { background-color:tan; order:4; }
+            .box3 { background-color:#eee; order:3; }
+            .box4 { background-color:rosybrown; order:2; }
+            .box5 { background-color:antiquewhite; order:1; }
+        </style>
+    </head>
+
+    <body>
+        <div class="container"> <!-- flex container -->
+            <div class="box1">box1</div> <!-- flex item -->
+            <div class="box2">box2</div> <!-- flex item -->
+            <div class="box3">box3</div> <!-- flex item -->
+            <div class="box4">box4</div> <!-- flex item -->
+            <div class="box5">box5</div> <!-- flex item -->
+        </div>
+    </body>
+</html>
+```
+
+일 때 결과
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FddYwee%2FbtqWXa0k6mZ%2FnQ2kTCPKrTlKtwi5pADzb1%2Fimg.png)
+
+<br>
+
+- - -
+
+<br>
+
+### flex-grow
+
+- 자식 박스에 적용
+    - 부모 박스에 여백이 있는 경우 지정한 값에 따라 자동적으로 늘어나 여백을 채우게 됨
+- 자식 박스가 늘어나는 배율 지정
+    - 자식 박스의 증가 비율을 설정하는 단축 속성
+- 숫자가 클수록 더 큰 영역 가짐
+- 가변값이 아니거나 0인 경우 적용되지 않음
+- 정수(+)만 가능, 음수(-)는 불가능
+- 개별로 지정한 경우, 지정하지 않은 자식 박스는 최소치가 됨
+- IE 10에서는 `-ms-flex-positive` 사용
+
+<br>
+
+- 간단한 예시
+
+```html
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+        <title>flexible box: flex-grow</title>
+        <style>
+            ul { list-style:none; margin:10px; padding:0; text-align:center; font-weight:bold; font-size:25px; background-color:#eee; display:flex; width:600px; height:60px; }
+            li { width:0; }
+            li:first-child { background-color:steelblue; }
+            li:nth-child(2) { background-color:tan; }
+            li:last-child { background-color:rosybrown; }
+
+            .box1 > li { flex-grow:0; } /* 기본값, 커지지 않음 */
+
+            .box2 > li { flex-grow:1; } /* 균일하게 커져서 부모 요소를 채움 */
+
+            .box3 > li:first-child { flex-grow:1; } /* 1/5 == 20% 차지 */
+            .box3 > li:nth-child(2) { flex-grow:2; } /* 2/5 == 40% 차지 */
+            .box3 > li:last-child { flex-grow:2; } /* 2/5 == 40% 차지 */
+
+            .box4 > li:first-child { flex-grow:1; } /* 1/4 == 25% 차지 */
+            .box4 > li:nth-child(2) { flex-grow:2; } /* 2/4 == 50% 차지 */
+            .box4 > li:last-child { flex-grow:1; } /* 1/4 == 25% 차지 */
+        </style>
+    </head>
+
+    <body>
+        <h2>flex-grow: 0</h2>
+        <ul class="box1"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-grow: 1</h2>
+        <ul class="box2"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-grow: 1 / flex-grow: 2</h2>
+        <ul class="box3"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-grow: 1 / flex-grow: 2 / flex-grow: 1</h2>
+        <ul class="box4"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+    </body>
+</html>
+```
+
+일 때 결과
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1KUEf%2FbtqWX4S6Pxx%2F9Rg7IMuyGKm8PKuOyOKW41%2Fimg.png)
+
+<br>
+
+- - -
+
+<br>
+
+### flex-shirink
+
+- 자식 박스에 적용
+- 자식 박스가 줄어드는 배율 지정
+    - 자식 박스의 감소 비율을 설정하는 단축 속성
+- 숫자가 클수록 더 큰 영역이 감소됨
+- 가변값이 아니거나 0인 경우 적용되지 않음
+- IE 10에서는 `-ms-flex-negative`로 사용
+
+<br>
+
+- 간단한 예시
+
+```html
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+        <title>flexible box 10: flex-shrink</title>
+        <style>
+            ul { list-style:none; margin:10px; padding:0; text-align:center; font-weight:bold; font-size:25px; outline:6px solid #000; display:flex; width:600px; height:60px; }
+            li { width:300px; }
+            li:first-child { background-color:steelblue; }
+            li:nth-child(2) { background-color:tan; }
+            li:last-child { background-color:rosybrown; }
+
+            .box1 > li { flex-shrink:0; } /* 작아지지 않고 그냥 그대로 넘침 (자기가 가지고 있는 크기대로) */
+
+            .box2 > li { flex-shrink:1; } /* 기본값, 균일하게 작아져서 부모 요소를 채움 */
+
+            .box3 > li:first-child { flex-shrink:1; } /* 1/5 li:300px + (-300/5)*1 = 240 */
+            .box3 > li:nth-child(2) { flex-shrink:2; }/* 숫자가 크면 더 많은 값이 감소 */
+            /* 1/5 li:300px + (-300/5)*2 = 180 */
+            .box3 > li:last-child { flex-shrink:2; }
+            /* 1/5 li:300px + (-300/5)*2 = 180 */
+
+            .box4 > li:first-child { flex-shrink:0; } /* 300px */
+            .box4 > li:nth-child(2) { flex-shrink:1; } /* 150px */
+            .box4 > li:last-child { flex-shrink:1; } /* 150px */
+        </style>
+    </head>
+
+    <body>
+        <h2>flex-shrink: 0</h2>
+        <ul class="box1"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-shrink: 1 (기본값)</h2>
+        <ul class="box2"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-shrink: 1 / flex-shrink: 2</h2>
+        <ul class="box3"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-shrink: 0 / flex-shrink: 1</h2>
+        <ul class="box4"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+    </body>
+</html>
+```
+
+일 때 결과
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FpCCKj%2FbtqWW91uLD1%2Fh5mxbQC4mKGFMk6Sbi1SNK%2Fimg.png)
+
+<br>
+
+- - -
+
+<br>
+
+### flex-basis
+
+- 자식 박스에 적용
+- 자식 박스의 기본 너비값 설정
+    - 자식 박스의 기본 배율 지정 (자식 박스의 기본 비율을 설정하는 단축 속성)
+    - flex-grow나 flex-shrink 값을 주기 위한 기준
+        - `flex-basis:100px;`: 100px의 크기를 기준으로 잡고 나머지 부분을 `flex-grow`와 `flex-shrink`가 조절
+        - `flex-basis:0;`: 전 영역을 `flex-grow`와 `flex-shrink`가 조절
+        - `flex-basis:auto;`: 콘텐츠가 가진 영역을 뺀 나머지 부분을 `flex-grow`와 `flex-shrink`가 조절
+    - `flex-direction`이 `row`일 때는 너비, `column`일 때는 높이
+- auto인 경우 width, height 등의 속성으로 너비 설정 가능하나 단위값이 주어진 경우 설정할 수 없음
+- width, height 값과 flex-basis 값을 선언하는 것은 결과적으로 동일한 값을 만듦
+    - width 값과 flex-basis 값을 동시 선언하는 경우 flex-basis 값이 우선 적용 -> 하지만 같이 잘 쓰지 않음
+
+<br>
+
+- 간단한 예시
+
+```html
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+        <title>flexible box: flex-basis</title>
+        <style>
+            ul { list-style:none; margin:10px; padding:0; text-align:center; font-weight:bold; font-size:25px; background-color:#eee; outline:6px solid #000; display:flex; width:600px; height:60px; }
+
+            li:first-child { background-color:steelblue; }
+            li:nth-child(2) { background-color:tan; }
+            li:last-child { background-color:rosybrown; }
+
+            .box1 > li { flex-basis:auto; } /* 기본값, li의 width 값 선언 시 선언된 width 값 적용, width 값 없으면 콘텐츠가 가진 만큼 width 값 설정됨 */
+            .box2 > li { flex-basis:0; } /* flex-basis 값을 안 준다는 뜻 -> 여백 X */
+            .box3 > li { flex-basis:150px; }
+            .box4 > li { flex-basis:300px; } /* 기본값인 flex-shrink:1; 덕분에 넘치지 않음 */
+        </style>
+    </head>
+
+    <body>
+        <h2>flex-basis: auto (기본값)</h2>
+        <ul class="box1"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-basis: 0</h2>
+        <ul class="box2"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-basis: 150px</h2>
+        <ul class="box3"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-basis: 300px; ==> 기본값으로 flex-shrink:1; 설정되어 있기 때문에 부모 요소를 넘기지 못하고 자동으로 작아짐</h2>
+        <ul class="box4"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>item 2</li> <!-- flex item -->
+            <li>item 3</li> <!-- flex item -->
+        </ul>
+    </body>
+</html>
+```
+
+일 때 결과
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fblob4Z%2FbtqWWt64THh%2FpVuD19oMEonyjGOre4F8W0%2Fimg.png)
+
+<br>
+
+- - -
+
+<br>
+
+### flex-grow와 flex-basis
+
+- `flex-shrink`와 `flex-basis`가 만나면 계산이 복잡해져 같이 잘 사용하지 않고, 사용하더라도 각각 사용
+- `flex-grow`와 `flex-basis`는 같이 잘 사용하는 편
+
+<br>
+
+- 간단한 예시
+
+```html
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+        <title>flexible box: flex-grow와 flex-basis</title>
+        <style>
+            ul { list-style:none; margin:10px; padding:0; text-align:center; font-weight:bold; font-size:25px; background-color:#eee; outline:6px solid #000; display:flex; width:600px; height:60px; }
+
+            li:first-child { background-color:steelblue; flex-grow:1; }
+            li:nth-child(2) { background-color:tan; flex-grow:1; }
+            li:last-child { background-color:rosybrown; flex-grow:2; }
+
+            .box1 > li { flex-basis:auto; } /* 자식 박스의 콘텐츠 크기에 맞춰 flex-grow 비율 설정 */
+            .box2 > li { flex-basis:0; } /* 고정 비율에 맞춰 flex-grow 설정, flex item 크기에 맞춰 비율 설정 */
+            .box3 > li { flex-basis:100px; } /* 고정값 100px에 맞춰 flex-grow 설정 */
+        </style>
+    </head>
+
+    <body>
+        <h2>flex-basis: auto (기본값)</h2>
+        <ul class="box1"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>2</li> <!-- flex item -->
+            <li>flex item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-basis: 0 ==> 부모의 크기가 600px일 때 1(150):1(150):2(300) 비율 가짐</h2>
+        <ul class="box2"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>2</li> <!-- flex item -->
+            <li>flex item 3</li> <!-- flex item -->
+        </ul>
+        <h2>flex-basis: 100px</h2>
+        <ul class="box3"> <!-- flex container -->
+            <li>item 1</li> <!-- flex item -->
+            <li>2</li> <!-- flex item -->
+            <li>flex item 3</li> <!-- flex item -->
+        </ul>
+    </body>
+</html>
+```
+
+일 때 결과
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcNGn4t%2FbtqW1tkUJNh%2FjvcxcR7Jrh5OSeQP7uoSxK%2Fimg.png)
+
+▼ 이해하기 쉽게 설명하자면...
+
+![explain](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbD7MaI%2FbtqXgnDScHx%2FECBTFsKkz8VsadkbmoJhHK%2Fimg.jpg)
