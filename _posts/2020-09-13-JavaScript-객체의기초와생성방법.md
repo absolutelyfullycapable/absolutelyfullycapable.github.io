@@ -199,9 +199,7 @@ console.log(address.연락처);
 - Date 생성자
 	- 날짜와 시간을 표현하는 객체 생성
 
-		```js
-        var now = new Date();
-        ```
+		`var now = new Date();`
 
 		- .getFullYear() : 연도를 뜻하는 숫자값
 		- .getMonth(); : 월을 뜻하는 숫자값, 0부터 시작
