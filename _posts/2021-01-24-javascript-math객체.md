@@ -38,7 +38,7 @@ comments: true
     - `Math.ceil(x)` : x 이상의 최소 정수
     - `Math.floor(x)` : x 이하의 최대 정수
     - `Math.max(x, y)` : x와 y 중 큰 값
-    - `Math.min(x,y)` : x와 y 중에서 작은 값
+    - `Math.min(x, y)` : x와 y 중에서 작은 값
     - `Math.random()` : 0 이상 1 미만의 난수(특정한 순서나 규칙을 가지지 않는 수)
     - `Math.round(x)` : x의 반올림
     - `Math.sqrt(x)` : x의 제곱근
