@@ -284,8 +284,10 @@ window.onload = function(){ // 문서 준비 이벤트
 - 기호
 	- `>` : 우항보다 크다
 	- `<` : 우항보다 작다
-	- `==` : 우항과 같다
-	- `===` : 우항과 값, 타입이 모두 같다 (엄격한 비교값)
+	- `==` : 우항과 같다 (equal operator)
+	- `===` : 우항과 값, 타입이 모두 같다 (엄격한 비교값, strict equal operator)
+		- 실제 프로그래밍에서는 데이터 타입이 다른 것은 다른 데이터기 때문에 동등 연산자보다는 일치 연산자를 쓰는 것을 추천! 🌟
+                - 큰 프로젝트에서 비슷한 것을 같은 것으로 처리하는 문법은 에러로 심각한 결과를 초래할 수 있기 때문에 좋은 거라고는 할 수 없음
 	- `>=` : 우항보다 크거나 같다
 	- `<=` : 우항보다 작거나 같다
 	- `!=` : 우항과 같지 않다
@@ -320,15 +322,18 @@ window.onload = function(){ // 문서 준비 이벤트
 
     ```js
     console.log(0 == false); // true
+    console.log(0 === false); // false
     console.log("" == false); // true
+    console.log("" === false); // false
     console.log("" == 0); // true
-    console.log("" == null); // false
-    // null은 변수에 데이터로 null이 저장되어 있는 경우나 변수에 저장된 데이터를 비우고자 할 때 사용
-
-    console.log("" == undefined); // false
-    // undifined는 변수에 아무 값도 등록되어 있지 않은 경우로 변수 초기값
+    console.log("" === 0); // false
+    
+    console.log("" == null); // false -> null은 변수에 데이터로 null이 저장되어 있는 경우나 변수에 저장된 데이터를 비우고자 할 때 사용
+    console.log("" == undefined); // false -> undifined는 변수에 아무 값도 등록되어 있지 않은 경우로 변수 초기값
 
     console.log(null == undefined); // true
+    console.log(null === undefined); // false
+    // 둘 다 똑같이 값이 없는 상태지만 undefined는 프로그래머가 의도하지 않은 상황, null은 프로그래머가 현재 값이 없다는 것을 의도적으로 지정한 상황
     ```
 
 <br>
@@ -352,13 +357,11 @@ window.onload = function(){ // 문서 준비 이벤트
     console.log('한글' > 'zoo'); // true. 다른 언어 비교 시에는 언어마다 우선 순위가 있음
 
     console.log('1234' == 1234); // true. '문자열' == 숫자 데이터
-	console.log('1234' === 1234 ); // false.
-    // === -> 데이터 형태까지 완전히 같다. (엄격한 비교값)
+	console.log('1234' === 1234 ); // false. === -> 데이터 형태까지 완전히 같다. (엄격한 비교값)
     console.log('' === 0); // false.
-	console.log(NaN === NaN); // false.  NaN만큼은 NaN를 포함한 모든 값과 같지 않다고 판정함
+	console.log(NaN === NaN); // false.  NaN(Not a Number: 숫자가 아님, 계산할 수 없음)만큼은 NaN를 포함한 모든 값과 같지 않다고 판정함
 
-    console.log('' !== 0); // true.
-    // !== -> 데이터 형태까지 완전히 같지 않다.
+    console.log('' !== 0); // true. !== -> 데이터 형태까지 완전히 같지 않다.
 	```
 
 - - -
@@ -426,5 +429,7 @@ window.onload = function(){ // 문서 준비 이벤트
 - 예시: 변수 a와 b의 값을 비교하여 a > b가 참이면 a, 거짓이면 b를 변수 c에 대입하는 수식
 
 	```js
-	c = (a > b) ? a : b;
+	var a = 10, b = 20,
+		c = (a > b) ? a : b;
+	console.log(c); // 20
     ```
