@@ -55,7 +55,7 @@ comments: true
 	- 프로그램 중간에서 변수를 선언하더라도 변수가 프로그램 첫머리에 선언된 것처럼 다른 문장 앞에 생성
 
     ```js
-    console.log(a); // >> undefined
+    console.log(a); // >> undefined (값을 할당하지 않은 결과), 에러 뜨지 않음!
     var a;
     ```
 
