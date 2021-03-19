@@ -196,6 +196,7 @@ console.log(address.연락처);
 
 		- .getFullYear() : 연도를 뜻하는 숫자값
 		- .getMonth(); : 월을 뜻하는 숫자값, 0부터 시작
+		- .getDay(); : 요일을 뜻하는 숫자값, 0(일요일)부터 시작
 		- .getDate(); : 날짜를 뜻하는 숫자값
 		- .getHours(); : 시각의 시간을 뜻하는 숫자값
 		- .getMinutes(); : 시각의 분을 뜻하는 숫자값
