@@ -219,7 +219,9 @@ if(month >= 3 && month <= 5) {
 ```js
 let score = prompt('점수를 입력해 주세요.');
 
-if(score <= 100 && score > 80) {
+if(score > 100) {
+	alert('0에서 100 사이 숫자로만 입력해 주세요');
+} else if(score <= 100 && score > 80) {
 	alert(score + '점은 상입니다.');
 } else if(score <= 80 && score > 60) {
 	alert(score + '점은 중입니다.');
