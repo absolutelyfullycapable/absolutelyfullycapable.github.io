@@ -12,7 +12,7 @@ comments: true
 1) 걸음수를 입력하고 걸음수에 맞는 값 출력하기 (입력한 값이 6000 이상이면 '좋은 습관을 가지고 있습니다.' / 6000 미만이면 '운동이 필요합니다.' 출력)
 
 ```js
-const walk = prompt('하루에 걷는 걸음은 몇 보입니까?');
+var walk = prompt('하루에 걷는 걸음은 몇 보입니까?');
 
 if(walk >= 6000) {
 	alert('좋은 습관을 가지고 있습니다.');
@@ -26,7 +26,7 @@ if(walk >= 6000) {
 2) 입력 받은 값이 10보다 작으면 '입력한 값이 10보다 작습니다.' / 입력 받은 값이 10보다 크면 '입력 받은 값이 10보다 큽니다.' 출력
 
 ```js
-const num = prompt('숫자를 입력해 주세요.');
+var num = prompt('숫자를 입력해 주세요.');
 
 if(num < 10) {
 	alert('입력한 값이 10보다 작습니다.');
@@ -56,9 +56,9 @@ if(num % 2 == 0) {
 4) 확인 버튼을 누르면 '탈퇴 처리가 되었습니다.' / 취소 버튼을 누르면 '탈퇴 취소되었습니다.' 출력
 
 ```js
-let a = confirm('탈퇴하시겠습니까?');
+let out = confirm('탈퇴하시겠습니까?');
 
-if(a == 1) {
+if(out == 1) {
 	alert('탈퇴 처리가 되었습니다.');
 } else {
 	alert('탈퇴 취소되었습니다.');
@@ -73,23 +73,21 @@ if(a == 1) {
 5) ID가 web, 비밀번호가 12345일 때 로그인
 
 ```js
-const id = "web", pw = "12345";
-const user_id = prompt('아이디를 입력해 주세요.');
+var id = "web", pw = "12345";
+var user_id = prompt('아이디를 입력해 주세요.');
 
 if(id == user_id) { // 아이디 일치
-	const user_pw = prompt('비밀번호를 입력해 주세요.');
-    if(pw == user_pw) { // 아이디 일치, 비밀번호 일치
-    	alert('로그인되었습니다.');
-    } else { // 아이디 일치, 비밀번호 불일치
-    	alert('비밀번호가 일치하지 않습니다.');
-        window.location.reload();
-    }
+	let user_pw = prompt('비밀번호를 입력해 주세요.');
+    	if(pw == user_pw) { // 아이디 일치, 비밀번호 일치
+    		alert('로그인되었습니다.');
+    	} else { // 아이디 일치, 비밀번호 불일치
+    		alert('비밀번호가 일치하지 않습니다.');
+        	window.location.reload(); // window.location.reload(); 브라우저 새로 고침
+    	}
 } else { // 아이디 불일치
-    alert('아이디가 일치하지 않습니다.');
-    window.location.reload();
+    	alert('아이디가 일치하지 않습니다.');
+    	window.location.reload();
 }
-
-// window.location.reload(); 브라우저 새로 고침
 ```
 
 <br>
@@ -143,8 +141,8 @@ if(num1 > num2) {
 3) 입력한 점수와 함께 90점 이상은 A / 80점 이상은 B / 70점 이상은 C / 60점 이상은 D / 그 밑은 F 등급 출력
 
 ```js
-let score = prompt('점수를 입력해 주세요.'); // 점수
-let grade // 등급 선언
+var score = Number(prompt('점수를 입력해 주세요.')), // 점수
+    grade // 등급 선언
 
 if(score >= 90 && score <= 100) {
 	grade = "A";
