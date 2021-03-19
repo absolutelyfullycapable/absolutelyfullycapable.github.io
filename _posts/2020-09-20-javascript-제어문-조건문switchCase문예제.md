@@ -75,11 +75,13 @@ switch(num) {
 let num = prompt('숫자를 입력해 주세요.');
 
 switch(num % 2) { // 문자열이지만 식을 통해 자동으로 숫자로 변환되어 연산 -> 숫자형 데이터
-    case 0: // 입력 받은 값이 짝수인 경우
-    	alert('입력한 값 ' + num + '은 짝수입니다.');
-    	break;
-    default: // 입력 받은 값이 홀수인 경우
-    	alert('입력한 값 ' + num + '은 홀수입니다.');
+    	case 0: // 입력 받은 값이 짝수인 경우
+    		alert('입력한 값 ' + num + '은 짝수입니다.');
+    		break;
+    	case 1: // 입력 받은 값이 홀수인 경우
+    		alert('입력한 값 ' + num + '은 홀수입니다.');
+    	default:
+		alert('숫자로만 입력해 주세요.');
 }
 ```
 
@@ -120,11 +122,10 @@ document.write.innerHTML = '<h1>주문한 ' + coffee + '는/은 ' + price + '원
 let id = "abc", pw = 1234;
 let user_id = prompt('아이디를 입력해 주세요.', '여기에 입력해 주세요.');
 
-switch(id == user_id) {
+switch(id === user_id) {
     case true:
     	let user_pw = prompt('비밀번호를 입력해 주세요.', '여기에 입력해 주세요.');
         user_pw = Number(user_pw);
-
         switch(user_pw) {
         	case 1234:
             	alert('로그인되었습니다.');
@@ -143,34 +144,34 @@ switch(id == user_id) {
 6) 요일을 알려 주는 프로그램
 
 ```js
-var day;
-var week = new Date().getDay(); // 0(일요일)~6(토요일)
+var day,
+    week = new Date().getDay(); // 0(일요일)~6(토요일)
 
 switch(week) {
-    case 0:
-    	day = "일요일";
-        break;
-    case 1;
-    	day = "월요일";
-        break;
-    case 2:
-    	day = "화요일";
-        break;
-    case 3;
-    	day = "수요일";
-        break;
-    case 4:
-    	day = "목요일";
-        break;
-    case 5;
-    	day = "금요일";
-        break;
-    case 6:
-    	day = "토요일";
-        break;
+	case 0:
+		day = "일요일";
+		break;
+	case 1:
+		day = "월요일";
+		break;
+	case 2:
+		day = "화요일";
+		break;
+	case 3:
+		day = "수요일";
+		break;
+	case 4:
+		day = "목요일";
+		break;
+	case 5:
+		day = "금요일";
+		break;
+	case 6:
+		day = "토요일";
+		break;
 }
 
-document.write.innerHTML = '<h1>오늘은 ' + day + '입니다.';
+document.write('<h1>오늘은 ' + day + '입니다.</h1>');
 ```
 
 <br>
