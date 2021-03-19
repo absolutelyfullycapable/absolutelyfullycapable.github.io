@@ -49,6 +49,7 @@ comments: true
 	- if 조건문은 조건의 값이 참인 경우 실행되기 때문에 거짓의 조건(0, null, "", undefined)에서는 실행되지 않음
 - 조건식에 true 값을 직접 대입하면 무조건 처리하도록 제어할 수 있음
 - 조건식에 false 값을 쓰면 블록 내 문장은 영원히 처리 불가능
+	- 하지만 그런 식으로 잘 쓰지 않고 안 쓰는 게 좋음 🙅🏻‍♀️
 - if문 안에 또 다른 if문 포함하여 작성 가능 (중첩된 if문)
 
 <br>
@@ -80,15 +81,15 @@ if(조건식 A) { // 조건이 참인 경우,
 
 ```js
 if(111 < 100) {// 조건이 거짓이면
-alert('참입니다.'); // 실행되지 않음
+	alert('참입니다.'); // 실행되지 않음
 }
 
 if(0) {// 조건이 거짓이면 (0 == false)
-alert('참입니다.'); // 실행되지 않음
+	alert('참입니다.'); // 실행되지 않음
 }
 
 if(1) {// 1 == true -> 조건이 참이면
-alert('참입니다.'); // 실행됨
+	alert('참입니다.'); // 실행됨
 }
 
 const num = 100;
@@ -171,6 +172,7 @@ if(조건식) { // 조건이 참인 경우,
 1) 나이가 19세 이상이면 성인, 미만이면 미성년자로 구분하는 프로그램
 
 ```js
+var age = prompt('나이를 입력해 주세요.');
 if(age >= 19) { // age가 19보다 같거나 크다
 	result="성인입니다.";
 } else { // age가 19보다 작다
@@ -186,7 +188,7 @@ if(age >= 19) { // age가 19보다 같거나 크다
 var gender = "M" // 남자(M), 여자(F)
 var age = 21;
 
-if(gender == "M") { // 남자일 때
+if(gender === "M") { // 남자일 때
 	if(age >= 19) { // 남자 성인일 때
 		result="남자 성인입니다.";
 	} else { // 남자 미성년자일 때
@@ -207,7 +209,7 @@ if(gender == "M") { // 남자일 때
 
 ```js
 function isLeapYear(year) {
-	if((year % 400 == 0) || (year % 4 == 0) && (year % 100 != 0)) {
+	if((year % 400 === 0) || (year % 4 === 0) && (year % 100 !== 0)) {
 		return true;
 	}
 	return false;
@@ -223,10 +225,8 @@ id = prompt('아이디 입력');
 
 if(id == 'admin') { // 아이디 일치 시
 	password = prompt('비밀번호를 입력');
-
 	if (password === "123456") { // 아이디 일치, 비밀번호 일치 시
-		location.href="login.html" // 로그인 완료 화면으로 이동
-        // location.href=""; : "" 안의 주소로 이동
+		location.href="login.html" // 로그인 완료 화면으로 이동 (location.href=""; : "" 안의 주소로 이동)
 	} else { // 아이디 일치, 비밀번호 불일치 시
 		location.href="error.html" // 에러 화면으로 이동
 	}
@@ -280,13 +280,13 @@ if(조건식 A) {//조건식 A가 참인 경우
 ```js
 let num = "3";
 
-if(num == 1) { // 거짓
+if(num === 1) { // 거짓
 	if(num === "3") {
 		alert('문자열 숫자입니다.');
 	} else {
 		alert('숫자입니다.');
 	}
-} else { // num == 1 조건이 거짓이므로 else 조건에 있는 실행 문장 실행됨
+} else { // num === 1 조건이 거짓이므로 else 조건에 있는 실행 문장 실행됨
 	alert('숫자 3이 아닙니다.');
 }
 ```
@@ -310,10 +310,10 @@ if(num == 1) { // 거짓
 
 ```js
 switch(비교값) {
-    case 비교할 값 1 (비교할 값 1):
+    case 비교할 값 1:
     	실행 문장 A;
         break;
-    case 비교할 값 2 (비교할 값 2):
+    case 비교할 값 2:
     	실행 문장 B;
         break;
    	...
@@ -340,7 +340,7 @@ switch(비교값) {
 	- case에 해당하는 경우 없으면 마지막 default문 실행
 		- default문에는 어떤 case문에도 해당하지 않는 경우 처리할 문장 작성
 	- default 문장 생략 가능
-	- deafault는 else와 같은 역할
+	- default는 else와 같은 역할
 	- default는 switch 불록 어느 위치에 있어도 문법 오류가 발생하지 않지만, 블록 중간에 있으면 프로그램을 이해하기 어려워 되도록이면 마지막에 작성하도록 함
 
 <br>
@@ -376,7 +376,7 @@ switch(n) {
 
 <br>
 
-2)
+2) 1~4까지의 숫자 중 하나를 입력하고 그 수에 맞는 문구 출력
 
 ```js
 let num = prompt("1~4까지의 숫자 중 하나만 작성하세요.");
