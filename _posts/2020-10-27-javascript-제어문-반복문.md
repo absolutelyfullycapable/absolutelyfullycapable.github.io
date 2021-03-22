@@ -368,4 +368,5 @@ while(x <= 100);
 
 document.write("1부터 100까지의 합은 " + sum + "입니다.");
 ```
-![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdvCeNH%2Fbtq0JwY1jFl%2F1XsH9SszO2VfMRUK8xc3pk%2Fimg.png
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdvCeNH%2Fbtq0JwY1jFl%2F1XsH9SszO2VfMRUK8xc3pk%2Fimg.png)
