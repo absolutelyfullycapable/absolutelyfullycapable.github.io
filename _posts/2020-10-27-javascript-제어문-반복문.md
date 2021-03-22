@@ -25,8 +25,9 @@ comments: true
 - 조건이 만족되는 동안 반복 실행
 - 반복문의 공통 작업을 명시적으로 한 곳(소괄호 안)에 모아서 표기
 	- 어떤 반복 처리를 하는지 이해하기 쉬움
-	- 반복 조건의 포기화 작업과 갱신 작업을 빠뜨리는 등의 실수 사전 방지 가능
+	- 반복 조건의 초기화 작업과 갱신 작업을 빠뜨리는 등의 실수 사전 방지 가능
 - for 반복문 안에 break 문, continue 문 사용 가능
+	- [break 문, continue 문이란?](https://absolutelyfullycapable.github.io/2020-10/javascript-%EC%A0%9C%EC%96%B4%EB%AC%B8-%EC%A0%90%ED%94%84%EB%AC%B8)
 
 <br>
 
@@ -42,9 +43,29 @@ for(초기화식; 조건식; 반복식;) {
 - 초기화식: 반복 변숫값 초기화, for문이 처음 시작할 때 단 한 번만 실행됨
 	- 초기화식 입력하는 부분에는 변수 선언 가능
 		- **루프 카운터 변수**: 반복식 안에서 값이 바뀌는 변수
-	- 쉼표 연산자를 사용하면 표현식 여러 개 작성 가능 (ex. for(var i = 1, sum = 0; ...)) 
-- 조건식: 블록 내 문장을 얼마나 반복할지 결정, 조건식이 참인 동안 반복
-- 증감식: 초기화식에서 초기화한 변수의 값을 증가 또는 감소시킴
+	- 쉼표 연산자를 사용하면 표현식 여러 개 작성 가능 (ex. for(var i = 1, sum = 0; ...))
+	- 초기화식을 for 반복문 이전에 먼저 선언했다면 for 반복문에서는 생략 가능
+
+	```js
+	var num = 1;
+	for( ; num < 5; num++) { // 세미콜론은 생략하면 안 됨!
+  		// 실행 문장 작성
+	}
+	```
+
+- 조건식: 블록 내 문장을 얼마나 반복할지 결정, 조건식이 참인 동안 반복 (반복 조건)
+- 증감식: 초기화식에서 초기화한 변수의 값을 증가 또는 감소시킴 (반복 실행)
+	- for 반복문 블록 내에 증감식 문장을 포함하면 for 반복문 자체에 증감식 생략 가능
+
+	```js
+	var num = 1,
+	    st = "ABCDEF",
+	    ct = st.length;
+	for( ; num < ct; ) {
+    		// 실행 문장 작성
+    		num++;
+	}
+	```
 
 <br>
 
@@ -69,47 +90,20 @@ for(초기화식; 조건식; 반복식;) {
 1)
 
 ```js
-for(var i = 0; i < 10; i++) { ... } // -> i = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-for(var i = 2; i <= 10; i+= 2) { ... } // -> i = 2, 4, 6, 8, 10
-for(var i = 10; i > 0; i--) { ... } // -> i = 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+for(var i = 0; i < 10; i++) { console.log(i); } // -> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+for(var i = 2; i <= 10; i+= 2) { console.log(i); } // -> 2, 4, 6, 8, 10
+for(var i = 10; i > 0; i--) { console.log(i); } // -> 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 ```
 
 <br>
 
-2) 초기화식을 for 반복문 이전에 먼저 선언했다면 for 반복문에서는 생략 가능
-
-```js
-var num = 1;
-for( ; num < 5; num++) {
-    // 실행 문장 작성
-}
-```
-
-<br>
-
-3) for 반복문 블록 내에 증감식 문장을 포함하면 for 반복문 자체에 증감식 생략 가능
-
-```js
-var num = 1;
-var st = "ABCDEF";
-var ct = st.length;
-
-for( ; num < ct; ) {
-    // 실행 문장 작성
-    num++;
-}
-```
-
-<br>
-
-4) 구구단 2단 출력
+2) 구구단 2단 출력
 
 ```js
 let sum = 0;
-
 for(i = 1; i < 10; i++) {
     sum = i * 2;
-    document.write(2 + " * " + i + " = " + sum + "<br/>");
+    document.write(2 + " * " + i + " = " + sum + "<br>");
 }
 ```
 
@@ -135,7 +129,6 @@ for(i = 1; i < 10; i++) {
 var x, y;
 for(x = 2; x <= 3; x++) {
     document.write("--- " + x + "단 ---<br>");
-
     for(y = 1; y <= 9; y++) {
         document.write(x + "*" + y + "=" + (x * y) + "<br>");
     }
@@ -153,7 +146,7 @@ for(x = 2; x <= 3; x++) {
 
 ### **1-2. for~in 반복문**
 
-- 객체 안의 프로퍼티를 순회하는 반복문
+- 객체 안의 프로퍼티와 배열 안의 배열 요소를 순회하는 반복문
 - 반복문 안에서 문장을 여러 개 실행하려면 여러 문장을 블록으로 묶어서 블록 문장으로 만듦
 - for~in 반복문 안에서도 break문과 continue문 사용 가능
 
@@ -161,19 +154,20 @@ for(x = 2; x <= 3; x++) {
 
 #### **· for~in 반복문의 처리 흐름**
 
-1. for~in 반복문이 실행되면 먼저 객체 표현식을 평가
-2. 객체 표현식이 null 또는 undefined로 평가되면 for~in 반복문을 빠져나와 다음 작업으로 이동 / 객체로 평가되면 객체 프로퍼티 이름이 차례대로 변수에 할당되고 각각의 프로퍼티에 대해서 문장이 한 번씩 실행됨
+1. for~in 반복문이 실행되면 먼저 객체 및 배열 표현식을 평가
+2. 객체 및 배열 표현식이 null 또는 undefined로 평가되면 for~in 반복문을 빠져나와 다음 작업으로 이동
+	- 객체로 평가되면 객체 프로퍼티 이름이 차례대로 변수에 할당되고 각각의 프로퍼티에 대해서 문장이 한 번씩 실행됨
+	- 배열로 평가되면 인덱스 번호가 차례대로 변수에 할당되고 각각의 인덱스 번호에 대해서 문장이 한 번씩 실행됨
 
 <br>
 <br>
 
 #### **· 간단한 예시**
 
-1)
+1) 객체
 
 ```js
 var obj = {a:1, b:2, c:3};
-
 for(var p in obj) {
     console.log("p = " + p);
 }
@@ -181,7 +175,7 @@ for(var p in obj) {
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdmuiB6%2FbtqL38EgaBc%2Fz3P45d8GQaKskp3X3s8jDK%2Fimg.png)
 
-- for~in 반복문은 프로퍼티 이름만 꺼내 변수에 할당
+- for~in 반복문은 **프로퍼티 이름만** 꺼내 변수에 할당
 
 <br>
 
@@ -189,13 +183,24 @@ for(var p in obj) {
 
 ```js
 var obj = {a:1, b:2, c:3};
-
 for(var p in obj) {
     console.log("obj." + p + "=" + obj[p]);
 }
 ```
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb2metx%2FbtqLXSiTMqt%2FKthaKj6QnadsqGU3BJKnj0%2Fimg.png)
+
+<br>
+
+3) 배열
+
+```js
+var array = [1, 2, 3];
+for(var a in array) {
+    console.log("a = " + a);
+}
+```
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbi8stB%2Fbtq0LOZbIld%2FZPppqowrH38GwNOVXNQo61%2Fimg.png)
 
 <br>
 <br>
@@ -214,14 +219,12 @@ for(var p in obj) {
 
 ```js
 // 1. 기본 작성
-let 변수 = 초기값;
-while(조건식) {
+var 변수 = 초기값;
+while(조건식) { // 조건식: 참과 거짓의 조건으로 참인 동안 실행
     조건이 만족될 때까지의 실행 문장;
     증감식;
 }
 ```
-
-- 조건식: 참과 거짓의 조건으로 참인 동안 실행
 
 <br>
 
@@ -240,11 +243,9 @@ while(조건식) {
 1) 1부터 10까지 나열
 
 ```js
-let i = 1;
-
+var i = 1;
 while(i <= 10) {
-    document.writeln(i);
-    // document.writeln(); -> 문서에 띄어쓰기로 작성
+    document.writeln(i); // document.writeln(); -> 문서에 띄어쓰기로 작성
     i++;
 }
 ```
@@ -253,7 +254,7 @@ while(i <= 10) {
 
 <br>
 
-2) n의 팩토리얼 구하는 함수
+2) n의 팩토리얼 구하는 함수 (🥲)
 
 ```js
 function fact(n) {
@@ -273,7 +274,6 @@ fact(5); // -> 120
 
 ```js
 var x = 1, sum = 0;
-
 while(x <= 100) {
     sum += x;
     x++;
@@ -290,11 +290,9 @@ document.write("1부터 100까지의 합은 " + sum + "입니다.");
 
 ```js
 var x = 1, sum = 0;
-
 while(1) {
     sum += x;
     x++;
-
     if(x == 101) {
         break;
     }
@@ -311,7 +309,6 @@ document.write("1부터 100까지의 합은 " + sum + "입니다.");
 
 ```js
 var x = 1;
-
 while(x <= 30) {
     if(x % 2 == 0 && x % 6 ==0) { // 조건이 만족될 때까지의 실행 문장
         document.writeln(x);
@@ -354,7 +351,8 @@ while(조건식);
 
 1. 실행 문장 먼저 실행
 2. 조건식 평가
-3. 결과가 false면 do~while 반복문을 빠져 나와 다음 처리로 이동 / true면 반복문의 시작 부분으로 되돌아감
+3. 결과가 false면 do~while 반복문을 빠져 나와 다음 처리로 이동
+	- true면 반복문의 시작 부분으로 되돌아감
 
 <br>
 <br>
@@ -365,7 +363,6 @@ while(조건식);
 
 ```js
 var x = 1, sum = 0;
-
 do {
     sum += x;
     x++;
@@ -374,3 +371,4 @@ while(x <= 100);
 
 document.write("1부터 100까지의 합은 " + sum + "입니다.");
 ```
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdvCeNH%2Fbtq0JwY1jFl%2F1XsH9SszO2VfMRUK8xc3pk%2Fimg.png
