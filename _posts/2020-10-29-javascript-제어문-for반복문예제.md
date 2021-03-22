@@ -13,7 +13,6 @@ comments: true
 
 ```js
 let sum = 0; // 값이 대입되어 있지 않거나 변수 선언이 되지 않은 상태에서 작성되면 식 안에서 변수의 성격을 파악할 수 없기 때문에 숫자로 초기화함
-
 for(let i = 1; i <= 10, i++) {
     sum += i;
 }
@@ -29,7 +28,6 @@ document.body.innerHTML = "<h1>1부터 10까지의 합은 " + sum + "입니다.<
 
 ```js
 let sum = 0;
-
 for(let i = 3; i <= 9; i += 2) {
     sum += i;
 }
@@ -46,9 +44,7 @@ document.body.innerHTML = "<h1>3, 5, 7, 9의 합은 " + sum + "입니다.</h1>";
 ```js
 let num = prompt("더할 숫자를 입력해 주세요.");
 num = Number(num);
-let sum = 0;
-
-for(let i = 1; i <= num; i++) {
+for(let i = 1, sum = 0; i <= num; i++) {
     sum += i;
 }
 
@@ -76,12 +72,9 @@ for(let i = 1; i <= 100; i++) {
 ```js
 let num = prompt("2단부터 9단 사이의 원하는 구구단을 입력하세요.");
 num = Number(num);
-let sum = 0;
-
 if(num >= 2 && num <= 9) {
-    document.write("<h1>" + num + "단</h1>");
-
-    for(i = 1; i <= 9; i++) {
+    document.write("<h2>" + num + "단</h2>");
+    for(i = 1; i < 10; i++) {
         sum = i * num;
         document.write(num + " * " + i + " = " + sum + "<br>");
     }
@@ -93,7 +86,7 @@ if(num >= 2 && num <= 9) {
 
 <br>
 
-6) 별 쌓기 - **중첩 반복문**
+6) 별 쌓기 - **중첩 반복문** (🥲..)
 
 ```js
 for(let i = 1; i <= 9; i++) {// 줄 수
