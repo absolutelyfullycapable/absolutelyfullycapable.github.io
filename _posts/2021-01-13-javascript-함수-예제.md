@@ -28,15 +28,15 @@ document.write("<h3>입력한 값의 부가세 포함 가격은 " + sum(price) +
 2) 과일에 맞는 가격 출력
 
 ```js
-function fruit(num) {
+function fruit(name) {
     let msg = "오천 원입니다."
-    if(num == "수박") {
+    if(name == "수박") {
         msg = "만 원입니다."
-    } else if(num == "복숭아") {
+    } else if(name == "복숭아") {
         msg = "이만 원입니다."
     }
 
-    document.write(num + ': ' + msg + '<br>'); // 출력값까지 함수 내부에 존재 -> return 키워드는 필요하지 않음
+    document.write(name + ': ' + msg + '<br>'); // 출력값까지 함수 내부에 존재 -> return 키워드는 필요하지 않음
 }
 
 fruit("사과"); // "오천 원입니다." 출력
@@ -48,18 +48,27 @@ fruit("복숭아"); // "이만 원입니다." 출력
 
 <br>
 
-3) 1부터 100까지의 합을 구하시오
+3) 1부터 n까지의 합을 구하는 프로그램
 
 ```js
+// 방법 1
 function sum(n) {
-    let i = 0, total = 0;
+    for(var i = 1, total = 0; i <= n; i++) {
+        total += i;
+    }
+    return total;
+}
+document.write(sum(100));
+
+// 방법 2
+function sum(n) {
+    let i = 1, total = 0;
     while(i <= n) {
         total += i;
         i++;
     }
     return total;
 }
-
 document.write(sum(100));
 ```
 
@@ -70,6 +79,7 @@ document.write(sum(100));
 4) 구구단 3단의 여섯 개, 6단의 네 개만 출력
 
 ```js
+// 방법 1
 function out(n, limit) {
     document.write('<h2>--' + n + '단--</h2>');
     for(let i = 1; i <= limit; i++) {
@@ -77,7 +87,20 @@ function out(n, limit) {
         document.write(n + ' * ' + i + ' = ' + total + '<br>');
     }
 }
+out(3, 6);
+out(6, 4);
 
+// 방법 2
+function out(n, limit) {
+    document.write('<h2>--' + n + '단--</h2>');
+    for(let i = 1; i < 10; i++) {
+        if(i == (limit + 1)) {
+            break;
+        }
+        sum = n * i;
+        document.write(n + ' * ' + i + ' = ' + sum + '<br>');
+    }
+}
 out(3, 6);
 out(6, 4);
 ```
