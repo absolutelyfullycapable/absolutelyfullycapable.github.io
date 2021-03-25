@@ -162,6 +162,7 @@ document.write('<h2>평균 점수는 약 ' + aver + '점입니다.</h2>');
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcw01rr%2FbtqTDcU5Jld%2FcWsJKHkLz2QKHti2hk31S1%2Fimg.png)
 
 ```js
+// 방법 2
 var score = [60, 66, 95, 80, 100, 92],
     sum = 0,
     max = 0,
