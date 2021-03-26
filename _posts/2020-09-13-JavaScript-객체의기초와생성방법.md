@@ -91,14 +91,37 @@ card.color // >> undefined
 
 <br>
 
-#### **2. 생성자로 객체 생성하기**
+#### **2. 생성자로 객체 생성하기 (🥲)**
+
+`var obj = new Object();`
 
 - **생성자**: new 연산자로 객체를 생성할 것이라 기대하고 만든 함수
 - 생성자로 객체를 생성할 때는 **new 연산자** 사용
 - 객체를 생성하고 초기화하는 역할을 함
-- 생성자 이름은 보통 파스칼 표기법 따름
-- 생성자 안에서 **this.프로퍼티 이름**에 값을 대입하면 그 이름을 가진 프로퍼티에 값이 할당된 객체 생성됨
-- 메소드 함수 안에서 this 사용하면 그 값이 생성자와 new 연산자로 생성한 객체(인스턴트)의 프로퍼티임을 명시 가능
+- 생성자 인수값이 null이거나 undefined면 빈 객체 반환
+
+```js
+var obj1 = new Object(null),
+    obj2 = new Object(undefined);
+```
+
+- **특수한 상황이 아니라면 객체 리터럴 방식을 사용하는 것이 일반적**
+	- 자바스크립트 엔진은 객체 리터럴로 객체를 생성하는 코드를 만나면 내부적으로 Object 생성자 함수를 사용하여 객체를 생성하기 때문에 굳이 생성자로 객체를 생성하지 않아도 됨
+- 간단한 예시
+
+```js
+var person = new Object();
+
+person.name = 'Ji Hye';
+person.gender = 'female';
+person.sayHello = function () {
+  console.log('Hi! My name is ' + this.name);
+};
+
+console.log(person); // {name: "Ji Hye", gender: "female", sayHello: ƒ}
+
+person.sayHello(); // Hi! My name is Ji Hye
+```
 
 <br>
 - - -
