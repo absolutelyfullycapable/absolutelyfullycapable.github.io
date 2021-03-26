@@ -8,7 +8,8 @@ comments: true
 ### **객체 (Object)**
 
 -  데이터 여러 개를 하나로 모은 복합 데이터
--  변수와 함수(속성, 이벤트, 메소드)가 모여 만든 변형 가능한 속성들의 집합
+	- 배열과 비슷하지만 배열과는 다르게 인덱스를 문자 혹은 우리가 직접 원하는 데이터로 지정 가능 (가시적인 차이점)
+-  변수와 함수(속성, 이벤트, 메소드)가 모여 만든 변형 가능한 속성들의 집합 -> 하나의 단위로 구조화할 수 있어 유용 
 -  자바스크립트 객체는 크게 네이티브 객체, 호스트 객체, 사용자 정의 객체로 나뉘어짐
 	- **네이티브 객체(Native  Object), 코어 객체(Core Object)**: ECMAScript 사양에 정의된 객체
 	    - 내장 생성자 객체(Object, String, Number, Boolean, Array, Function...), JSON, Math, Reflect 등
@@ -28,6 +29,14 @@ comments: true
 
 - 객체에 포함된 데이터 하나(이름과 값의 쌍)
 - 프로퍼티에 저장된 값이 함수일 경우, 일반 함수와 구분하기 위해 그 프로퍼티를 메소드 (method)라 부름
+- 프로퍼티는 프로퍼티 키(이름)고 프로퍼티 값으로 구성됨
+	- 프로퍼티는 유일하게 프로퍼티 키로 식별할 수 있음 (프로퍼티 키는 프로퍼티를 식별하기 위한 식별자)
+	- 프로퍼티 키는 빈 문자열을 포함하는 모든 문자열 또는 symbol 값으로 작성함
+		- 문자열, symbol 값 이외의 값을 지정하면 암묵적으로 **문자열**로 변환됨
+		- 프로퍼티 키 중복 선언 시 나중에 작성된 프로퍼티 키 값으로 적용됨
+	- 프로퍼티 값에는 모든 형태의 데이터 올 수 있음
+		- 이미 존재하는 프로퍼티 키에 새로운 값 부여하면 해당 프로퍼티 값은 새로운 값으로 변경됨
+- 배열과 다르게 객체는 프로퍼티 열거 시 순서를 보장하지 않음
 
 <br>
 
@@ -96,8 +105,26 @@ card.color // >> undefined
 `var obj = new Object();`
 
 - **생성자**: new 연산자로 객체를 생성할 것이라 기대하고 만든 함수
-- 생성자로 객체를 생성할 때는 **new 연산자** 사용
+- 생성자 함수를 통해 생성된 객체를 인스턴스(instance)라고 함
+- 생성자로 객체를 생성할 때는 **new 연산자** 사용 (빈 객체 생성됨)
+	- 생성자 안에서 **this.프로퍼티 이름**에 값을 대입하면 그 이름을 가진 프로퍼티에 값이 할당된 객체 생성됨
+- 메소드 함수 안에서 this 사용하면 그 값이 생성자와 new 연산자로 생성한 객체(인스턴트)의 프로퍼티임을 명시 가능
+
+	```js
+	var person = new Object();
+
+	person.name = 'Ji Hye';
+	person.gender = 'female';
+	person.sayHello = function () {
+		console.log('Hi! My name is ' + this.name);
+	};
+
+	console.log(person); // {name: "Ji Hye", gender: "female", sayHello: ƒ}
+	person.sayHello(); // Hi! My name is Ji Hye
+	```
+
 - 객체를 생성하고 초기화하는 역할을 함
+- 생성자 함수 이름은 보통 파스칼 표기법 따름 (일반 함수와 생성자 함수를 구분하기 위해) 
 - 생성자 인수값이 null이거나 undefined면 빈 객체 반환
 
 ```js
@@ -107,20 +134,6 @@ var obj1 = new Object(null),
 
 - **특수한 상황이 아니라면 객체 리터럴 방식을 사용하는 것이 일반적**
 	- 자바스크립트 엔진은 객체 리터럴로 객체를 생성하는 코드를 만나면 내부적으로 Object 생성자 함수를 사용하여 객체를 생성하기 때문에 굳이 생성자로 객체를 생성하지 않아도 됨
-- 간단한 예시
-
-```js
-var person = new Object();
-
-person.name = 'Ji Hye';
-person.gender = 'female';
-person.sayHello = function () {
-  console.log('Hi! My name is ' + this.name);
-};
-
-console.log(person); // {name: "Ji Hye", gender: "female", sayHello: ƒ}
-person.sayHello(); // Hi! My name is Ji Hye
-```
 
 <br>
 - - -
