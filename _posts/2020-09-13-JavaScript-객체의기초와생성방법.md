@@ -119,7 +119,6 @@ person.sayHello = function () {
 };
 
 console.log(person); // {name: "Ji Hye", gender: "female", sayHello: ƒ}
-
 person.sayHello(); // Hi! My name is Ji Hye
 ```
 
