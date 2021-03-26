@@ -70,17 +70,17 @@ comments: true
 
 	- 대괄호([]) 연산자: 프로퍼티 이름 또는 문자열 반환하는 표현식 사용 가능
 
-	```js
-    	card["rank"] // >> A
-    	```
+    ```js
+    card["rank"] // >> A
+    ```
 
 <br>
 
 - 객체에 없는 프로퍼티를 읽으려고 시도하면 undefined 반환됨
 
-	```js
-    	card.color // >> undefined
-    	```
+```js
+card.color // >> undefined
+```
 
 <br>
 
@@ -184,8 +184,15 @@ console.log("color" in card); // >> 프로퍼티가 객체에 포함되어 있�
 #### **내장 객체**
 
 - 자바스크립트에서는 처음부터 사용할 수 있는 내장 객체(빌트인 오브젝트)가 마련되어 있음
+
+<br>
+
+
 - 내장 생성자
 	- Object, String, Number, Boolean, Array, Date, Function ...
+
+<br>
+
 - Date 생성자
 	- 날짜와 시간을 표현하는 객체 생성
 
@@ -205,10 +212,16 @@ console.log("color" in card); // >> 프로퍼티가 객체에 포함되어 있�
 		- now.toLocaleTimeString(); : 지역화된 시간 정보
 		- .getUTCHours(); : UTC 시각의 시간을 뜻하는 숫자값
 		- now.toUTCSting(); : UTC 날짜와 시간 정보
+
+<br>
+
 - Function 생성자
 	- 함수를 생성하는 내장 생성자
 	- var 변수 이름 = new Function(첫 번째 인수, ..., n 번째 인수, 함수 몸통);
 	- **Function 생성자로 생성한 함수는 전역 변수와 자신의 지역 변수만 읽고 쓸 수 있다는 단점이 있어 함수를 동적으로 생성해야 하는 특별한 상황 외는 사용 안 함**
+
+<br>
+
 - 기타 내장 객체
 	- 전역 객체: 프로그램 어디서나 사용할 수 있는 객체
 		- 전역 객체의 프로퍼티
@@ -216,9 +229,6 @@ console.log("color" in card); // >> 프로퍼티가 객체에 포함되어 있�
 			- 생성자: Object(), String(), Number() ...
 			- 전역 함수: parseInt(), parseFloat(), isNaN() ...
 			- 내장 객체: Math, JSON, Reflect
-
-	<br>
-
 	- JSON: JSON을 처리하는 기능을 제공
 	- Math: 수학적인 함수와 상수를 제공
 	- Reflect: 프로그램의 흐름을 가로채는 기능을 제공
