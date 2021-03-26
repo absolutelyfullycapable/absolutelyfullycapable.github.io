@@ -71,16 +71,16 @@ comments: true
 	- 대괄호([]) 연산자: 프로퍼티 이름 또는 문자열 반환하는 표현식 사용 가능
 
 	```js
-    card["rank"] // >> A
-    ```
+    	card["rank"] // >> A
+    	```
 
 <br>
 
 - 객체에 없는 프로퍼티를 읽으려고 시도하면 undefined 반환됨
 
 	```js
-    card.color // >> undefined
-    ```
+    	card.color // >> undefined
+    	```
 
 <br>
 
@@ -124,11 +124,11 @@ obj.name = "이름";
 obj.age = "나이";
 
 document.write("객체 obj의 name 속성은 " + obj.name + "<br>");
-document.write("객체 obj의 age property은 " + obj.age + "<br>");
+document.write("객체 obj의 age property는 " + obj.age + "<br>");
 console.log(obj);
 ```
 
-![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdKWc8E%2Fbtq038X1zIE%2FxuHypk6CzXDKkKnRyN6xTK%2Fimg.png)
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbCL1IB%2Fbtq03vlPkdj%2F8EsLCS9kTmb2k57KGFSuy1%2Fimg.png)
 
 <br>
 
