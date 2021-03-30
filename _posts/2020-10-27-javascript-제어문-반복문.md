@@ -142,6 +142,24 @@ for(x = 2; x <= 3; x++) {
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FUPE19%2FbtqLXS4dxhL%2FFhlMIOq5N9UBfOBkoZsA10%2Fimg.png)
 
 <br>
+
+2) 두 개의 주사위를 던졌을 때, 두 눈의 합이 6이 되는 모든 경우의 수
+
+```js
+for(x = 1; x <= 6; x++) {
+    for(y = 1; y <= 6; y++) {
+        if(x + y === 6) {
+		document.write('[' + x + ', ' + y + ']<br>');
+	}
+    }
+}
+```
+
+<br>
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbYCIfi%2Fbtq1qOSwztm%2F1IwzVrjjyCajsYEKgLFdE0%2Fimg.png)
+
+<br>
 <br>
 - - -
 <br>
