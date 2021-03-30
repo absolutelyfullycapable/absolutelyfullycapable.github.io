@@ -315,6 +315,8 @@ window.onload = function(){ // 문서 준비 이벤트
     console.log(null == undefined); // true
     console.log(null === undefined); // false
     // 둘 다 똑같이 값이 없는 상태지만 undefined는 프로그래머가 의도하지 않은 상황, null은 프로그래머가 현재 값이 없다는 것을 의도적으로 지정한 상황
+    
+    console.log(NaN === NaN); // false -> NaN는 자신과 일치하지 않는 유일한 값
     ```
 
 <br>
@@ -396,15 +398,53 @@ window.onload = function(){ // 문서 준비 이벤트
 - - -
 <br>
 
-## **5. 조건 연산자**
+## **5. 삼항 조건 연산자**
 
 - 조건식을 판별하여 참(true)이냐 거짓(false)이냐에 따라 다음 문장을 선택적으로 실행하는 연산자
-- 삼항 연산자
-	- 첫 번째 피연산자를 조건식으로 평가한 후 그 결과가 참(true)이면 두 번째 피연산자 값으로 삼고, 거짓(false)이면 세 번째 피연산자를 값으로 삼음
-- 예시: 변수 a와 b의 값을 비교하여 a > b가 참이면 a, 거짓이면 b를 변수 c에 대입하는 수식
+- 첫 번째 피연산자를 조건식으로 평가한 후 그 결과가 참(true)이면 두 번째 피연산자 값으로 삼고, 거짓(false)이면 세 번째 피연산자를 값으로 삼음
+- 예시 1: 변수 a와 b의 값을 비교하여 a > b가 참이면 a, 거짓이면 b를 변수 c에 대입하는 수식
 
     ```js
     var a = 10, b = 20,
 	c = (a > b) ? a : b;
     console.log(c); // 20
     ```
+    
+- 예시 2: x가 짝수이면 '짝수'를, 홀수이면 '홀수'를 반환
+
+    ```js
+    var x = 10,
+        result = (x % 2) ? '홀수' : '짝수'; // x % 2는 0, 0은 false로 암묵적 타입 변환됨 
+    console.log(result); // 짝수
+    ```
+
+<br>
+- - -
+<br>
+
+## **6. typeof 연산자**
+
+- typeof 뒤에 위치한 피연산자의 데이터 타입을 **문자열**로 반환
+- typeof가 반환하는 문자열은 7 개의 데이터 타입과 일치하지 않음
+    - "string", "number", "boolean", "undefined", "symbol", "object", "function" 중 하나를 반환
+    - "null"은 반환하지 않음
+
+
+```js
+typeof ''; // "string"
+typeof 1; // "number"
+typeof NaN; // "number"
+typeof true; // "boolean"
+typeof undefined; // "undefined"
+typeof Symbol(); // "symbol"
+typeof null; // "object" -> 자바스크립트의 첫 번째 버전에서 이렇게 설계된 것을 현재의 버전에 반영하지 못하고 있기 때문
+typeof []; // "object"
+typeof {}; // "object"
+typeof new Date(); // "object"
+typeof function() {}; // "function"
+
+// null 타입을 확인할 때는 일치 연산자(===) 사용
+var n = null;
+console.log(typeof n === null); // false
+console.log(n === null); // true
+```
