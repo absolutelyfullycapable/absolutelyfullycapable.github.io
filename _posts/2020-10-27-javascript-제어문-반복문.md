@@ -169,6 +169,18 @@ for(x = 1; x <= 6; x++) {
 - 객체 안의 프로퍼티와 배열 안의 배열 요소를 순회하는 반복문
 - 반복문 안에서 문장을 여러 개 실행하려면 여러 문장을 블록으로 묶어서 블록 문장으로 만듦
 - for~in 반복문 안에서도 break문과 continue문 사용 가능
+- 배열에서 배열 요소만 순회하지 않기 때문에 배열로는 사용하지 않는 것이 좋음
+
+```js
+var arr = ['1', '2'];
+arr.three = '3';
+
+for(var num in arr) {
+	console.log(num + ': ' + arr[num]);
+}
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FzpOAf%2Fbtq1s49dxFB%2F9Bdq7gfpp2XDZhB00285p0%2Fimg.png)
 
 <br>
 
@@ -220,7 +232,38 @@ for(var a in array) {
     console.log("a = " + a);
 }
 ```
+
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbi8stB%2Fbtq0LOZbIld%2FZPppqowrH38GwNOVXNQo61%2Fimg.png)
+
+<br>
+<br>
+- - -
+<br>
+
+### **1-3. for~of 반복문**
+
+- for~in 반복문에서 배열은 배열 요소만 순회하지 않는다는 단점을 극복하기 위해 ES6에 추가된 반복문
+- 배열 요소가 변수에 차례대로 할당됨
+
+```js
+var arr = ['lee', 'ji', 'hye'];
+for(var name in arr) {
+    console.log(name);
+}
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcRODha%2Fbtq1uvL55gE%2FO3XumRquqNImLJvZVEksK1%2Fimg.png)
+
+- 배열 요소의 인덱스 값 불러오고 싶을 때는?
+
+```js
+var arr = ['lee', 'ji', 'hye'];
+for(var [index, value] in arr.entries()) { // .entries() 메소드는 배열의 배열 요소 인덱스 값과 배열 요소의 값을 쌍으로 출력시킴
+    document.write('index: ' + index + ', value: ' + value + '<br>');
+}
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fba0yNC%2Fbtq1uwjXLmA%2FmjfZT8uvBo9DwPq4ZrsoL0%2Fimg.png)
 
 <br>
 <br>
