@@ -108,7 +108,7 @@ card.color // >> undefined
 - 생성자 함수를 통해 생성된 객체를 인스턴스(instance)라고 함
 - 생성자로 객체를 생성할 때는 **new 연산자** 사용 (빈 객체 생성됨)
 	- 생성자 안에서 **this.프로퍼티 이름**에 값을 대입하면 그 이름을 가진 프로퍼티에 값이 할당된 객체 생성됨
-- 메소드 함수 안에서 this 사용하면 그 값이 생성자와 new 연산자로 생성한 객체(인스턴트)의 프로퍼티임을 명시 가능
+- 메소드 함수 안에서 this 사용하면 그 값이 생성자와 new 연산자로 생성한 객체의 프로퍼티임을 명시 가능
 
 	```js
 	var person = new Object();
@@ -134,6 +134,33 @@ var obj1 = new Object(null),
 
 - **특수한 상황이 아니라면 객체 리터럴 방식을 사용하는 것이 일반적**
 	- 자바스크립트 엔진은 객체 리터럴로 객체를 생성하는 코드를 만나면 내부적으로 Object 생성자 함수를 사용하여 객체를 생성하기 때문에 굳이 생성자로 객체를 생성하지 않아도 됨
+
+<br>
+
+#### **3. 생성자 함수로 생성하기**
+
+- 생성자 함수: 객체를 생성하는 함수
+- 객체를 생성하기 위한 템플릿처럼 사용 -> 프로퍼티 값만 다른 여러 개의 객체를 생성할 때의 불편함 보완 가능
+- 생성자 함수명은 일반적으로 대문자로 시작 -> 생성자 함수임을 인식할 수 있도록 도움 줌
+- 생성자 함수 내에서 선언된 일반 변수는 내수에서는 자유롭게 접근이 가능하지만 외부 참조는 불가능
+
+```js
+function Person(name, hobby) { // 생성자 함수로 객체 생성
+	this.name = name;
+	this.hobby = hobby;
+	this.sayHi = function() {
+		document.write('Hi! My name is ' + name + ', and my hobby is ' + hobby + '.<br>');
+	}
+}
+
+var jihye = new Person('Ji Hye', 'listening music'),
+    boo = new Person('Boo', 'singing');
+
+jihye.sayHi();
+boo.sayHi();
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbum6iA%2Fbtq1qN8mn9O%2FyOuJDkmo2f0dlSYODk9uu0%2Fimg.png)
 
 <br>
 - - -
