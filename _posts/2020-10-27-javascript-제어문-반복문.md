@@ -247,7 +247,7 @@ for(var a in array) {
 
 ```js
 var arr = ['lee', 'ji', 'hye'];
-for(var name in arr) {
+for(var name of arr) {
     console.log(name);
 }
 ```
@@ -258,7 +258,7 @@ for(var name in arr) {
 
 ```js
 var arr = ['lee', 'ji', 'hye'];
-for(var [index, value] in arr.entries()) { // .entries() 메소드는 배열의 배열 요소 인덱스 값과 배열 요소의 값을 쌍으로 출력시킴
+for(var [index, value] of arr.entries()) { // .entries() 메소드는 배열의 배열 요소 인덱스 값과 배열 요소의 값을 쌍으로 출력시킴
     document.write('index: ' + index + ', value: ' + value + '<br>');
 }
 ```
