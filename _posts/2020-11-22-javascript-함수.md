@@ -86,7 +86,7 @@ function 함수명(매개 변수 1, 매개 변수 2, ...) { // 함수 선언
 3) Function 생성자로 정의
 
 - Function 생성자로 정의한 함수는 그 참조를 변수에 할당한 후 호출 가능
-- 이 방식으로 일반적으로 사용하지는 않음
+- 이 방식을 일반적으로 사용하지는 않음
 
     ```js
     var square = new Function("x", "return x*x");
