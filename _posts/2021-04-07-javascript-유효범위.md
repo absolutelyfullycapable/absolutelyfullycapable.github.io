@@ -1,3 +1,10 @@
+---
+title: "JavaScript"
+date: 2021-04-07
+categories: [JavaScript]
+comments: true
+---
+
 > 해당 포스팅은 [생활 코딩 자바스크립트 언어 - 함수 지향 유효 범위 파트](https://opentutorials.org/course/743/6495) 수강 후 강의 내용을 토대로 학습한 내용을 담고 있습니다. 😎
 포스팅 내용에 대한 피드백은 언제나 환영입니다!
 
