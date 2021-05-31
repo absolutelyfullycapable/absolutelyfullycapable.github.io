@@ -28,15 +28,15 @@ layout: page
   {% if page.comment %}
   <div class="post_comment">
     {% include disqus.html username = site.disqus.shortname %}
+    <!-- utterances -->
+    <script src="https://utteranc.es/client.js"
+      repo="absolutelyfullycapable/blog-comments"
+      issue-term="title"
+      label="✨💬 Comment ✨"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+    </script>
   </div>
   {% endif %}
-  
-  <script src="https://utteranc.es/client.js"
-    repo="absolutelyfullycapable/blog-comments"
-    issue-term="title"
-    label="✨💬 Comment ✨"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
 </div>
