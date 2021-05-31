@@ -27,19 +27,15 @@ layout: page
 
   {% if page.comment %}
   <div class="post_comment">
-    {% include disqus.html username = site.disqus.shortname %}
-  </div>
-  {% endif %}
-
-  <!-- utterances comment -->
-  <div>
+    <!-- utterances -->
     <script src="https://utteranc.es/client.js"
         repo="absolutelyfullycapable/blog-comments"
-        issue-term="pathname"
-        label="comments"
+        issue-term="title"
+        label="💬 Comments"
         theme="github-light"
         crossorigin="anonymous"
         async>
     </script>
   </div>
+  {% endif %}
 </div>
