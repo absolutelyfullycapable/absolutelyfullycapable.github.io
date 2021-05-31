@@ -21,9 +21,9 @@ comments:
   provider:
   utterances:
     enable: true
-    repo: absolutelyfullycapable/blog-comments
-    theme : github-light
-    issue_term: title
+    repo: "absolutelyfullycapable/blog-comments"
+    theme : "github-light"
+    issue_term: "title"
 
 user:
   name: Archive Of Records
