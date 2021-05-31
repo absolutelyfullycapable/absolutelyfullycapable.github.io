@@ -20,8 +20,10 @@ disqus_shortname: #disqus shortname
 comments:
   provider:
   utterances:
-    theme : "github-light"
-    issue_term: "title"
+    enable: true
+    repo: absolutelyfullycapable/blog-comments
+    theme : github-light
+    issue_term: title
 
 user:
   name: Archive Of Records
