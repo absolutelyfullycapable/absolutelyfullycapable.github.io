@@ -27,15 +27,7 @@ layout: page
 
   {% if page.comment %}
   <div class="post_comment">
-    <!-- utterances comment -->
-    <script src="https://utteranc.es/client.js"
-        repo="absolutelyfullycapable/absolutelyfullycapable.github.io"
-        issue-term="pathname"
-        label="comments"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-    </script>
+    {% include disqus.html username = site.disqus.shortname %}
   </div>
   {% endif %}
 
