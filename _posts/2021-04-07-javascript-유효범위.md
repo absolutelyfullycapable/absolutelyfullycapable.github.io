@@ -1,5 +1,5 @@
 ---
-title: "JavaScript"
+title: "JavaScript 유효 범위(Scope)"
 date: 2021-04-07
 categories: [JavaScript]
 comments: true
