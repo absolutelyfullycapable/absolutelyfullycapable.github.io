@@ -17,6 +17,11 @@ favicon: favicon.ico
 google_analytics: #UA—XXXXXXXX-X
 disqus_shortname: #disqus shortname
 
+comments:
+  provider:
+  utterances:
+    theme : "github-light"
+
 user:
   name: Archive Of Records
   pic: /assets/img/profile.jpg
@@ -35,10 +40,7 @@ defaults:
       type: posts
     values:
       layout: post
-      comment:
-        provider:
-          utterances:
-            theme : "github-light"
+      comment: true
  
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown 
