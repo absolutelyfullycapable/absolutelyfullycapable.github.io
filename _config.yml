@@ -35,7 +35,10 @@ defaults:
       type: posts
     values:
       layout: post
-      comment: true   
+      comment:
+        provider:
+          utterances:
+            theme : "github-light"
  
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown 
