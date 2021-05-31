@@ -21,6 +21,7 @@ comments:
   provider:
   utterances:
     theme : "github-light"
+    issue_term: "title"
 
 user:
   name: Archive Of Records
