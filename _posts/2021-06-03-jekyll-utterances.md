@@ -22,7 +22,7 @@ Utterances 사용 방법에 대한 글은 구글링만 해도 정말 많이 나�
 <br>
 
 ## 그래서 Utterances가 뭔가요?
-
+<br>
 ![Utterances](https://blog.kakaocdn.net/dn/l7y0h/btq6vxduluD/1aXOWbNJLLK4ub4kUwmifK/img.png)
 
 <br>
@@ -38,6 +38,8 @@ Utterances 사용 방법에 대한 글은 구글링만 해도 정말 많이 나�
 <br>
 
 ## 그러면 이제 Utterances를 적용해 봅시다!
+
+<br>
 
 ### 1. Github에 신규 Repository 만들기 (생략 가능)
 
@@ -79,9 +81,18 @@ Install 버튼을 누르면 요런 페이지가 뜨는데요.
 
 <br>
 
+#### 1) Utterances와 연결할 Repo 작성하기
+
+<br>
+
 ![Repo](https://blog.kakaocdn.net/dn/bmI2RJ/btq6uIT59DR/D9h61keqgp9VCmYgYvpSk1/img.png)
 
 Repo는 앞서 만든 댓글 관리용 Repo를 작성해 주시면 됩니다.
+
+<br>
+<br>
+
+#### 2) Issue Mapping 방법 선택하기
 
 <br>
 
@@ -91,11 +102,21 @@ Repo는 앞서 만든 댓글 관리용 Repo를 작성해 주시면 됩니다.
 참고로 저는 `Issue title contains page pathname`을 선택했어요.
 
 <br>
+<br>
+
+#### 3) Issue label 작성하기
+
+<br>
 
 ![Issue label](https://blog.kakaocdn.net/dn/coPtju/btq6rnwo592/d3ZRUQj1BHhaHoMCO1CdI1/img.png)
 
 그 후 Issue label을 설정해 줍니다. 설정된 label은 댓글 issue 뒤에 붙습니다.<br>
 이모지도 지원되는 걸 보면 이 부분은 각자 잘 알아볼 수 있는 방법으로 자유롭게 설정 가능한 것 같아요.
+
+<br>
+<br>
+
+#### 4) Utterances theme 선택하기
 
 <br>
 
@@ -105,6 +126,11 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 저는 심플 이즈 더 베스트라 생각하여 가장 기본인 Github Light로 설정했습니다. 😎
 
 <br>
+<br>
+
+#### 5) Utterances script 복사 후 댓글 기능이 필요한 페이지에 붙여넣기
+
+<br>
 
 ![Utterances Script](https://blog.kakaocdn.net/dn/n0DUe/btq6q2sFYJk/YCXwewvvlhBkv8eOmFfrlK/img.png)
 
@@ -112,7 +138,11 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 저는 포스트에만 댓글을 설정해 줄 거기 때문에 복사한 script를 `_layouts/post.html`에 넣었습니다. (댓글 기능이 필요한 페이지에 넣으면 될 것 같아요!)<br>
 <br>
 신나게 등록하고 Jekyll 블로그를 열어 댓글창이 생긴 걸 확인한 뒤, 테스트 댓글을 작성하려고 Sign with Github 버튼을 누르는 순간 이런 화면을 마주했습니다.
+
 <br>
+<br>
+<br>
+
 ![404 Error](https://blog.kakaocdn.net/dn/bEAz5V/btq6oDy0mwn/D6rcMuwHSfc9crijW1LHmk/img.png)
 
 왜.. 뭐가 문제인데.. 😥
@@ -125,10 +155,11 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 <br>
 
 보통의 경우에 복사한 script를 넣은 뒤 정상적으로 작동해야 합니다. 그런데 저는 (단계들을 잘 밟으면서 온 것 같은데..) Github 연동 로그인이 되지 않아 애를 먹었습니다.<br>
-<br>
 구글링을 해 봐도 비교적 쉽게 설치할 수 있는 거라 그런지 저와 같은 문제를 겪고 있는 사람을 찾기 어렵더라구요. (물론 제 구글링 실력이 나빠서 못 발견했을 수도 있..)<br>
 <br>
 그래서 제가 설치할 때 참고한 [HAHWUL 님 블로그 포스팅](https://www.hahwul.com/2020/08/08/jekyll-utterances/)에 문의 댓글을 우다다 달았는데요..
+
+<br>
 
 ![HAHWUL 님 댓글 1](https://blog.kakaocdn.net/dn/IdSoO/btq6w60EfZB/KKKvlKVJ4beXFHLM0j34KK/img.png)
 ![HAHWUL 님 댓글 2](https://blog.kakaocdn.net/dn/bnqmKS/btq6qRElilW/hgx3XAzWCu95DB44mQenx0/img.png)
@@ -171,7 +202,7 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 문제를 해결하니 잘 작동합니다. 해당 댓글은 댓글 관리용으로 만든 Repo에서도 확인이 가능했습니다.<br>
 <br>
 
-![Repo의 Issue 카테고리에서 확인 및 관리 가능한 댓글](https://blog.kakaocdn.net/dn/vxbET/btq6q1MqpNO/IsurkwwZfUxZWdahgFyZpk/img.png)
+![Repo의 Issue 카테고리에서 확인 및 관리 가능한 댓글](https://blog.kakaocdn.net/dn/HKycu/btq6u2Y70SC/K46vGLervSdECC8B7HzQTK/img.png)
 
 별거 아닌데도 해결하고 보니 뿌듯뿌듯.. 😏
 
