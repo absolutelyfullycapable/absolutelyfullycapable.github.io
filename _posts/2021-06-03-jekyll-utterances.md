@@ -6,7 +6,7 @@ comments: true
 ---
 
 ## 제가 Utterances를 사용한 이유는요..
-
+<br>
 시작하기 앞서 저는 작년 9월부터 Jekyll 블로그를 사용하다가 `댓글 기능이 없어 타인과 글에 대해 소통하기 불편할 것 같다`의 이유로 올해 4월 다른 플랫폼으로 블로그를 이사한 적이 있습니다. (물론 다른 사람에게 보여 주거나 소통을 최우선으로 두고 작성한 글들이 아니라 스스로 공부한 내용을 정리한 형식이긴 하지만요..)<br>
 <br>
 이사한 블로그는 잘 구축되어 있는 플랫폼이라 여러 방면에서 운영하기 좋았지만 작년부터 남긴 기록이 아깝기도 했고, 결정적으로 `Jekyll 블로그도 댓글 기능을 추가할 수 있다`는 사실을 알고 '새로 시작하는 것도 좋지만 있던 블로그를 잘 관리해 보자' 생각이 들어 다시 돌아오게 되었습니다.<br>
@@ -23,7 +23,7 @@ Utterances 사용 방법에 대한 글은 구글링만 해도 정말 많이 나�
 
 ## 그래서 Utterances가 뭔가요?
 
-![Utterances](https://blog.kakaocdn.net/dn/bLOjds/btq6q0NtwI4/F2HHNjbjnafchAVAjHbEC0/img.png)
+![Utterances](https://blog.kakaocdn.net/dn/l7y0h/btq6vxduluD/1aXOWbNJLLK4ub4kUwmifK/img.png)
 
 <br>
 
@@ -60,7 +60,7 @@ Utterances 사용 방법에 대한 글은 구글링만 해도 정말 많이 나�
 
 Install 버튼을 누르면 요런 페이지가 뜨는데요.
 
-![Install Utterances 2](https://blog.kakaocdn.net/dn/YaA7L/btq6mHVXfOj/SaJSwLQU3QjfdfqSt837q1/img.png)
+![Install Utterances 2](https://blog.kakaocdn.net/dn/MdXfb/btq6q1UQkOR/4jRfdCKLgMorysNa3RpEp1/img.png)
 
 제 Github에 있는 모든 Repo에 적용하지 않을 거고, 댓글 관리용 Repo를 만들었기 때문에 **Only select repositories**를 선택하고 앞서 만든 댓글 관리용 Repo를 선택합니다.<br>
 댓글 관리용 Repo를 만들지 않았다면 Utterances와 연결할 Repo를 선택하면 됩니다!<br>
@@ -80,34 +80,34 @@ Install 버튼을 누르면 요런 페이지가 뜨는데요.
 
 <br>
 
-![Repo](https://blog.kakaocdn.net/dn/tE5hy/btq6pHVqLxL/D2XjdE8KkeDxaAfo2XjAY0/img.png)
+![Repo](https://blog.kakaocdn.net/dn/bmI2RJ/btq6uIT59DR/D9h61keqgp9VCmYgYvpSk1/img.png)
 
 Repo는 앞서 만든 댓글 관리용 Repo를 작성해 주시면 됩니다.
 
 <br>
 
-![Issue Mapping](https://blog.kakaocdn.net/dn/QQgpv/btq6n6BnpVM/iX6q20u7bMRAK4qP2qJUnk/img.png)
+![Issue Mapping](https://blog.kakaocdn.net/dn/deD2jr/btq6rwUBSSd/QyKeYoPKtjTn0eZG3OOej1/img.png)
 
 그 다음은 글과 Issue를 어떻게 매핑할 건지 선택하는 창이 나오는데요. (어떤 건지 설명) 여섯 가지 선택지 중 각자 블로그에 맞는 선택지로 고르면 됩니다!<br>
 참고로 저는 `Issue title contains page pathname`을 선택했어요.
 
 <br>
 
-![Issue label](https://blog.kakaocdn.net/dn/blNoug/btq6lYp7RCw/KMq3B4MXTf6sOW9rVBSkQk/img.png)
+![Issue label](https://blog.kakaocdn.net/dn/coPtju/btq6rnwo592/d3ZRUQj1BHhaHoMCO1CdI1/img.png)
 
 그 후 Issue label을 설정해 줍니다. 설정된 label은 댓글 issue 뒤에 붙습니다.<br>
 이모지도 지원되는 걸 보면 이 부분은 각자 잘 알아볼 수 있는 방법으로 자유롭게 설정 가능한 것 같아요.
 
 <br>
 
-![Utterances Theme](https://blog.kakaocdn.net/dn/bNNFuz/btq6n6uEzSj/ecxvbj2tro58pf8QTZ1aa1/img.png)
+![Utterances Theme](https://blog.kakaocdn.net/dn/bmFTd9/btq6uJlezvP/NuqBcilPtbMNZKjwxGpuQ1/img.png)
 
 Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 맞게 선택하시면 됩니다.<br>
 저는 심플 이즈 더 베스트라 생각하여 가장 기본인 Github Light로 설정했습니다. 😎
 
 <br>
 
-![Utterances Script](https://blog.kakaocdn.net/dn/Qr3rw/btq6mBWdyHA/SM6ssTldW9Y3D4CtCPJU4k/img.png)
+![Utterances Script](https://blog.kakaocdn.net/dn/n0DUe/btq6q2sFYJk/YCXwewvvlhBkv8eOmFfrlK/img.png)
 
 그 후 설정에 맞게 완성된 script를 복사합니다.<br>
 저는 포스트에만 댓글을 설정해 줄 거기 때문에 복사한 script를 `_layouts/post.html`에 넣었습니다. (댓글 기능이 필요한 페이지에 넣으면 될 것 같아요!)<br>
@@ -190,7 +190,7 @@ Utterances의 기본 최대 가로 사이즈가 760px이라 옆 여백이 참 �
 
 <br>
 
-![레이아웃 수정 방법 문구](https://blog.kakaocdn.net/dn/b0NhtT/btq6sdttsDa/UMoOedFzUTn8agDFOjuHu0/img.png)
+![레이아웃 수정 방법 문구](https://blog.kakaocdn.net/dn/L7BxN/btq6w51UFy5/IHrmlW3KyCsQhkFl9eXvhK/img.png)
 
 레이아웃을 수정하고 싶으면 CSS에서 `.utterances`나 `.utterances-frame` 선택자를 사용하여 수정하면 된다고 합니다.
 
