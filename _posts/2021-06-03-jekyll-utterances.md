@@ -44,7 +44,6 @@ Utterances 사용 방법에 대한 글은 구글링만 해도 정말 많이 나�
 ![댓글 관리용 신규 Repository](https://blog.kakaocdn.net/dn/C2O9I/btq6rn2KKXe/KA79o2hPKd2RD9k8Kfze9K/img.png)
 
 댓글을 관리하는 신규 Repository를 만듭니다. **(기존 블로그 Repo에서 한꺼번에 관리하고 싶다면 새로 만들지 않고 블로그 Repo를 연결해도 됩니다!)**<br>
-<br>
 보통 이름은 `blog-comments`나 `blog_comments`로 많이 만드시더라구요. 꼭 저렇게 해야 하는 건 아니니 각자 원하는 대로 작성해 주시면 될 것 같습니다.<br>
 <br>
 여기서 주의할 점은 ✨ 꼭 **Public**으로 만드셔야 합니다! ✨<br>
