@@ -164,9 +164,9 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 ![HAHWUL 님 댓글 1](https://blog.kakaocdn.net/dn/IdSoO/btq6w60EfZB/KKKvlKVJ4beXFHLM0j34KK/img.png)
 ![HAHWUL 님 댓글 2](https://blog.kakaocdn.net/dn/bnqmKS/btq6qRElilW/hgx3XAzWCu95DB44mQenx0/img.png)
 
-세상에 🤭!!!!!<br>
+세상에 😱!!!!!<br>
 <br>
-이 Issue 때문에 404 Error 페이지가 뜨는 것 같다고 [링크](https://github.com/utterance/utterances/issues/443#issuecomment-774536781)와 함께 해결 방법을 알려 주셨습니다.. 🤭<br>
+이 Issue 때문에 404 Error 페이지가 뜨는 것 같다고 [링크](https://github.com/utterance/utterances/issues/443#issuecomment-774536781)와 함께 해결 방법을 알려 주셨습니다.. 😮<br>
 (너무 친절하고 자세하게 설명해 주셔서 감동받았던.. 이 포스팅을 통해 다시 감사의 인사를 드립니다. (--)(__) ♡)<br>
 <br>
 생각보다 해결하기 어려운 문제는 아니라 안심하며 바로 수정에 들어갔습니다.<br>
