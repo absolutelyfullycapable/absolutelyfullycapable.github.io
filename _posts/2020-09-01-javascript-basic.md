@@ -3,6 +3,9 @@ title: "JavaScript 기초"
 date: 2020-09-01
 categories: [JavaScript]
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## **자바스크립트**
