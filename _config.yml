@@ -7,6 +7,8 @@ description: > # this means to ignore newlines until "baseurl"
 
 baseurl: # the subpath of the site
 url: http://absolutelyfullycapable.github.io # the base hostname & protocol for your sit
+plugins:
+  - jekyll-sitemap
 
 permalink: /:year-:month/:title
 timezone:
