@@ -54,12 +54,16 @@ function 함수명(매개 변수 1, 매개 변수 2, ...) { // 함수 선언
 1) 함수 선언문으로 정의
 
 - 함수 선언문의 정의할 때는 함수명 생략할 수 없음 -> 기명 함수
+- 매개변수는 0 개 이상의 목록으로 괄호로 감싸고 콤마(,)로 분리
+	- 매개변수의 타입을 기술하지 않아 함수 몸체 내에서 매개변수의 타입 체크가 필요할 수 있음
 - 함수 선언문으로 정의한 함수는 호출문이 그보다 앞에 위치해도 호출할 수 있음 (자바스크립트 엔진이 함수 선언문을 프로그램의 첫머리 또는 함수의 첫머리로 끌어올리기 때문(호이스팅))
 - 함수 선언문도 내부적으로 자바스크립트 엔진이 기명 함수 표현식으로 변환하므로 결국 함수 리터럴 방식을 사용하는 것과 마찬가지
 
     ```js
     console.log(square(2)); // -> 4
-    function square(x) { return x*x; };
+    function square(x) {
+    	return x*x; // return 문으로 결과값 반환 = 반환값 (return value)
+    };
     ```
 
 <br>
@@ -67,17 +71,22 @@ function 함수명(매개 변수 1, 매개 변수 2, ...) { // 함수 선언
 2) 함수 리터럴로 정의 (표현식으로 작성)
 
 - 리터럴: 코드 상에서 데이터를 표현하는 것
+- 함수 표현식: 함수의 일급 객체 특성을 이용하여 함수 리터럴 방식으로 함수를 정의하고 변수에 할당하는 방식
 - 함수 리터럴로 정의한 함수는 일급 객체이기 때문에 그 참조를 변수에 할당한 후 호출 가능
 	- 이때 변수는 함수명이 아니라 할당된 함수를 가리키는 참조값을 저장하게 됨 -> **함수 호출 시 함수명이 아니라 함수를 가리키는 변수명을 사용하여야 함**
 - 함수 표현식 방식으로 정의한 함수는 함수명 생략 가능 -> 익명 함수
 	- 함수 표현식에서는 함수명을 생략하는 것이 일반적
 
     ```js
-    var ex1 = function square(x) { return x*x; }; // 기명 함수 표현식 (named function expression)
+    var ex1 = function square(x) {
+    	return x*x;
+    }; // 기명 함수 표현식 (named function expression)
     console.log(ex1(3)); // -> 9
     console.log(square(3)); // -> Uncaught ReferenceError: square is not defined (함수가 할당된 변수로 함수를 호출하지 않고 함수명으로 호출하면 함수 표현식에서 사용한 함수명은 외부 코드에서 접근 불가능하기 때문에 에러 발생)
 
-    var ex2 = function(x) { return x+x; }; // 익명 함수 표현식 (anonymous function expression)
+    var ex2 = function(x) {
+        return x+x;
+    }; // 익명 함수 표현식 (anonymous function expression)
     console.log(ex2(3)); // -> 6
     ```
 
