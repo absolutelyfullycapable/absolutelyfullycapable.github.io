@@ -296,13 +296,17 @@ printMsg("호출되었습니다."); // 함수 호출
 
 ### **· 함수 반환값 출력**
 
-- 함수 수행 결괏값을 반환할 때는 **'return'** 키워드 사용
+- 함수 수행 결괏값을 반환할 때(함수를 호출한 코드(caller)에게 값을 반환할 때) **'return'** 키워드 사용
     - 함수 안에서 선언된 변수나 값의 경우 외부에서 접근 불가능하기 때문에 return 키워드 사용하여 호출한 코드 돌려 줌
     - 함수 실행 후 결과를 다시 얻으려면 리턴 키워드 사용
-- 반환할 결괏값이 없다면 return문 생략 가능
+    - 배열 등을 이용하여 한 번에 여러 개의 값 리턴 가능
+- 반환값(return value): 반환된 값
+- 함수는 반환을 생략할 수 있음 (암묵적으로 undefined 반환)
+    - 반환할 결괏값이 없는 경우에도 return문 생략 가능
 - 반환값을 저장하기 위한 변수 미리 선언해야 함
     - 작성 방법에 있는 변수 'result'가 그 역할
 - 함수 처리가 완료되면 자동으로 함수를 호출한 시점으로 돌아가 프로그램 계속 수행
+    - 만약 return 키워드 이후에 다른 구문이 존재하면 그 구문은 실행되지 않음
 
 <br>
 
@@ -407,3 +411,20 @@ document.write("결과 2: " + addUp(3, 20));
 ```
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdGt3R0%2FbtqNZNz8cqW%2FEyxzXPj0eXy9kiElGnEsck%2Fimg.png)
+
+<br>
+
+5) 복수 값의 반환
+
+```js
+function getSize(width, height, depth) {
+    var area = width * height,
+        volume = width * height * depth;
+    return [area, volume];
+}
+
+document.write('area is ' + getSize(3, 2, 3)[0]); // -> area is 6
+document.write('volume is ' + getSize(3, 2, 3)[1]); // -> volume is 18
+```
+
+![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FNEd01%2Fbtq7L1F0IQ3%2FexCzUoINGdMiRGP0apLUr0%2Fimg.png)
