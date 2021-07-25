@@ -364,25 +364,46 @@ window.onload = function(){ // 문서 준비 이벤트
 
 ## **4. 논리 연산자**
 
-- 주어진 조건을 논리적으로 연산하여 참(true) 또는 거짓(false)을 반환
+- 주어진 조건을 논리적으로 연산하여 피연산자 값 반환
 - 두 개 이상의 값을 비교
 - 기호
 	- 논리곱 연산자: &&
-	    - A 조건 && B 조건 : A의 조건과 B의 조건이 **모두** 만족시킬 때 true
+	    - 연산 순서
+	    	1. 가장 왼쪽 피연산자부터 확인하며 **falsy** 값 찾음
+	    	2. falsy 값 발견 시 작동 멈추고 그 값을 반환
+	    	3. 피연산자에서 falsy 값 발견 못 했을 때는 마지막 피연산자 값을 반환
+	    - falsy 값 (falsy 값을 제외한 모든 값은 truthy 값)
+	    	- ```0, -0, false, "", '', ``, undefined, null, NaN```
+	    - **논리합 연산자보다 우선 순위 높음**
 
             ```js
 	    const a = 10, b = 20;
 	    console.log(a >= 10 && b == 20); // true
 	    console.log(a > 10 && b == 20); // false
+	    
+	    console.log(false && 10); // false
+	    console.log('abc' && null); // null
+	    
+	    console.log([] || 'happy' && null); // []
 	    ```
 
+	<br>
+
 	- 논리합 연산자: `||`
-	    - A 조건 `||` B 조건 : A의 조건과 B의 조건 중 **하나만** 만족시킬 때 true
+	    - 연산 순서
+	    	1. 가장 왼쪽 피연산자부터 확인하며 **truthy** 값 찾음
+	    	2. truthy 값 발견 시 작동 멈추고 그 값을 반환
+	    	3. 피연산자에서 truthy 값을 발견 못 했을 때는 마지막 피연산자 값을 반환
 
             ```js
             const a = 10, b = 20;
             console.log(a > 10 || b == 20); // true
+	    
+	    console.log('def' || 0); // 'def'
+	    console.log("" || undefined); // undefined
             ```
+
+	<br>
 
 	- 논리 부정 연산자: !
 	    - !A 조건 : A 조건이 아니면 true
