@@ -373,9 +373,10 @@ window.onload = function(){ // 문서 준비 이벤트
 	    	2. falsy 값 발견 시 작동 멈추고 그 값을 반환
 	    	3. 피연산자에서 falsy 값 발견 못 했을 때는 마지막 피연산자 값을 반환
 	    - falsy 값 (falsy 값을 제외한 모든 값은 truthy 값)
-	    	- ```0, -0, false, "", '', ``, undefined, null, NaN```
+	    	<br>
+	    	```0, -0, false, "", '', ``, undefined, null, NaN```
 	    - **논리합 연산자보다 우선 순위 높음**
-
+	    
             ```js
 	    const a = 10, b = 20;
 	    console.log(a >= 10 && b == 20); // true
