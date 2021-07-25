@@ -377,16 +377,16 @@ window.onload = function(){ // 문서 준비 이벤트
 	    	```0, -0, false, "", '', ``, undefined, null, NaN```
 	    - **논리합 연산자보다 우선 순위 높음**
 	    
-            ```js
-	    const a = 10, b = 20;
-	    console.log(a >= 10 && b == 20); // true
-	    console.log(a > 10 && b == 20); // false
+	```js
+	const a = 10, b = 20;
+	console.log(a >= 10 && b == 20); // true
+	console.log(a > 10 && b == 20); // false
+	
+	console.log(false && 10); // false
+	console.log('abc' && null); // null
 	    
-	    console.log(false && 10); // false
-	    console.log('abc' && null); // null
-	    
-	    console.log([] || 'happy' && null); // []
-	    ```
+	console.log([] || 'happy' && null); // []
+	```
 
 	<br>
 
@@ -396,13 +396,13 @@ window.onload = function(){ // 문서 준비 이벤트
 	    	2. truthy 값 발견 시 작동 멈추고 그 값을 반환
 	    	3. 피연산자에서 truthy 값을 발견 못 했을 때는 마지막 피연산자 값을 반환
 
-            ```js
-            const a = 10, b = 20;
-            console.log(a > 10 || b == 20); // true
-	    
-	    console.log('def' || 0); // 'def'
-	    console.log("" || undefined); // undefined
-            ```
+	```js
+	const a = 10, b = 20;
+	console.log(a > 10 || b == 20); // true
+	
+	console.log('def' || 0); // 'def'
+	console.log("" || undefined); // undefined
+	```
 
 	<br>
 
