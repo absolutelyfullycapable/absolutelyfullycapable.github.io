@@ -409,12 +409,12 @@ window.onload = function(){ // 문서 준비 이벤트
 	- 논리 부정 연산자: !
 	    - !A 조건 : A 조건이 아니면 true
 
-            ```js
-            const a = 10, b = 20;
-            console.log(b == 10); // false
-            console.log(!(b == 10)); // 상수 b는 10과 같지 않지 않기 때문에 true
-            console.log(!(a == 10)); // 상수 a는 10과 같지 않다는 게 맞지 않기 때문에 false
-            ```
+	```js
+	const a = 10, b = 20;
+	console.log(b == 10); // false
+	console.log(!(b == 10)); // 상수 b는 10과 같지 않지 않기 때문에 true
+	console.log(!(a == 10)); // 상수 a는 10과 같지 않다는 게 맞지 않기 때문에 false
+	```
 
 <br>
 - - -
