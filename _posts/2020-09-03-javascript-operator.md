@@ -368,13 +368,7 @@ window.onload = function(){ // 문서 준비 이벤트
 - 두 개 이상의 값을 비교
 - 기호
 	- 논리곱 연산자: &&
-	    - 연산 순서
-	    	1. 가장 왼쪽 피연산자부터 확인하며 **falsy** 값 찾음
-	    	2. falsy 값 발견 시 작동 멈추고 그 값을 반환
-	    	3. 피연산자에서 falsy 값 발견 못 했을 때는 마지막 피연산자 값을 반환
-	    - falsy 값 (falsy 값을 제외한 모든 값은 truthy 값)
-	    	<br>
-	    	```0, -0, false, "", '', ``, undefined, null, NaN```
+	    - 피연산자 모두 true여야 true로 평가됨
 	    - **논리합 연산자보다 우선 순위 높음**
 	    
 	```js
@@ -382,7 +376,8 @@ window.onload = function(){ // 문서 준비 이벤트
 	console.log(a >= 10 && b == 20); // true
 	console.log(a > 10 && b == 20); // false
 	
-	console.log(false && 10); // false
+	console.log(false && 10); // false -> 가장 먼저 확인한 피연산자가 false면, 다른 피연산자는 볼 것도 없이 가장 먼저 확인한 피연간자 값을 반환
+	console.log(0 && undefined); // 0
 	console.log('abc' && null); // null
 	    
 	console.log([] || 'happy' && null); // []
@@ -391,17 +386,14 @@ window.onload = function(){ // 문서 준비 이벤트
 	<br>
 
 	- 논리합 연산자: `||`
-	    - 연산 순서
-	    	1. 가장 왼쪽 피연산자부터 확인하며 **truthy** 값 찾음
-	    	2. truthy 값 발견 시 작동 멈추고 그 값을 반환
-	    	3. 피연산자에서 truthy 값을 발견 못 했을 때는 마지막 피연산자 값을 반환
+	    - 피연산자 중 하나만 true여도 true로 평가됨
 
 	```js
 	const a = 10, b = 20;
 	console.log(a > 10 || b == 20); // true
 	
 	console.log('def' || 0); // 'def'
-	console.log("" || undefined); // undefined
+	console.log("" || undefined); // undefined -> true인 피연산자를 찾지 못하면 가장 마지막 피연산자 반환함
 	```
 
 	<br>
