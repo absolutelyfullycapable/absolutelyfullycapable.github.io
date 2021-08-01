@@ -223,36 +223,6 @@ alert(lv); // Uncaught ReferenceError: lv is not defined
 
 ```js
 // 예제 3
-var vscope = 'global';
-
-function fscope() {
-  vscope = 'local';
-}
-
-alert(vscope); // 'local' 출력
-```
-
-<br>
-
-```js
-// 예제 3-1
-var vscope = 'global';
-
-function fscope() {
-  var vscope = 'local';
-}
-
-alert(vscope); // 'global' 출력
-```
-
-> ❓ 예제 3과 예제 3-1의 출력값은 왜 다른가요?
-<br>
-→ 예제 3처럼 함수 내에서 변수 키워드를 생략하고 선언된 변수는 자동적으로 전역 변수로 선언되기 때문입니다!
-
-<br>
-
-```js
-// 예제 3-2
 var foo = function() {
   var a = 3,
       b = 5,
