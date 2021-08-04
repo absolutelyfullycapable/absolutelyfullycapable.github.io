@@ -183,7 +183,13 @@ comments: true
 		- 변수를 처음 선언하면 끝
 		- 다만 선언된 변수의 객체 내용은 변경 가능
 	4. **반드시 선언과 동시에 대입**
-	5. 값이 객체 타입일 때 사용하는 것을 추천
+		- 값을 주지 않고 쓸 수 없음
+
+		```js
+		const a; // Uncaught SyntaxError: Missing initializer in const declaration
+		```
+
+	6. 값이 객체 타입일 때 사용하는 것을 추천
 
 <br>
 - - -
