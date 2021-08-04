@@ -188,8 +188,18 @@ comments: true
 		```js
 		const a; // Uncaught SyntaxError: Missing initializer in const declaration
 		```
+	<br>
+		- 단, `const` 안에 객체나 배열을 할당하고, 그 객체의 프로퍼티나 배열 요소를 수정하는 것은 가능!
 
-	6. 값이 객체 타입일 때 사용하는 것을 추천
+		```js
+		const arr = [2, 3, 4];
+		
+		arr.push(5);
+		
+		console.log(arr); // [2, 3, 4, 5]
+		```
+
+	5. 값이 객체 타입일 때 사용하는 것을 추천
 
 <br>
 - - -
