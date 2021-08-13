@@ -134,6 +134,21 @@ var obj1 = new Object(null),
 
 - **특수한 상황이 아니라면 객체 리터럴 방식을 사용하는 것이 일반적**
 	- 자바스크립트 엔진은 객체 리터럴로 객체를 생성하는 코드를 만나면 내부적으로 Object 생성자 함수를 사용하여 객체를 생성하기 때문에 굳이 생성자로 객체를 생성하지 않아도 됨
+- 생성자에는 보통의 객체처럼 속성을 추가할 수 없음
+
+```js
+const a = new Object();
+
+a.name = "jihye";
+console.log(a); // { name: "jihye" }
+```
+
+```js
+const a = new Object;
+
+Object.name = "jihye";
+console.log(a); // {}
+```
 
 <br>
 
