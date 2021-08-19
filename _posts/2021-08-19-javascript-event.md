@@ -8,8 +8,7 @@ comments: true
 ## 1. 이벤트 등록
 
   - 웹 애플리케이션에서 사용자의 입력을 받기 위해 필요한 기능
-  - `addEventListener()` 사용
-    - 웹 API
+  - `addEventListener()` 웹 API 사용
     - 화면에서 동적인 기능을 추가하기 위해 자연스럽게 접하게 되는 기본적인 기능
     - 사용자의 입력에 따라 추가 동작을 구현할 수 있는 방법
 
@@ -21,12 +20,12 @@ comments: true
 
   > Trigger clicks all the way up
 
-    - 특정 화면 요소에서 이벤트가 발생했을 때 해당 이벤트가 상위의 화면 요소들로 전달되어 가는 특성
-    - **상위의 화면 요소**란?
-      - HTML은 기본적으로 트리 구조를 가짐
-      - 트리 구조상 한 단계 위에 있는 요소를 상위 요소라고 함
+  - 특정 화면 요소에서 이벤트가 발생했을 때 해당 이벤트가 상위의 화면 요소들로 전달되어 가는 특성
+  - **상위의 화면 요소**란?
+    - HTML은 기본적으로 트리 구조를 가짐
+    - 트리 구조상 한 단계 위에 있는 요소를 상위 요소라고 함
 
-      [!이벤트 버블링]()
+    ![이벤트 버블링](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaZAab%2FbtrcHEjBZZ8%2FuhbwRRdFQSPgkmZS3WRAek%2Fimg.png)
 
       ```html
       <body>
@@ -54,7 +53,7 @@ comments: true
       > `forEach` 메소드는 인수로 받은 함수를 배열의 요소별로 한 번씩 실행함 <br />
       그 함수에는 인수 세 개(value, index, array)가 전달됨 (예시처럼 하나만 넣으면 그건 value)
 
-      [!result]()
+      ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMuKcO%2Fbtrczp2Ymis%2FggwFG4HkJxTHF9xMs8IMLk%2Fimg.png)
       ⬆️ 예제 코드를 실행했을 때 나오는 결과
 
       > Q. 클래스명이 three인 div 태그 한 개만 클릭했을 뿐인데 왜 세 개의 이벤트가 발생되는 걸까? <br />
@@ -70,7 +69,7 @@ comments: true
   2. **이벤트 캡처링 (Event Capturing)**
     - 이벤트 버블링과 반대 방향으로 진행되는 이벤트 전파 방식
 
-      [!이벤트 캡처링]()
+      ![이벤트 캡처링](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCDsSF%2FbtrcHFQmWwp%2FW1U3ginQvgHjlsN0Y6sKx1%2Fimg.png)
 
       클릭 이벤트가 발생한 지점을 찾아 내려가는 그림
 
@@ -99,7 +98,7 @@ comments: true
       }
       ```
 
-      [!result]()
+      ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbvITXR%2FbtrcEw1aAeL%2FMcUdOYSK8j4If0aeWhGejk%2Fimg.png)
       ⬆️ 예제 코드를 실행했을 때 나오는 결과
 
 <br />
@@ -119,3 +118,9 @@ comments: true
     - 상위 요소로 이벤트를 전달하는 것을 막음(방해함)
   - 이벤트 캡처링의 경우에는 클릭한 요소의 최상위 요소의 이벤트만 동작시킴
     - 하위 요소들로 이벤트를 전달하지 않음
+
+<br />
+<br />
+
+> 참고 문서 📝<br>
+1. [이벤트 버블링, 이벤트 캡처 그리고 이벤트 위임까지](https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/)
