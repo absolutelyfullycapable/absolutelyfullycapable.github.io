@@ -16,9 +16,9 @@ comments: true
 
 ## 2. 브라우저가 이벤트를 감지하는 방식
 
-  1. **이벤트 버블링 (Event Bubbling)**
+  **(1) 이벤트 버블링 (Event Bubbling)**
 
-    > Trigger clicks all the way up
+  > Trigger clicks all the way up
 
   - 특정 화면 요소에서 이벤트가 발생했을 때 해당 이벤트가 상위의 화면 요소들로 전달되어 가는 특성
   - **상위의 화면 요소**란?
@@ -71,8 +71,9 @@ comments: true
 
   <br />
 
-  2. **이벤트 캡처링 (Event Capturing)**
-    - 이벤트 버블링과 반대 방향으로 진행되는 이벤트 전파 방식
+  **(2) 이벤트 캡처링 (Event Capturing)**
+
+   - 이벤트 버블링과 반대 방향으로 진행되는 이벤트 전파 방식
 
       ![이벤트 캡처링](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCDsSF%2FbtrcHFQmWwp%2FW1U3ginQvgHjlsN0Y6sKx1%2Fimg.png)
       <br />
