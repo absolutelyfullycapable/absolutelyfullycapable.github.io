@@ -42,6 +42,12 @@ comments: true
     - `Math.random()` : 0 이상 1 미만의 난수(특정한 순서나 규칙을 가지지 않는 수)
     - `Math.round(x)` : x의 반올림
     - `Math.sqrt(x)` : x의 제곱근
+    - `Math.pow(base, exponent)`: `base^exponent`처럼 base에 exponent를 제곱한 값을 반환  
+      - `base`: 밑 값
+      - `exponent`: 밑 값을 제곱하기 위해 사용하는 지수 (몇 번 제곱할 건지 알려 주는 지수)
+      - 밑 값이 음수, 지수가 정수가 아닌 경우 결과는 `NaN`
+      - `pow()`는 Math의 정적 메소드이므로 Math 객체를 생성하여 그 메서드로 사용하지 말고, 항상 `Math.pow()`로 사용해야 함
+      - ex) `Math.pow(7, 2); // 49`
 
 <br>
 
