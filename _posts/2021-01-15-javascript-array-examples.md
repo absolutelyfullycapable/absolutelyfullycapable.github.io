@@ -106,14 +106,14 @@ score(4);
 
 ```js
 // 방법 1
-var score = [60, 66, 95, 80, 100, 92];
+const score = [60, 66, 95, 80, 100, 92];
 
 // 제일 높은 점수 출력
-var i = 0,
-    max = 0;
+let i = 0;
+let max = 0;
 
-while(i < score.length) {
-    switch(max < score[i]) {
+while (i < score.length) {
+    switch (max < score[i]) {
         case: true: // 위의 조건이 참인 경우
             max = score[i]; // 변수 max에 재대입
             // 0 < 60 -> true -> max = 60;
@@ -132,11 +132,11 @@ document.write('<h2>제일 높은 점수는 ' + max + '점입니다.</h2>');
 
 
 // 제일 낮은 점수 출력
-var a = 0,
-    min = 100;
+let a = 0;
+let min = 100;
 
-while(a < score.length) {
-    if(min > score[a]) { // 참인 경우
+while (a < score.length) {
+    if (min > score[a]) { // 참인 경우
         min = acore[a];
         // 100 > 60 -> true -> min = 60; (a = 0일 때)
         // 60 > 66 -> false -> min = 60; (a = 1일 때)
@@ -151,9 +151,9 @@ while(a < score.length) {
 document.write('<h2>제일 낮은 점수는 ' + min + '점입니다.</h2>');
 
 // 평균 점수 출력
-var sum = 0;
+let  sum = 0;
 
-for(var x = 0; x < score.length; x++) {
+for (let x = 0; x < score.length; x++) {
     score[x] = Number(score[x]);
     sum += score[x];
 }
@@ -168,25 +168,26 @@ document.write('<h2>평균 점수는 약 ' + aver + '점입니다.</h2>');
 
 ```js
 // 방법 2
-var score = [60, 66, 95, 80, 100, 92],
-    sum = 0,
-    max = 0,
-    min = 100,
-    average;
+const score = [60, 66, 95, 80, 100, 92];
+let sum = 0;
+let max = 0;
+let min = 100;
+let average;
 
-for(var i in score) {
+for (let i in score) {
 	sum += score[i];
-	switch(max < score[i]) {
+	switch (max < score[i]) {
 		case true:
 			max = score[i];
 			break;
 	}
-	switch(min > score[i]) {
+	switch (min > score[i]) {
 		case true:
 			min = score[i];
 			break;
 	}
 }
+
 average = Math.round((sum / score.length));
 
 document.write('<h2>제시된 점수의 최저점은 ' + min + '점이고, 최고점은 ' + max + '점이며 평균은 약 ' + average + '점입니다.</h2>');
