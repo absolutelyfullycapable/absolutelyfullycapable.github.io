@@ -109,6 +109,7 @@ comments: true
 
 - 캐멀 표기법
 	- 두 번째 이후 단어의 첫 글자를 대문자로 표기
+	- 보통 자바스크립트에서 이 표기법을 사용함
 
 	`ex) userName, userEmail`
 
@@ -124,6 +125,7 @@ comments: true
 
 - 밑줄 표기법
 	- 모든 단어는 소문자로 표기, 단어와 단어를 밑줄로 구분
+	- 보통 파이썬에서 이 표기법을 사용함
 
 	`ex) user_name, user_email`
 	
