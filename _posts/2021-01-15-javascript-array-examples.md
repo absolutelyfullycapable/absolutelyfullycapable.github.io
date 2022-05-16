@@ -151,7 +151,7 @@ while (a < score.length) {
 document.write('<h2>제일 낮은 점수는 ' + min + '점입니다.</h2>');
 
 // 평균 점수 출력
-let  sum = 0;
+let sum = 0;
 
 for (let x = 0; x < score.length; x++) {
     score[x] = Number(score[x]);
