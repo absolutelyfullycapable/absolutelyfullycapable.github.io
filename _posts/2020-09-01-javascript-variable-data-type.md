@@ -123,7 +123,7 @@ comments: true
 
 	`ex) userNameName, userEmailEmail`
 
-- 밑줄 표기법
+- 밑줄 표기법 (snake_case)
 	- 모든 단어는 소문자로 표기, 단어와 단어를 밑줄로 구분
 	- 보통 파이썬에서 이 표기법을 사용함
 
