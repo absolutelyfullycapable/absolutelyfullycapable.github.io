@@ -8,22 +8,22 @@ comments: true
 (1) 좋아하는 과일 4개를 배열로 만들고 반복문을 이용하여 알림창을 순차적으로 출력
 
 ```js
-var fruit = ["수박", "딸기", "복숭아", "사과"];
+const fruit = ["수박", "딸기", "복숭아", "사과"];
 
 // 방법 1
-for(var i = 0; i < fruit.length; i++) {
+for (let i = 0; i < fruit.length; i++) {
 	alert(fruit[i]);
 }
 
 // 방법 2
-var i = 0;
-while(i < fruit.length) {
+let i = 0;
+while (i < fruit.length) {
 	alert(fruit[i]);
     	i++;
 }
 
 // 방법 3
-for(var i in fruit) {
+for (let i in fruit) {
 	alert(fruit[i]);
 }
 ```
@@ -36,21 +36,21 @@ for(var i in fruit) {
 
 ```js
 // 방법 1
-var five = [5, 10, 15, 20, 25];
+const five = [5, 10, 15, 20, 25];
 
-var i = 0;
-while(i < five.length) {
+let i = 0;
+while (i < five.length) {
 	document.write('<h2>배열의 인덱스 ' + i + '의 배열 요소는 ' + five[i] + '입니다</h2>');
 	i++;
 }
 
 // 방법 2
-for(var i = 0; i < five.length; i++) {
+for (let i = 0; i < five.length; i++) {
 	document.write('<h2>배열의 인덱스 ' + i + '의 배열 요소는 ' + five[i] + '입니다</h2>');
 }
 
 // 방법 3
-for(var i in five) {
+for (let i in five) {
 	document.write('<h2>배열의 인덱스 ' + i + '의 배열 요소는 ' + five[i] + '입니다</h2>');
 }
 ```
@@ -63,31 +63,36 @@ for(var i in five) {
 
 ```js
 // 방법 1
-var num = new Array(4), // 배열 요소(데이터) 값이 4개인 배열 생성
-    i = 0, // 인덱스
-    sum = 0; // 합계
+const num = new Array(4); // 배열 요소(데이터) 값이 4개인 배열 생성
+let i = 0; // 인덱스
+let sum = 0; // 합계
 
 while(i < num.length) {
-    var score = prompt('점수를 입력해 주세요.');
+    let score = prompt('점수를 입력해 주세요.');
     score = Number(score); // 입력 받은 숫자형 문자열을 숫자로 리턴하여 재대입 -> prompt에서 입력 받은 값이 숫자형 문자열이라 숫자열로 변경해야 됨
     num[i] = score; // 각각의 배열 요소에 대입
     sum += num[i];
     i++;
 }
 
-document.write('<h2>총점은 ' + sum + '점이고, 평균은 ' + sum / num.length + '입니다.</h2>');
+document.write("<h2>총점은 " + sum + "점이고, 평균은 " + (sum / num.length) + "입니다.</h2>");
 
 
 // 방법 2 -> n 명의 점수를 받아 총점과 평균을 구하는 프로그램 방식
 function score(n) {
-	var studentScore = new Array(n);
-	for(var i = 0, sum = 0; i < n; i++) {
-		studentScore[i] = Number(prompt('점수를 입력해 주세요.'));
+	const studentScore = new Array(n);
+	let sum = 0;
+
+	for (let i = 0; i < n; i++) {
+		studentScore[i] = Number(prompt("점수를 입력해 주세요."));
 		sum += studentScore[i];
 	}
-	var average = (sum / n);
-	document.write('입력한 점수의 총점은 ' + sum + '이고, 평균은 ' + average + '입니다.');
+
+	const average = sum / n;
+
+	document.write("입력한 점수의 총점은 " + sum + "이고, 평균은 " + average + "입니다.");
 }
+
 score(4);
 ```
 
@@ -95,7 +100,7 @@ score(4);
 
 <br>
 
-(4) 제시된 점수 중 제일 높은 점수, 제일 낮은 점수, 평균 점수를 각각 출력 (평균 점수는 소수점 이하 반올림하여 나타내기) (🥲)
+(4) 제시된 점수 중 제일 높은 점수, 제일 낮은 점수, 평균 점수를 각각 출력 (평균 점수는 소수점 이하 반올림하여 나타내기) ★★★★★
 
 - 제시된 점수: 60, 66, 95, 80, 100, 92
 
