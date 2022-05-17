@@ -175,17 +175,17 @@ let min = 100;
 let average;
 
 for (let i in score) {
-	sum += score[i];
-	switch (max < score[i]) {
-		case true:
-			max = score[i];
-			break;
-	}
-	switch (min > score[i]) {
-		case true:
-			min = score[i];
-			break;
-	}
+    sum += score[i];
+    switch (max < score[i]) {
+        case true:
+	    max = score[i];
+	    break;
+    }
+    switch (min > score[i]) {
+        case true:
+	    min = score[i];
+	    break;
+    }
 }
 
 average = Math.round(sum / score.length);
