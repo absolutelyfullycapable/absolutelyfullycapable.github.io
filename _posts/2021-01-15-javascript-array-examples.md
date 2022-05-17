@@ -114,7 +114,7 @@ let max = 0;
 
 while (i < score.length) {
     switch (max < score[i]) {
-        case: true: // 위의 조건이 참인 경우
+        case true: // 위의 조건이 참인 경우
             max = score[i]; // 변수 max에 재대입
             // 0 < 60 -> true -> max = 60;
             // 60 < 66 -> true -> max = 66;
@@ -127,7 +127,7 @@ while (i < score.length) {
     i++;
 }
 
-document.write('<h2>제일 높은 점수는 ' + max + '점입니다.</h2>');
+document.write("<h2>제일 높은 점수는 " + max + "점입니다.</h2>");
 
 
 
@@ -137,7 +137,7 @@ let min = 100;
 
 while (a < score.length) {
     if (min > score[a]) { // 참인 경우
-        min = acore[a];
+        min = score[a];
         // 100 > 60 -> true -> min = 60; (a = 0일 때)
         // 60 > 66 -> false -> min = 60; (a = 1일 때)
         // 60 > 95 -> false -> min = 60; (a = 2일 때)
@@ -148,20 +148,20 @@ while (a < score.length) {
     a++;
 }
 
-document.write('<h2>제일 낮은 점수는 ' + min + '점입니다.</h2>');
+document.write("<h2>제일 낮은 점수는 " + min + "점입니다.</h2>");
 
 // 평균 점수 출력
 let sum = 0;
+let aver;
 
 for (let x = 0; x < score.length; x++) {
     score[x] = Number(score[x]);
     sum += score[x];
 }
 
-aver = sum / arr.length;
-aver = Math.round(aver); // 소수점 이하 반올림
+aver = Math.round(sum / score.length); // Math.round() => 소수점 이하 반올림
 
-document.write('<h2>평균 점수는 약 ' + aver + '점입니다.</h2>');
+document.write("<h2>평균 점수는 약 " + aver + "점입니다.</h2>");
 ```
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcw01rr%2FbtqTDcU5Jld%2FcWsJKHkLz2QKHti2hk31S1%2Fimg.png)
@@ -188,9 +188,9 @@ for (let i in score) {
 	}
 }
 
-average = Math.round((sum / score.length));
+average = Math.round(sum / score.length);
 
-document.write('<h2>제시된 점수의 최저점은 ' + min + '점이고, 최고점은 ' + max + '점이며 평균은 약 ' + average + '점입니다.</h2>');
+document.write("<h2>제시된 점수의 최저점은 " + min + "점이고, 최고점은 " + max + "점이며 평균은 약 " + average + "점입니다.</h2>");
 ```
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRU6Lq%2Fbtq037qk8hC%2FSaGDlVBCUCWKF66gcrEdck%2Fimg.png)
