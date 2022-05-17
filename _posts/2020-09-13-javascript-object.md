@@ -13,14 +13,8 @@ comments: true
 -  자바스크립트 객체는 크게 네이티브 객체, 호스트 객체, 사용자 정의 객체로 나뉘어짐
 	- **네이티브 객체(Native  Object), 코어 객체(Core Object)**: ECMAScript 사양에 정의된 객체
 	    - 내장 생성자 객체(Object, String, Number, Boolean, Array, Function...), JSON, Math, Reflect 등
-
-    <br>
-
 	- **호스트 객체(Host Object)**: ECMAScript에는 정의되어 있지 않지만 자바스크립트 실행 환경에 정의된 객체 -> 운영 체제, 웹 브라우저마다 달라짐
 	    - BOM 객체(Browser Object Model(브라우저 객체): Window, Navigator, History, Location, Screen, Document...), DOM 객체(Document Object Model(문서 객체 모델)), XMLHttpRequest 객체, HTML5의 각종 API...
-
-    <br>
-
 	- **사용자 정의 객체(User-defined Object)**: 사용자가 정의한 자바스크립트 코드를 실행한 결과로 생성된 객체
 
 <br>
@@ -28,8 +22,8 @@ comments: true
 ### **프로퍼티 (Property)**
 
 - 객체에 포함된 데이터 하나(이름과 값의 쌍)
-- 프로퍼티에 저장된 값이 함수일 경우, 일반 함수와 구분하기 위해 그 프로퍼티를 메소드 (method)라 부름
-- 프로퍼티는 프로퍼티 키(이름)고 프로퍼티 값으로 구성됨
+- 프로퍼티에 저장된 값이 함수일 경우, 일반 함수와 구분하기 위해 그 프로퍼티를 메소드(method)라 부름
+- 프로퍼티는 프로퍼티 키(이름)와 프로퍼티 값으로 구성됨
 	- 프로퍼티는 유일하게 프로퍼티 키로 식별할 수 있음 (프로퍼티 키는 프로퍼티를 식별하기 위한 식별자)
 	- 프로퍼티 키는 빈 문자열을 포함하는 모든 문자열 또는 symbol 값으로 작성함
 		- 문자열, symbol 값 이외의 값을 지정하면 암묵적으로 **문자열**로 변환됨
@@ -43,7 +37,7 @@ comments: true
 ### **메소드 (Method)**
 
 - 객체에 소속된 프로퍼티의 값으로 함수를 지정할 수 있음 (객체에 소속된 함수를 만들 수 있다는 뜻)
-	- 그 객체에 소속된 함수가 **메소드**
+	- 객체에 소속된 그 함수가 **메소드**
 - 객체에 제한되어 있음
 
 <br>
@@ -56,7 +50,7 @@ comments: true
 
 #### **1. 객체 리터럴로 객체 생성하기**
 
-- ex) var card = {suit: "하트", rank: "A"};
+- ex)  card = {suit: "하트", rank: "A"};
 	- {...} : **객체 리터럴**
 	- 객체 리터럴을 변수 card에 대입한 것
 	- 객체가 생성되면 객체 내부에는 속성(프로퍼티)과 값이 존재
@@ -102,21 +96,20 @@ card.color // >> undefined
 
 #### **2. 생성자로 객체 생성하기 (🥲)**
 
-`var obj = new Object();`
+`const obj = new Object();`
 
 - **생성자**: new 연산자로 객체를 생성할 것이라 기대하고 만든 함수
-- 생성자 함수를 통해 생성된 객체를 인스턴스(instance)라고 함
 - 생성자로 객체를 생성할 때는 **new 연산자** 사용 (빈 객체 생성됨)
 	- 생성자 안에서 **this.프로퍼티 이름**에 값을 대입하면 그 이름을 가진 프로퍼티에 값이 할당된 객체 생성됨
-- 메소드 함수 안에서 this 사용하면 그 값이 생성자와 new 연산자로 생성한 객체의 프로퍼티임을 명시 가능
+- **메소드 함수 안에서 this 사용하면 그 값이 생성자와 new 연산자로 생성한 객체의 프로퍼티임을 명시 가능**
 
 	```js
-	var person = new Object();
+	const person = new Object();
 
 	person.name = 'Ji Hye';
 	person.gender = 'female';
 	person.sayHello = function () {
-		console.log('Hi! My name is ' + this.name);
+	    console.log('Hi! My name is ' + this.name);
 	};
 
 	console.log(person); // {name: "Ji Hye", gender: "female", sayHello: ƒ}
@@ -124,12 +117,12 @@ card.color // >> undefined
 	```
 
 - 객체를 생성하고 초기화하는 역할을 함
-- 생성자 함수 이름은 보통 파스칼 표기법 따름 (일반 함수와 생성자 함수를 구분하기 위해) 
 - 생성자 인수값이 null이거나 undefined면 빈 객체 반환
 
 	```js
-	var obj1 = new Object(null),
-	    obj2 = new Object(undefined);
+	const obj1 = new Object(null);
+	const obj2 = new Object(undefined);
+	// 둘 다 빈 객체 반환
 	```
 
 - **특수한 상황이 아니라면 객체 리터럴 방식을 사용하는 것이 일반적**
@@ -155,21 +148,22 @@ card.color // >> undefined
 #### **3. 생성자 함수로 생성하기**
 
 - 생성자 함수: 객체를 생성하는 함수
+- 생성자 함수를 통해 생성된 객체를 인스턴스(instance)라고 함
 - 객체를 생성하기 위한 템플릿처럼 사용 -> 프로퍼티 값만 다른 여러 개의 객체를 생성할 때의 불편함 보완 가능
-- 생성자 함수명은 일반적으로 대문자로 시작 -> 생성자 함수임을 인식할 수 있도록 도움 줌
+- 생성자 함수 이름은 보통 파스칼 표기법 따름 (일반 함수와 생성자 함수를 구분하기 위해) 
 - 생성자 함수 내에서 선언된 일반 변수는 내수에서는 자유롭게 접근이 가능하지만 외부 참조는 불가능
 
 ```js
 function Person(name, hobby) { // 생성자 함수로 객체 생성
-	this.name = name;
-	this.hobby = hobby;
-	this.sayHi = function() {
-		document.write('Hi! My name is ' + name + ', and my hobby is ' + hobby + '.<br>');
-	}
+    this.name = name;
+    this.hobby = hobby;
+    this.sayHi = function() {
+        document.write('Hi! My name is ' + name + ', and my hobby is ' + hobby + '.<br>');
+    }
 }
 
-var jihye = new Person('Ji Hye', 'listening music'),
-    boo = new Person('Boo', 'singing');
+const jihye = new Person('Ji Hye', 'listening music');
+const boo = new Person('Boo', 'singing');
 
 jihye.sayHi();
 boo.sayHi();
@@ -230,10 +224,20 @@ console.log(address.연락처);
 <br>
 
 - delete 연산자를 사용하면 프로퍼티 삭제 가능
+    - 이때 피연산자는 **프로퍼티 키**여야 함
 
 ```js
-delete card.rank;
-console.log(card); // >> Object {suit:"하트", value:14}
+const person = {
+    "first-name": "Ung-mo",
+    "last-name": "Lee",
+    gender: 'male',
+};
+
+delete person.gender;
+console.log(person.gender); // undefined
+
+delete person;
+console.log(person); // Object {first-name: 'Ung-mo', last-name: 'Lee'}
 ```
 
 <br>
@@ -261,19 +265,12 @@ console.log("color" in card); // >> 프로퍼티가 객체에 포함되어 있�
 #### **내장 객체**
 
 - 자바스크립트에서는 처음부터 사용할 수 있는 내장 객체(빌트인 오브젝트)가 마련되어 있음
-
-<br>
-
-
 - 내장 생성자
 	- Object, String, Number, Boolean, Array, Date, Function ...
-
-<br>
-
 - Date 생성자
 	- 날짜와 시간을 표현하는 객체 생성
 
-		`var now = new Date();`
+		`const now = new Date();`
 
 		- .getFullYear() : 연도를 뜻하는 숫자값
 		- .getMonth(); : 월을 뜻하는 숫자값, 0부터 시작
@@ -289,16 +286,10 @@ console.log("color" in card); // >> 프로퍼티가 객체에 포함되어 있�
 		- now.toLocaleTimeString(); : 지역화된 시간 정보
 		- .getUTCHours(); : UTC 시각의 시간을 뜻하는 숫자값
 		- now.toUTCSting(); : UTC 날짜와 시간 정보
-
-<br>
-
 - Function 생성자
 	- 함수를 생성하는 내장 생성자
-	- var 변수 이름 = new Function(첫 번째 인수, ..., n 번째 인수, 함수 몸통);
+	- const 변수 이름 = new Function(첫 번째 인수, ..., n 번째 인수, 함수 몸통);
 	- **Function 생성자로 생성한 함수는 전역 변수와 자신의 지역 변수만 읽고 쓸 수 있다는 단점이 있어 함수를 동적으로 생성해야 하는 특별한 상황 외는 사용 안 함**
-
-<br>
-
 - 기타 내장 객체
 	- 전역 객체: 프로그램 어디서나 사용할 수 있는 객체
 		- 전역 객체의 프로퍼티
