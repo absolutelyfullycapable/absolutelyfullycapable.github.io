@@ -196,12 +196,12 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 
 <br>
 
-![잘 작동하는 Utterances](https://blog.kakaocdn.net/dn/bfnSfq/btq6q1r5Ixg/Rz2hY2HjL5kQkRjBkei4lk/img.png)
+![잘 작동하는 Utterances](https://blog.kakaocdn.net/dn/MzXUQ/btsffwqyTQL/ZCcCNSZ4R9nAuEykETiGlk/img.png)
 
 문제를 해결하니 잘 작동합니다. 해당 댓글은 댓글 관리용으로 만든 Repo에서도 확인이 가능했습니다.<br>
 <br>
 
-![Repo의 Issue 카테고리에서 확인 및 관리 가능한 댓글](https://blog.kakaocdn.net/dn/HKycu/btq6u2Y70SC/K46vGLervSdECC8B7HzQTK/img.png)
+![Repo의 Issue 카테고리에서 확인 및 관리 가능한 댓글](https://blog.kakaocdn.net/dn/dmGxLN/btsftIQ93m9/M49Q5X1Zu88VTHO0kWDuFK/img.png)
 
 별거 아닌데도 해결하고 보니 뿌듯뿌듯.. 😏
 
@@ -212,26 +212,26 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 
 그런데 적용된 Utterances를 보니 뭔가 2% 부족한 느낌이 들었습니다.
 
-![첫 적용 이후](https://blog.kakaocdn.net/dn/ckTNeA/btq6skGbdFE/SD4fkKuMTTTFqwtUlf9LYK/img.png)
+![첫 적용 이후](https://blog.kakaocdn.net/dn/MzXUQ/btsffwqyTQL/ZCcCNSZ4R9nAuEykETiGlk/img.png)
 
 Utterances의 기본 최대 가로 사이즈가 760px이라 옆 여백이 참 많이 남아 허전해 보였던 겁니다. 😓<br>
 '뭔가 포스팅 가로 부분을 꽉 채우고 싶은데..'라는 생각이 들었을 때 Utterances 페이지에서 본 문구가 떠올랐습니다.
 
 <br>
 
-![레이아웃 수정 방법 문구](https://blog.kakaocdn.net/dn/L7BxN/btq6w51UFy5/IHrmlW3KyCsQhkFl9eXvhK/img.png)
+![레이아웃 수정 방법 문구](https://blog.kakaocdn.net/dn/RELKU/btsfgh0Zwxt/KYGdJHFdNOKd8kZPHwhDyk/img.jpg)
 
 레이아웃을 수정하고 싶으면 CSS에서 `.utterances`나 `.utterances-frame` 선택자를 사용하여 수정하면 된다고 합니다.
 
 <br>
 
-![레이아웃 수정](https://blog.kakaocdn.net/dn/cielsd/btq6qibbOav/JGrU1TBqumO4TZuqOgpK30/img.png)
+![레이아웃 수정](https://blog.kakaocdn.net/dn/ctFTpb/btsfcMuby1n/kvQM3Xa7TXgg876rvtOuW1/img.png)
 
 저는 가로 부분을 꽉 채우기 위해 최대 가로 사이즈를 100%로 주었습니다.
 
 <br>
 
-![가로 사이즈 수정 완료](https://blog.kakaocdn.net/dn/b62Hoj/btq6sd7XXp3/LbXD4dGtG7NTQQ1K2O96F0/img.png)
+![가로 사이즈 수정 완료](https://blog.kakaocdn.net/dn/bD1cDj/btsfvokNPUN/pC5Off6gwEWxwRflVseTFk/img.png)
 
 제가 원하는 방식대로 뜨는 게 보이시죠? 😎
 
