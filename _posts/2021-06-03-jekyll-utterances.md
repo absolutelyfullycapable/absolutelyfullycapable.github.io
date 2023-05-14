@@ -143,7 +143,7 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 <br>
 <br>
 
-![404 Error](https://blog.kakaocdn.net/dn/bEAz5V/btq6oDy0mwn/D6rcMuwHSfc9crijW1LHmk/img.png)
+![404 Error](https://blog.kakaocdn.net/dn/xJzVT/btsfeANuja5/1KUV0MgwlPpaubyHqKF2l1/img.png)
 
 왜.. 뭐가 문제인데.. 😥
 
@@ -161,8 +161,7 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 
 <br>
 
-![HAHWUL 님 댓글 1](https://blog.kakaocdn.net/dn/IdSoO/btq6w60EfZB/KKKvlKVJ4beXFHLM0j34KK/img.png)
-![HAHWUL 님 댓글 2](https://blog.kakaocdn.net/dn/bnqmKS/btq6qRElilW/hgx3XAzWCu95DB44mQenx0/img.png)
+![HAHWUL 님 댓글](https://blog.kakaocdn.net/dn/bagk4u/btsfeAtaadg/JxoUOH4e1zHGfbHArKxIg1/img.png)
 
 세상에 😱!!!!!<br>
 <br>
@@ -173,7 +172,7 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 
 <br>
 
-![404 Error](https://blog.kakaocdn.net/dn/ZCjNM/btq6rvmc4ce/hkke2aDElKaD838gjdxF70/img.png)
+![404 Error](https://blog.kakaocdn.net/dn/xJzVT/btsfeANuja5/1KUV0MgwlPpaubyHqKF2l1/img.png)
 
 왜.. 뭐가 문제인데.. 😥 22<br>
 <br>
@@ -182,13 +181,13 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 
 <br>
 
-![연결된 링크와 실제 페이지 링크가 달라서 생겼던 문제였음!](https://blog.kakaocdn.net/dn/dPtzn2/btq6qoOCyMH/xpZkKw8LFUFmyYkElhdMEk/img.png)
+![연결된 링크와 실제 페이지 링크가 달라서 생겼던 문제였음!](https://blog.kakaocdn.net/dn/cdnJ8F/btsfOHDSl3x/8frDnCK99mA40aHK3BTcA0/img.png)
 
 연결된 링크와 실제 페이지 링크가 아직도 서로 달라 그런 거였습니다. 저 `/test`는 도대체 어디서 나온 아이일까.. 싶어 가장 기본적인 내용을 담고 있는 `_config.yml`부터 확인했습니다.
 
 <br>
 
-![_config.yml에서 발견한 오류](https://blog.kakaocdn.net/dn/cpT4Gx/btq6n6anIxL/N4QgTFOFjesXgdgBwr1lZK/img.png)
+![_config.yml에서 발견한 오류](https://blog.kakaocdn.net/dn/b6z1gy/btsfeBewRpj/9LduFuZKTKLGVDfUWKCQK1/img.png)
 
 범인을 드디어 찾았군요. 😎 기본적으로 설정한 url 때문이었습니다.<br>
 <br>
