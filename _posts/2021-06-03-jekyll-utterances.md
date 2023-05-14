@@ -23,7 +23,7 @@ Utterances 사용 방법에 대한 글은 구글링만 해도 정말 많이 나�
 
 ## 그래서 Utterances가 뭔가요?
 <br>
-![Utterances](https://blog.kakaocdn.net/dn/l7y0h/btq6vxduluD/1aXOWbNJLLK4ub4kUwmifK/img.png)
+![Utterances](https://blog.kakaocdn.net/dn/blk7pN/btsffwjIIub/c9XAUhz356SUtkM8SnL7LK/img.png)
 
 <br>
 
@@ -43,7 +43,7 @@ Utterances 사용 방법에 대한 글은 구글링만 해도 정말 많이 나�
 
 ### 1. Github에 신규 Repository 만들기 (생략 가능)
 
-![댓글 관리용 신규 Repository](https://blog.kakaocdn.net/dn/C2O9I/btq6rn2KKXe/KA79o2hPKd2RD9k8Kfze9K/img.png)
+![댓글 관리용 신규 Repository](https://blog.kakaocdn.net/dn/b8mcn0/btsfdYuhm8s/V9MgrOhPw5GuGKS3KynyzK/img.png)
 
 댓글을 관리하는 신규 Repository를 만듭니다. **(기존 블로그 Repo에서 한꺼번에 관리하고 싶다면 새로 만들지 않고 블로그 Repo를 연결해도 됩니다!)**<br>
 보통 이름은 `blog-comments`나 `blog_comments`로 많이 만드시더라구요. 꼭 저렇게 해야 하는 건 아니니 각자 원하는 대로 작성해 주시면 될 것 같습니다.<br>
@@ -57,11 +57,11 @@ Utterances 사용 방법에 대한 글은 구글링만 해도 정말 많이 나�
 
 먼저 [Utterances 사이트](https://github.com/apps/utterances)로 이동합니다.
 
-![Install Utterances 1](https://blog.kakaocdn.net/dn/bYQHbm/btq6lYjkRut/VTtEOjNQYBzQzPtxi2R5q0/img.png)
+![Install Utterances 1](https://blog.kakaocdn.net/dn/YMLRU/btsftKuBmfo/CHjMtfM5f2sXdmWDKH4zl0/img.png)
 
 Install 버튼을 누르면 요런 페이지가 뜨는데요.
 
-![Install Utterances 2](https://blog.kakaocdn.net/dn/MdXfb/btq6q1UQkOR/4jRfdCKLgMorysNa3RpEp1/img.png)
+![Install Utterances 2](https://blog.kakaocdn.net/dn/3tqUR/btsfvnF8lhL/FkZ0wYYshGCkmgtQg7uKr1/img.png)
 
 제 Github에 있는 모든 Repo에 적용하지 않을 거고, 댓글 관리용 Repo를 만들었기 때문에 **Only select repositories**를 선택하고 앞서 만든 댓글 관리용 Repo를 선택합니다.<br>
 댓글 관리용 Repo를 만들지 않았다면 Utterances와 연결할 Repo를 선택하면 됩니다!<br>
@@ -73,7 +73,7 @@ Install 버튼을 누르면 요런 페이지가 뜨는데요.
 
 그러면 아래 보이는 사이트로 이동하게 됩니다.
 
-![Utterances 사이트](https://blog.kakaocdn.net/dn/cdnI2C/btq6n6VJD4z/gRovZi7Rbv6GzNwc1uXtak/img.png)
+![Utterances 사이트](https://blog.kakaocdn.net/dn/u50aH/btsfdaV24EN/Okz3bKTgjCESRpf9IHykD1/img.png)
 
 해당 페이지에서는 Utterances에 대한 소개와 Repo 지정, Issue Mapping 방법, Issue label 및 Theme 옵션 설정, Utterances를 활성화해 줄 스크립트가 나옵니다.<br>
 <br>
@@ -85,7 +85,7 @@ Install 버튼을 누르면 요런 페이지가 뜨는데요.
 
 <br>
 
-![Repo](https://blog.kakaocdn.net/dn/bmI2RJ/btq6uIT59DR/D9h61keqgp9VCmYgYvpSk1/img.png)
+![Repo](https://blog.kakaocdn.net/dn/XkhFW/btsfcMVdLMU/k5DGyAjiUUK2s9Lwn1TPF0/img.png)
 
 Repo는 앞서 만든 댓글 관리용 Repo를 작성해 주시면 됩니다.
 
@@ -96,7 +96,7 @@ Repo는 앞서 만든 댓글 관리용 Repo를 작성해 주시면 됩니다.
 
 <br>
 
-![Issue Mapping](https://blog.kakaocdn.net/dn/deD2jr/btq6rwUBSSd/QyKeYoPKtjTn0eZG3OOej1/img.png)
+![Issue Mapping](https://blog.kakaocdn.net/dn/czTi17/btsfcM8LDHb/ZgEkyxhzTilGLGKJUG8gok/img.png)
 
 그 다음은 글과 Issue를 어떻게 매핑할 건지 선택하는 창이 나오는데요. (어떤 건지 설명) 여섯 가지 선택지 중 각자 블로그에 맞는 선택지로 고르면 됩니다!<br>
 참고로 저는 `Issue title contains page pathname`을 선택했어요.
@@ -108,7 +108,7 @@ Repo는 앞서 만든 댓글 관리용 Repo를 작성해 주시면 됩니다.
 
 <br>
 
-![Issue label](https://blog.kakaocdn.net/dn/coPtju/btq6rnwo592/d3ZRUQj1BHhaHoMCO1CdI1/img.png)
+![Issue label](https://blog.kakaocdn.net/dn/bEOXtq/btsfe6L8fxy/RhIsTEZAbzKeAPfVLIn6k1/img.png)
 
 그 후 Issue label을 설정해 줍니다. 설정된 label은 댓글 issue 뒤에 붙습니다.<br>
 이모지도 지원되는 걸 보면 이 부분은 각자 잘 알아볼 수 있는 방법으로 자유롭게 설정 가능한 것 같아요.
@@ -120,7 +120,7 @@ Repo는 앞서 만든 댓글 관리용 Repo를 작성해 주시면 됩니다.
 
 <br>
 
-![Utterances Theme](https://blog.kakaocdn.net/dn/bmFTd9/btq6uJlezvP/NuqBcilPtbMNZKjwxGpuQ1/img.png)
+![Utterances Theme](https://blog.kakaocdn.net/dn/bixQsJ/btsfcM1VDOt/KnU0zrspc4KJGON8tGpbhK/img.png)
 
 Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 맞게 선택하시면 됩니다.<br>
 저는 심플 이즈 더 베스트라 생각하여 가장 기본인 Github Light로 설정했습니다. 😎
@@ -132,7 +132,7 @@ Theme 옵션은 여러 개가 있습니다. 이것 또한 각자 블로그에 �
 
 <br>
 
-![Utterances Script](https://blog.kakaocdn.net/dn/n0DUe/btq6q2sFYJk/YCXwewvvlhBkv8eOmFfrlK/img.png)
+![Utterances Script](https://blog.kakaocdn.net/dn/b3V6bd/btsfghGEitp/xUaRcFxOvbbQnpVYxKMiZ0/img.png)
 
 그 후 설정에 맞게 완성된 script를 복사합니다.<br>
 저는 포스트에만 댓글을 설정해 줄 거기 때문에 복사한 script를 `_layouts/post.html`에 넣었습니다. (댓글 기능이 필요한 페이지에 넣으면 될 것 같아요!)<br>
