@@ -153,22 +153,6 @@ card.color // >> undefined
 - 생성자 함수 이름은 보통 파스칼 표기법 따름 (일반 함수와 생성자 함수를 구분하기 위해) 
 - 생성자 함수 내에서 선언된 일반 변수는 내수에서는 자유롭게 접근이 가능하지만 외부 참조는 불가능
 
-```js
-function Person(name, hobby) { // 생성자 함수로 객체 생성
-    this.name = name;
-    this.hobby = hobby;
-    this.sayHi = function() {
-        document.write('Hi! My name is ' + name + ', and my hobby is ' + hobby + '.<br>');
-    }
-}
-
-const jihye = new Person('Ji Hye', 'listening music');
-const boo = new Person('Boo', 'singing');
-
-jihye.sayHi();
-boo.sayHi();
-```
-
 {% include codepen.html hash="OJdZxmB" title="생성자 함수로 객체 생성하기 예시" %}
 
 <br>
