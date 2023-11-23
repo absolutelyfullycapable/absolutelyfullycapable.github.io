@@ -173,18 +173,9 @@ console.log(card); // >> Object {suit:"하트", rank:"A", value:14}
 
 - 간단한 예시
 
-```js
-let obj = {};
-obj.name = "이름";
-obj.age = "나이";
+{% include codepen.html hash="RwvyjEw" title="프로퍼티 추가와 삭제 예시 1" %}
 
-document.write("객체 obj의 name 속성은 " + obj.name + "<br>");
-document.write("객체 obj의 age property는 " + obj.age + "<br>");
-console.log(obj);
-```
-
-![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbCL1IB%2Fbtq03vlPkdj%2F8EsLCS9kTmb2k57KGFSuy1%2Fimg.png)
-<a class="jsbin-embed" href="https://jsbin.com/wopubawuzi/embed?js,console,output">JS Bin on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?4.1.8"></script>
+![result](https://blog.kakaocdn.net/dn/NhUuR/btsANvKcgkT/7zPoO0i8jdXm0DRdEkbVBK/img.png)
 
 <br>
 
@@ -204,7 +195,7 @@ address["연락처"] = "010-1234-5678"; // 객체 속성 추가
 console.log(address.연락처);
 ```
 
-![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbfJbOq%2FbtqM4zg101Y%2FM5Is3YeZxgCMMWm7kKP10k%2Fimg.png)
+![result](https://blog.kakaocdn.net/dn/bs2yDh/btsAMXz7TpV/Wc57jEE8lGrUi4V8POZSM1/img.png)
 
 <br>
 
