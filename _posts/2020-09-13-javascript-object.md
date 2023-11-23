@@ -184,6 +184,7 @@ console.log(obj);
 ```
 
 ![result](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbCL1IB%2Fbtq03vlPkdj%2F8EsLCS9kTmb2k57KGFSuy1%2Fimg.png)
+<a class="jsbin-embed" href="https://jsbin.com/wopubawuzi/embed?js,console,output">JS Bin on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?4.1.8"></script>
 
 <br>
 
